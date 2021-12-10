@@ -25,7 +25,7 @@ SPE\_{sustype}\_{stage}\_{doftype}\_{refnum}.xml
 
 ## Usage
 
-If you want to get past data for all `Type-A` suspension with template files given by `templates.txt` at `2021/12/1 13:53:02 UTC`, please execute like this;
+If you want to get past data at `2021/12/1 13:53:02 UTC` for all `Type-A` suspension with template files given by `templates.txt`, please execute like this;
 
 ```
 $ run_spectrum TypeA "2021/12/1 13:53:02 UTC"
