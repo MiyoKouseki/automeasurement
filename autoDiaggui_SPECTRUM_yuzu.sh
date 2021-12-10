@@ -1,7 +1,7 @@
 #!/bin/bash
 #******************************************#
 #     File Name: autoDiaggui_SPECTRUM.sh
-#        Author: Takafumi Ushiba, Hirotaka Yuzurihara
+#        Author: Takafumi Ushiba, Hirotaka Yuzurihara, Kouseki Miyo
 # Last Modified: 2021/10/25 14:43:20
 #******************************************#
 
@@ -43,7 +43,7 @@ echo "DATE : $DATE_BEG"
 echo "GPS : $GPS_BEG"
 #exit 1
 
-REFNUM=`cat REF_SPECTRUM.txt`
+REFNUM=`cat /users/ushiba/script/REF_SPECTRUM.txt`
 REFNUM=`printf "%d" ${REFNUM}`
 let REFNUM=${REFNUM}+1
 
