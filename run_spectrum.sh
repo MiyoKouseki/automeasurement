@@ -5,7 +5,7 @@
 #******************************************#
 
 #####  User parameter
-DEBUG=0
+DEBUG=1
 
 if [ $# -ne 2 ]; then
     echo "Error : this script needs the date string, such as TypeA \"2021/11/1 13:53:02 UTC\""
@@ -16,7 +16,7 @@ fi
 
 
 sustype="$1"
-FILES=`cat "templates.txt" | grep -v -e '^#' | grep "SPE_${sustype}_.*.xml"`
+FILES=`cat "templates.txt" | grep -v -e '^#' | grep "SPE_${sustype}.*.xml"`
 if [ -z "$FILES" ]; then
     echo "No template files."
     exit 1
@@ -30,16 +30,17 @@ DATE_BEG="$2"
 GPS_BEG=`/users/das/bin/date2gps.py "${DATE_BEG}"`
 GPS_BEG_TAIL="000000000"
 
-REFNUM=`cat /users/ushiba/script/REF_SPECTRUM.txt`
+REFFILE='/users/ushiba/script/REF_SPECTRUM.txt'
+REFNUM=`cat ${REFFILE}`
 REFNUM=`printf "%d" ${REFNUM}`
 let REFNUM=${REFNUM}+1
 
-echo ${REFNUM}>REF_SPECTRUM.txt
+echo ${REFNUM}>${REFFILE}
+echo "REFNUM is updated to ${REFNUM}"
 let DIR=${REFNUM}/100*100
 REFNUM=`printf "%04d" ${REFNUM}`
 
 SAVE="/kagra/Dropbox/Measurements/VIS/SPECTRA"
-
 
 #####  Helper function
 function measurement(){
@@ -47,8 +48,8 @@ function measurement(){
     local NAME=`basename ${XML%.*}`
     mkdir -p ${SAVE}/${DIR}
     printf "\033[31;01m=== Running ${NAME}.xml ===\033[00m\n"
-    #[ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
-    [ ${DEBUG} = "1" ] && cmd=cat
+    [ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
+    #[ ${DEBUG} = "1" ] && cmd=cat
     ${cmd} <<EOF
 open
 restore ${1}

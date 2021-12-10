@@ -2,6 +2,16 @@
 
 テンプレファイルを大量に実行するスクリプト。メンテを考えてBashで書くべし。グラフ描画などは他のリポジトリでおこなう。
 
+## Template file
+
+SPE_{sustype}_{stage}_{doftype}_{refnum}.xml
+
+ * sustype : suspension type. TyepA, TypeB, TypeBp.
+ * stage   : stage. IP, BF, .. , TM.
+ * doftype : EUL or SENS
+ * refnum  : reference number.
+
+
 ## Files
 
 **./run_spectrum.sh**
