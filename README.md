@@ -4,7 +4,7 @@
 
 ## Template file
 
-SPE_{sustype}_{stage}_{doftype}_{refnum}.xml
+SPE\_{sustype}\_{stage}\_{doftype}\_{refnum}.xml
 
  * sustype : suspension type. TyepA, TypeB, TypeBp.
  * stage   : stage. IP, BF, .. , TM.
