@@ -2,7 +2,6 @@
 #******************************************#
 #     File Name: autoDiaggui_SPECTRUM.sh
 #        Author: Takafumi Ushiba, Hirotaka Yuzurihara, Kouseki Miyo
-# Last Modified: 2021/10/25 14:43:20
 #******************************************#
 
 #####  User parameter
@@ -21,7 +20,6 @@ FILES=`cat <<EOF | grep -v -e '^#'
 /users/ushiba/template/spectrum/SPE_TypeA_OPLEV_0000.xml
 #------ End of File List ------#
 EOF`
-SAVE="/kagra/Dropbox/Measurements/VIS/SPECTRA"
 
 if [ $# -ne 1 ]; then
     echo "Error : this script needs the date string, such as \"2021/11/1 13:53:02 UTC\""
@@ -49,23 +47,20 @@ let REFNUM=${REFNUM}+1
 
 echo ${REFNUM}>REF_SPECTRUM.txt
 let DIR=${REFNUM}/100*100
-
 REFNUM=`printf "%04d" ${REFNUM}`
- 
+
+SAVE="/kagra/Dropbox/Measurements/VIS/SPECTRA"
+
 #####  Helper function
 function measurement(){
-#    OPTIC=`printf ${1} | awk -F'_' '{print $2}'`
-#    STATE=`caget -t K1:GRD-VIS_${OPTIC}_STATE_S`
-#    local XML=`basename "$1" | sed -e "s/_0000/_${REFNUM}/g" -e "s/STATE/${STATE}/g"`
     local XML=`basename "$1" | sed -e "s/_0000/_${REFNUM}/g"`
-#    local XML=${1}
-#    local DATE=`date +%y%m%d_%H%M%S`
     local NAME=`basename ${XML%.*}`
     mkdir -p ${SAVE}/${DIR}
     printf "\033[31;01m=== Running ${NAME}.xml ===\033[00m\n"
-    [ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
+    #[ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
+    [ ${DEBUG} = "1" ] && cmd=cat
     ${cmd} <<EOF
-open
+open	   
 restore ${1}
 set Sync.Start = ${GPS_BEG}${GPS_BEG_TAIL}
 run -w
