@@ -1,30 +1,24 @@
 #!/bin/bash
 #******************************************#
-#     File Name: autoDiaggui_SPECTRUM.sh
+#     File Name: run_specrum.sh
 #        Author: Takafumi Ushiba, Hirotaka Yuzurihara, Kouseki Miyo
 #******************************************#
 
 #####  User parameter
-DEBUG=1
-FILES=`cat <<EOF | grep -v -e '^#'
-#--------   File List  --------#
-/users/ushiba/template/spectrum/SPE_TypeA_IP_EUL_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_IP_SENS_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_BF_EUL_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_BF_SENS_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_GAS_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_MN_EUL_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_MN_SENS_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_IM_EUL_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_IM_SENS_0000.xml
-/users/ushiba/template/spectrum/SPE_TypeA_OPLEV_0000.xml
-#------ End of File List ------#
-EOF`
+DEBUG=0
 
-if [ $# -ne 1 ]; then
-    echo "Error : this script needs the date string, such as \"2021/11/1 13:53:02 UTC\""
+if [ $# -ne 2 ]; then
+    echo "Error : this script needs the date string, such as TypeA \"2021/11/1 13:53:02 UTC\""
     echo ""
-    echo "usage : autoDiaggui_SPECTRUM.sh \"2021/11/1 13:53:02 UTC\""
+    echo "usage : autoDiaggui_SPECTRUM.sh TypeA \"2021/11/1 13:53:02 UTC\""
+    exit 1
+fi
+
+
+sustype="$1"
+FILES=`cat "templates.txt" | grep -v -e '^#' | grep "SPE_${sustype}_.*.xml"`
+if [ -z "$FILES" ]; then
+    echo "No template files."
     exit 1
 fi
 
@@ -32,14 +26,9 @@ fi
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate noiseb 
 
-DATE_BEG="$1"
-echo $DATE_BEG
+DATE_BEG="$2"
 GPS_BEG=`/users/das/bin/date2gps.py "${DATE_BEG}"`
 GPS_BEG_TAIL="000000000"
-echo "/users/das/bin/date2gps.py ""${DATE_BEG}"""
-echo "DATE : $DATE_BEG"
-echo "GPS : $GPS_BEG"
-#exit 1
 
 REFNUM=`cat /users/ushiba/script/REF_SPECTRUM.txt`
 REFNUM=`printf "%d" ${REFNUM}`
@@ -51,6 +40,7 @@ REFNUM=`printf "%04d" ${REFNUM}`
 
 SAVE="/kagra/Dropbox/Measurements/VIS/SPECTRA"
 
+
 #####  Helper function
 function measurement(){
     local XML=`basename "$1" | sed -e "s/_0000/_${REFNUM}/g"`
@@ -60,7 +50,7 @@ function measurement(){
     #[ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
     [ ${DEBUG} = "1" ] && cmd=cat
     ${cmd} <<EOF
-open	   
+open
 restore ${1}
 set Sync.Start = ${GPS_BEG}${GPS_BEG_TAIL}
 run -w
