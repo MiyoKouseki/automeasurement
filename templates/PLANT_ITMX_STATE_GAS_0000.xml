@@ -87,20 +87,20 @@
     <Param Name="RampDown" Type="double">1</Param>
     <Param Name="RampUp" Type="double">0</Param>
     <Param Name="StimulusType[0]" Type="int">7</Param>
-    <Param Name="StimulusType[1]" Type="int">0</Param>
-    <Param Name="StimulusType[2]" Type="int">0</Param>
-    <Param Name="StimulusType[3]" Type="int">0</Param>
-    <Param Name="StimulusType[4]" Type="int">0</Param>
+    <Param Name="StimulusType[1]" Type="int">7</Param>
+    <Param Name="StimulusType[2]" Type="int">7</Param>
+    <Param Name="StimulusType[3]" Type="int">7</Param>
+    <Param Name="StimulusType[4]" Type="int">7</Param>
     <Param Name="StimulusFrequency[0]" Type="double" Unit="Hz">0</Param>
-    <Param Name="StimulusFrequency[1]" Type="double" Unit="Hz">100</Param>
-    <Param Name="StimulusFrequency[2]" Type="double" Unit="Hz">100</Param>
-    <Param Name="StimulusFrequency[3]" Type="double" Unit="Hz">100</Param>
-    <Param Name="StimulusFrequency[4]" Type="double" Unit="Hz">100</Param>
+    <Param Name="StimulusFrequency[1]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequency[2]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequency[3]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequency[4]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusAmplitude[0]" Type="double">25000</Param>
-    <Param Name="StimulusAmplitude[1]" Type="double">0</Param>
-    <Param Name="StimulusAmplitude[2]" Type="double">0</Param>
-    <Param Name="StimulusAmplitude[3]" Type="double">0</Param>
-    <Param Name="StimulusAmplitude[4]" Type="double">0</Param>
+    <Param Name="StimulusAmplitude[1]" Type="double">40000</Param>
+    <Param Name="StimulusAmplitude[2]" Type="double">40000</Param>
+    <Param Name="StimulusAmplitude[3]" Type="double">40000</Param>
+    <Param Name="StimulusAmplitude[4]" Type="double">35000</Param>
     <Param Name="StimulusOffset[0]" Type="double">0</Param>
     <Param Name="StimulusOffset[1]" Type="double">0</Param>
     <Param Name="StimulusOffset[2]" Type="double">0</Param>
@@ -116,11 +116,11 @@
     <Param Name="StimulusRatio[2]" Type="double">0.5</Param>
     <Param Name="StimulusRatio[3]" Type="double">0.5</Param>
     <Param Name="StimulusRatio[4]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[0]" Type="double" Unit="Hz">10</Param>
-    <Param Name="StimulusFrequencyRange[1]" Type="double" Unit="Hz">10000</Param>
-    <Param Name="StimulusFrequencyRange[2]" Type="double" Unit="Hz">10000</Param>
-    <Param Name="StimulusFrequencyRange[3]" Type="double" Unit="Hz">10000</Param>
-    <Param Name="StimulusFrequencyRange[4]" Type="double" Unit="Hz">10000</Param>
+    <Param Name="StimulusFrequencyRange[0]" Type="double" Unit="Hz">20</Param>
+    <Param Name="StimulusFrequencyRange[1]" Type="double" Unit="Hz">20</Param>
+    <Param Name="StimulusFrequencyRange[2]" Type="double" Unit="Hz">20</Param>
+    <Param Name="StimulusFrequencyRange[3]" Type="double" Unit="Hz">20</Param>
+    <Param Name="StimulusFrequencyRange[4]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[0]" Type="double">0</Param>
     <Param Name="StimulusAmplitudeRange[1]" Type="double">0</Param>
     <Param Name="StimulusAmplitudeRange[2]" Type="double">0</Param>
@@ -157,7 +157,7 @@
     <Param Name="MeasurementChannel[9]" Type="string" Unit="channel">K1:VIS-ITMX_BF_DAMP_GAS_IN1_DQ</Param>
     <Param Name="MeasurementActive[9]" Type="boolean">true</Param>
     <Param Name="StimulusChannel[0]" Type="string" Unit="channel">K1:VIS-ITMX_F0_TEST_GAS_EXC</Param>
-    <Param Name="StimulusActive[0]" Type="boolean">true</Param>
+    <Param Name="StimulusActive[0]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[0]" Type="string" Unit="channel"></Param>
     <Param Name="StimulusFilter[0]" Type="string">zpk([],[],2,&quot;n&quot;)</Param>
     <Param Name="MeasurementChannelRate[10]" Type="int">1024</Param>
@@ -178,22 +178,22 @@
     <Param Name="MeasurementChannelRate[15]" Type="int">1024</Param>
     <Param Name="MeasurementChannel[15]" Type="string" Unit="channel">K1:VIS-ITMX_BF_DAMP_Y_IN1_DQ</Param>
     <Param Name="MeasurementActive[15]" Type="boolean">false</Param>
-    <Param Name="StimulusChannel[1]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusChannel[1]" Type="string" Unit="channel">K1:VIS-ITMX_F1_TEST_GAS_EXC</Param>
     <Param Name="StimulusActive[1]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[1]" Type="string" Unit="channel"></Param>
-    <Param Name="StimulusFilter[1]" Type="string"></Param>
-    <Param Name="StimulusChannel[2]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusFilter[1]" Type="string">zpk([],[],2,&quot;n&quot;)</Param>
+    <Param Name="StimulusChannel[2]" Type="string" Unit="channel">K1:VIS-ITMX_F2_TEST_GAS_EXC</Param>
     <Param Name="StimulusActive[2]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[2]" Type="string" Unit="channel"></Param>
-    <Param Name="StimulusFilter[2]" Type="string"></Param>
-    <Param Name="StimulusChannel[3]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusFilter[2]" Type="string">zpk([],[],2,&quot;n&quot;)</Param>
+    <Param Name="StimulusChannel[3]" Type="string" Unit="channel">K1:VIS-ITMX_F3_TEST_GAS_EXC</Param>
     <Param Name="StimulusActive[3]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[3]" Type="string" Unit="channel"></Param>
-    <Param Name="StimulusFilter[3]" Type="string"></Param>
-    <Param Name="StimulusChannel[4]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusFilter[3]" Type="string">zpk([],[],2,&quot;n&quot;)</Param>
+    <Param Name="StimulusChannel[4]" Type="string" Unit="channel">K1:VIS-ITMX_BF_TEST_GAS_EXC</Param>
     <Param Name="StimulusActive[4]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[4]" Type="string" Unit="channel"></Param>
-    <Param Name="StimulusFilter[4]" Type="string"></Param>
+    <Param Name="StimulusFilter[4]" Type="string">zpk([],[],2,&quot;n&quot;)</Param>
     <Param Name="MeasurementChannelRate[16]" Type="int">2048</Param>
     <Param Name="MeasurementChannel[16]" Type="string" Unit="channel">K1:VIS-ITMX_F0_TEST_GAS_IN2</Param>
     <Param Name="MeasurementActive[16]" Type="boolean">true</Param>
@@ -209,6 +209,174 @@
     <Param Name="MeasurementChannelRate[20]" Type="int">2048</Param>
     <Param Name="MeasurementChannel[20]" Type="string" Unit="channel">K1:VIS-ITMX_BF_TEST_GAS_IN2</Param>
     <Param Name="MeasurementActive[20]" Type="boolean">true</Param>
+    <Param Name="MeasurementChannelRate[21]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[21]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[21]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[22]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[22]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[22]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[23]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[23]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[23]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[24]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[24]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[24]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[25]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[25]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[25]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[26]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[26]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[26]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[27]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[27]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[27]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[28]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[28]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[28]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[29]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[29]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[29]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[30]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[30]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[30]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[31]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[31]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[31]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[32]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[32]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[32]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[33]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[33]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[33]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[34]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[34]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[34]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[35]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[35]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[35]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[36]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[36]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[36]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[40]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[40]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[40]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[41]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[41]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[41]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[42]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[42]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[42]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[43]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[43]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[43]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[44]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[44]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[44]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[45]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[45]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[45]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[48]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[48]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[48]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[49]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[49]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[49]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[50]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[50]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[50]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[51]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[51]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[51]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[52]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[52]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[52]" Type="boolean">false</Param>
+    <Param Name="MeasurementChannelRate[53]" Type="int">0</Param>
+    <Param Name="MeasurementChannel[53]" Type="string" Unit="channel"></Param>
+    <Param Name="MeasurementActive[53]" Type="boolean">false</Param>
+    <Param Name="StimulusChannel[5]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[5]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[5]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[5]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[5]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[5]" Type="double">0</Param>
+    <Param Name="StimulusPhase[5]" Type="double">0</Param>
+    <Param Name="StimulusType[5]" Type="int">0</Param>
+    <Param Name="StimulusRatio[5]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[5]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[5]" Type="double">0</Param>
+    <Param Name="StimulusFilter[5]" Type="string"></Param>
+    <Param Name="StimulusChannel[6]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[6]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[6]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[6]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[6]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[6]" Type="double">0</Param>
+    <Param Name="StimulusPhase[6]" Type="double">0</Param>
+    <Param Name="StimulusType[6]" Type="int">0</Param>
+    <Param Name="StimulusRatio[6]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[6]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[6]" Type="double">0</Param>
+    <Param Name="StimulusFilter[6]" Type="string"></Param>
+    <Param Name="StimulusChannel[7]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[7]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[7]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[7]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[7]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[7]" Type="double">0</Param>
+    <Param Name="StimulusPhase[7]" Type="double">0</Param>
+    <Param Name="StimulusType[7]" Type="int">0</Param>
+    <Param Name="StimulusRatio[7]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[7]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[7]" Type="double">0</Param>
+    <Param Name="StimulusFilter[7]" Type="string"></Param>
+    <Param Name="StimulusChannel[8]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[8]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[8]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[8]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[8]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[8]" Type="double">0</Param>
+    <Param Name="StimulusPhase[8]" Type="double">0</Param>
+    <Param Name="StimulusType[8]" Type="int">0</Param>
+    <Param Name="StimulusRatio[8]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[8]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[8]" Type="double">0</Param>
+    <Param Name="StimulusFilter[8]" Type="string"></Param>
+    <Param Name="StimulusChannel[9]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[9]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[9]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[9]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[9]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[9]" Type="double">0</Param>
+    <Param Name="StimulusPhase[9]" Type="double">0</Param>
+    <Param Name="StimulusType[9]" Type="int">0</Param>
+    <Param Name="StimulusRatio[9]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[9]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[9]" Type="double">0</Param>
+    <Param Name="StimulusFilter[9]" Type="string"></Param>
+    <Param Name="StimulusChannel[10]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[10]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[10]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[10]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[10]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[10]" Type="double">0</Param>
+    <Param Name="StimulusPhase[10]" Type="double">0</Param>
+    <Param Name="StimulusType[10]" Type="int">0</Param>
+    <Param Name="StimulusRatio[10]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[10]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[10]" Type="double">0</Param>
+    <Param Name="StimulusFilter[10]" Type="string"></Param>
+    <Param Name="StimulusChannel[11]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusActive[11]" Type="boolean">false</Param>
+    <Param Name="StimulusReadback[11]" Type="string" Unit="channel"></Param>
+    <Param Name="StimulusAmplitude[11]" Type="double">0</Param>
+    <Param Name="StimulusFrequency[11]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusOffset[11]" Type="double">0</Param>
+    <Param Name="StimulusPhase[11]" Type="double">0</Param>
+    <Param Name="StimulusType[11]" Type="int">0</Param>
+    <Param Name="StimulusRatio[11]" Type="double">0.5</Param>
+    <Param Name="StimulusFrequencyRange[11]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusAmplitudeRange[11]" Type="double">0</Param>
+    <Param Name="StimulusFilter[11]" Type="string"></Param>
   </LIGO_LW>
   <LIGO_LW Name="Plot[1][0]" Type="Plot">
     <Param Name="Flag" Type="string">Settings</Param>
@@ -1213,7 +1381,7 @@
     <Param Name="CursorTrace" Type="int">-1717986919</Param>
     <Param Name="CursorStyle" Type="int">1</Param>
     <Param Name="CursorType" Type="int">0</Param>
-    <Param Name="CursorX" Type="double" Dim="2">0	0</Param>
+    <Param Name="CursorX" Type="double" Dim="2">0.000977036	0.000977036</Param>
     <Param Name="CursorH" Type="double" Dim="2">0	100</Param>
     <Param Name="CursorValid" Type="boolean" Dim="8">false	false	false	false	false	false	false	false</Param>
     <Param Name="CursorN" Type="double" Dim="8">0	0	0	0	0	0	0	0</Param>
