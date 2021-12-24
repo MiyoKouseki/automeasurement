@@ -67,37 +67,21 @@ REFNUM=`date +%H%M`
 template=${templates_dir}/PLANT_${SUS}_STATE_${STAGE}_0000.xml
 output=${outputs_dir}/PLANT_${SUS}_${STATE}_${STAGE}_${EXC}_${DOF}_${REFNUM}.xml
 
-#
-# Read params.txt
-#
-# [Memo] '#' でコメントアウト
-# [Memo] 重複した場合は一つ目を読む
-# [Memo] フィルターがない場合空白でも可。
-# 
-
 if [ $STAGE = GAS ]; then
     STAGE=$4
     DOF=$2
 fi
-exc_name=${SUS}_${STAGE}_${EXC}_${DOF}_EXC
-params=(`cat params.txt|grep -v -e '^#'|grep ${exc_name}|xargs -d'\n'`)
-bw=${params[1]}
-amp=${params[2]}
-filter=${params[3]}
-exc_channel=K1:VIS-${exc_name}
 
 #
 # Run
 #
 DEBUG=1
-printf "\033[31;01m=== Running ${exc_name} ===\033[00m\n"
+printf "\033[31;01m=== Running ${SUS}_${STAGE}_${EXC}_${DOF} ===\033[00m\n"
 echo "open" >tmp
 echo "restore "$template >>tmp
 echo "set Test.BW = ${BW}">>tmp
-#echo "set Test.StimulusChannel[0] = ${exc_channel}">>tmp
 echo "set Test.StimulusActive[${exc_dof_num}] = true">>tmp
-#echo "set Test.StimulusAmplitude[0] = ${amp}">>tmp
-#echo "set Test.StimulusFilter[0] = ${filter}">>tmp
+# 複数でExcitationしないために使わないEXCチャンネルのActiveはFalseにしたほうがいい。
 echo "run -w" >>tmp
 echo "save "$output >> tmp
 echo "quit" >> tmp
