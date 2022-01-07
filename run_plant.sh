@@ -59,42 +59,24 @@ if [ ! -f $template ]; then
     exit 1;
 fi
 
-
-# Check DOF [fixme]
+# Check DOF
 DOF=$4
-if [[ "$DOF" = "L" ]] || [[ "$DOF" = "F0" ]]; then
-    DOFNUM=0
-elif [[ "$DOF" = "P" ]] || [[ "$DOF" = "F1" ]]; then
-    DOFNUM=1    
-elif [[ "$DOF" = "R" ]] || [[ "$DOF" = "F2" ]]; then
-    DOFNUM=2    
-elif [[ "$DOF" = "T" ]] || [[ "$DOF" = "F3" ]]; then
-    DOFNUM=3    
-elif [[ "$DOF" = "V" ]] || [[ "$DOF" = "BF" ]]; then
-    DOFNUM=4    
-elif [[ "$DOF" = "Y" ]]; then
-    DOFNUM=5
-elif [[ "$DOF" = "H1" ]]; then
-    DOFNUM=6
-elif [[ "$DOF" = "H2" ]]; then
-    DOFNUM=7
-elif [[ "$DOF" = "H3" ]]; then
-    DOFNUM=8
-elif [[ "$DOF" = "V1" ]]; then
-    DOFNUM=9
-elif [[ "$DOF" = "V2" ]]; then
-    DOFNUM=10
-elif [[ "$DOF" = "V3" ]]; then
-    DOFNUM=11   
-else
-    echo '${DOF} is invalid.'
-    exit 1;
-fi
-s
-# Replacement for GAS filter
 if [ $STAGE = GAS ]; then
     STAGE=$4
     DOF=$2
+fi
+
+# Get Excitation Channel Number
+DOFNUM=`grep -e "StimulusChannel.*${SUS}_${STAGE}_${EXC}_${DOF}" $template | sed -r 's/^.*StimulusChannel\[([0-9]+)\].*$/\1/'`
+isNumeric() {
+  expr "$1" + 1 >/dev/null 2>&1
+  if [ $? -ge 2 ]; then
+    return 1
+  fi
+  return 0
+}
+if ! isNumeric ${DOFNUM} ; then
+  exit 1;
 fi
 
 # Check output
