@@ -34,9 +34,10 @@ elif [ "$STAGE" = "PAY" ]; then
 else
     STAGES=${STAGE}
 fi    
+
 # Set DOFs
 if [ "$DOF" = "ALL" ]; then
-    DOFS=(L T Y P R V)
+    DOFS=(L T Y P R V F0 F1 F2 F3 BF)
 elif [ "$DOF" = "HOR" ]; then
     DOFS=(L T Y)
 elif [ "$DOF" = "VER" ]; then
@@ -71,11 +72,17 @@ if [ ! -e ${outputs_dir} ]; then
 fi
 refnum=`date +%Y%m%d%H%M`
 
+# Check STATE
+STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S` 
+if [ $? -gt 0 ]; then
+    exit # fixme
+fi
+
 # Run 
 for STAGE in ${STAGES[@]}; do
     for DOF in ${DOFS[@]}; do       	
 	output=${outputs_dir}/PLANT_${SUS}_${STATE}_${STAGE}_${EXC}_${DOF}_${refnum}.xml
-	run_plant ${SUS} ${STAGE} ${EXC} ${DOF} ${BW} ${output} ${DEBUG}
+	run_plant ${SUS} ${STAGE} ${EXC} ${DOF} ${BW} ${output} ${DEBUG} ${STATE}
     done
 done
 

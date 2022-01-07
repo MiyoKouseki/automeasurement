@@ -6,7 +6,7 @@
 # ./templates/SPECTRA_{SUS}_{STATE}_{STAGE}_{TIME}.xml
 # ./measurements/{SUS}/{PLANT,SPECTRA}/{YYYY}/{mmdd}/*{HHMM}.xml
 
-if [ $# -ne 7 ]; then
+if [ $# -ne 8 ]; then
   echo "指定された引数は$#個です。" 1>&2
   echo "実行するには4個の引数が必要です。" 1>&2
   exit 1
@@ -56,21 +56,6 @@ else
     exit 1;
 fi
 
-# Check Correct DOF
-if [ "$DOF" = "P" ]; then
-    if [ "$STAGE" = "IP" ]; then
-	exit 1;
-    fi
-elif [ "$DOF" = "R" ]; then
-    if [ "$STAGE" = "IP" ]; then
-	exit 1;
-    fi
-elif [ "$DOF" = "V" ]; then
-    if [ "$STAGE" = "IP" ]; then
-	exit 1;
-    fi
-fi	
-
 # Check BW
 BW=$5
 if [ "$STAGE" = "BF" ]; then
@@ -94,11 +79,8 @@ AVE=3
 # Check output file name
 output=${6}
 
-# Check STATE
-STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S` 
-if [ $? -gt 0 ]; then
-    exit # fixme
-fi
+#
+STATE=${7}
 
 # Check Template
 templates_dir=/kagra/Dropbox/Measurements/VIS/scripts/automeasurement/templates
