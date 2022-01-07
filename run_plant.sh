@@ -6,7 +6,7 @@
 # ./templates/SPECTRA_{SUS}_{STATE}_{STAGE}_{TIME}.xml
 # ./measurements/{SUS}/{PLANT,SPECTRA}/{YYYY}/{mmdd}/*{HHMM}.xml
 
-if [ $# -ne 6 ]; then
+if [ $# -ne 7 ]; then
   echo "指定された引数は$#個です。" 1>&2
   echo "実行するには4個の引数が必要です。" 1>&2
   exit 1
@@ -56,6 +56,21 @@ else
     exit 1;
 fi
 
+# Check Correct DOF
+if [ "$DOF" = "P" ]; then
+    if [ "$STAGE" = "IP" ]; then
+	exit 1;
+    fi
+elif [ "$DOF" = "R" ]; then
+    if [ "$STAGE" = "IP" ]; then
+	exit 1;
+    fi
+elif [ "$DOF" = "V" ]; then
+    if [ "$STAGE" = "IP" ]; then
+	exit 1;
+    fi
+fi	
+
 # Check BW
 BW=$5
 if [ "$STAGE" = "BF" ]; then
@@ -69,25 +84,15 @@ elif [ "$STAGE" = "IP" ]; then
 elif [ "$STAGE" = "GAS" ] || [ "$STAGE" = "IM" ] || [ "$STAGE" = "MN" ]; then
     BW=0.01
 else
-    echo '${STAGE} is invalid stage name.'
+    echo "${STAGE} is invalid stage name."
     exit 1;
 fi
 
 # Check AVE
 AVE=3
 
-
 # Check output file name
 output=${6}
-
-# Confirmation
-# read -p "${SUS}_${STAGE}_${EXC}_${DOF}, BW=${BW}, Ave=${AVE}. (Enter) :" YN
-# if [ "${YN}" = "" ]; then
-#     echo ""
-# else
-#     echo "you chose ${YN}. Stop. "
-#   exit 1;
-# fi
 
 # Check STATE
 STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S` 
@@ -109,10 +114,6 @@ if [ $STAGE = GAS ]; then
     DOF=$2
 fi
 
-
-# Check if others measure the same suspension.
-echo "no one measure ${SUS}"
-
 # Check output
 if [ -f $output ]; then
     echo '${output} already exists.'
@@ -120,8 +121,8 @@ if [ -f $output ]; then
 fi
 
 # Run
-DEBUG=0
-printf "\033[31;01m=== Running ${SUS}_${STAGE}_${EXC}_${DOF} ===\033[00m\n"
+DEBUG=$7
+printf "\033[30;01m=== Running ${SUS}_${STAGE}_${EXC}_${DOF} ===\033[00m\n"
 echo "open" >tmp
 echo "restore "$template >>tmp
 echo "set Test.BW = ${BW}">>tmp

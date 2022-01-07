@@ -46,18 +46,23 @@ else
 fi
 
 # Confirmation
-echo "Supension : ${SUS}"
-echo "Stage     : ${STAGES[@]}"
-echo "DOF       : ${DOFS}"
-#echo "BW        : ${BW} Hz"
-echo "AVE       : ${AVE}"
-read -p "(Enter):" YN
+echo -e " \033[1;31mSupension : ${SUS}\033[0;39m"
+echo -e " \033[1;31mStage     : ${STAGES[@]}\033[0;39m"
+echo -e " \033[1;31mDOF       : ${DOFS[@]}\033[0;39m"
+echo -e " \033[1;31mBW        : ${BW} Hz\033[0;39m"
+echo -e " \033[1;31mAVE       : ${AVE}\033[0;39m"
+read -p "(y/n):" YN
 if [ "${YN}" = "" ]; then
-    echo ""
+    DEBUG=0
+elif [ "${YN}" = "y" ]; then
+    DEBUG=1
 else
     echo "you chose ${YN}. Stop. "
   exit 1;
 fi
+
+# Check if other workers measure the same suspension.
+echo "OK. No one measure ${SUS}"
 
 # Set Refnumber
 outputs_dir=/kagra/Dropbox/Measurements/VIS/PLANT/${SUS}/`date +%Y/%m`
@@ -70,12 +75,11 @@ refnum=`date +%Y%m%d%H%M`
 for STAGE in ${STAGES[@]}; do
     for DOF in ${DOFS[@]}; do       	
 	output=${outputs_dir}/PLANT_${SUS}_${STATE}_${STAGE}_${EXC}_${DOF}_${refnum}.xml
-	run_plant ${SUS} ${STAGE} ${EXC} ${DOF} 0.1 ${output}
+	run_plant ${SUS} ${STAGE} ${EXC} ${DOF} ${BW} ${output} ${DEBUG}
     done
 done
 
 # Open the latest XML file with diaggui
-DEBUG=0
 latest=`ls -rt ${outputs_dir} | grep xml |tail -n 1`
 [ ${DEBUG} = "1" ] && cmd=diaggui || cmd=echo
 $cmd $outputs_dir/$latest
