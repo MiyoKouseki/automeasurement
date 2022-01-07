@@ -6,7 +6,7 @@
 # ./templates/SPECTRA_{SUS}_{STATE}_{STAGE}_{TIME}.xml
 # ./measurements/{SUS}/{PLANT,SPECTRA}/{YYYY}/{mmdd}/*{HHMM}.xml
 
-if [ $# -ne 5 ]; then
+if [ $# -ne 6 ]; then
   echo "指定された引数は$#個です。" 1>&2
   echo "実行するには4個の引数が必要です。" 1>&2
   exit 1
@@ -69,21 +69,25 @@ elif [ "$STAGE" = "IP" ]; then
 elif [ "$STAGE" = "GAS" ] || [ "$STAGE" = "IM" ] || [ "$STAGE" = "MN" ]; then
     BW=0.01
 else
-    echo '${STATE} is invalid stage name.'
+    echo '${STAGE} is invalid stage name.'
     exit 1;
 fi
 
 # Check AVE
 AVE=3
 
+
+# Check output file name
+output=${6}
+
 # Confirmation
-read -p "Are you sure you excite ${SUS}_${STAGE}_${EXC}_${DOF}\n BW is ${BW}\n Ave is ${AVE}. (Enter) :" YN
-if [ "${YN}" = "" ]; then
-    echo ""
-else
-    echo "you chose ${YN}. Stop. "
-  exit 1;
-fi
+# read -p "${SUS}_${STAGE}_${EXC}_${DOF}, BW=${BW}, Ave=${AVE}. (Enter) :" YN
+# if [ "${YN}" = "" ]; then
+#     echo ""
+# else
+#     echo "you chose ${YN}. Stop. "
+#   exit 1;
+# fi
 
 # Check STATE
 STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S` 
@@ -99,18 +103,6 @@ if [ ! -f $template ]; then
     exit 1;
 fi
 
-
-# Set Output
-outputs_dir=/kagra/Dropbox/Measurements/VIS/PLANT/${SUS}/`date +%Y/%m`
-if [ ! -e ${outputs_dir} ]; then
-  mkdir -p ${outputs_dir}
-fi
-output=${outputs_dir}/PLANT_${SUS}_${STATE}_${STAGE}_${EXC}_${DOF}_`date +%Y%m%d%H%M`.xml
-if [ -f $output ]; then
-    echo '${output} already exists.'
-    exit 1;
-fi
-
 # Replacement for GAS filter
 if [ $STAGE = GAS ]; then
     STAGE=$4
@@ -121,10 +113,14 @@ fi
 # Check if others measure the same suspension.
 echo "no one measure ${SUS}"
 
-#
+# Check output
+if [ -f $output ]; then
+    echo '${output} already exists.'
+    exit 1;
+fi
+
 # Run
-#
-DEBUG=1
+DEBUG=0
 printf "\033[31;01m=== Running ${SUS}_${STAGE}_${EXC}_${DOF} ===\033[00m\n"
 echo "open" >tmp
 echo "restore "$template >>tmp
@@ -137,7 +133,3 @@ echo "quit" >> tmp
 [ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
 $cmd < tmp
 rm tmp
-
-# Open the latest XML file with diaggui
-latest=`ls -rt ${outputs_dir} | grep xml |tail -n 1`
-diaggui $outputs_dir/$latest
