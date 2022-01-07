@@ -59,7 +59,11 @@ fi
 # Check BW
 BW=$5
 if [ "$STAGE" = "BF" ]; then
-    BW=0.001
+    if [ "$DOF" = "Y" ]; then    
+	BW=0.001
+    elif [ "$STAGE" = "IP" ]; then
+	BW=0.003
+    fi	
 elif [ "$STAGE" = "IP" ]; then
     BW=0.003
 elif [ "$STAGE" = "GAS" ] || [ "$STAGE" = "IM" ] || [ "$STAGE" = "MN" ]; then
