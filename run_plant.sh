@@ -91,14 +91,14 @@ fi
 DEBUG=$7
 tmp=${output}_tmp
 printf "\033[30;01m=== Running ${SUS}_${STAGE}_${EXC}_${DOF} ===\033[00m\n"
-echo "open" >tmp
-echo "restore "$template >>tmp
-echo "set Test.BW = ${BW}">>tmp
-echo "set Test.StimulusActive[${DOFNUM}] = true">>tmp
+echo "open" >$tmp
+echo "restore "$template >>$tmp
+echo "set Test.BW = ${BW}">>$tmp
+echo "set Test.StimulusActive[${DOFNUM}] = true">>$tmp
 # [Memo] 複数でExcitationしないために使わないEXCチャンネルのActiveはFalseにしたほうがいい。
-echo "run -w" >>tmp
-echo "save "$output >> tmp
-echo "quit" >> tmp
+echo "run -w" >>$tmp
+echo "save "$output >>$tmp
+echo "quit" >>$tmp
 [ ${DEBUG} = "1" ] && cmd=diag || cmd=cat
-$cmd < tmp
-rm tmp
+$cmd < $tmp
+srm $tmp
