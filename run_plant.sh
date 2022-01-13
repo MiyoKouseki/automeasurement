@@ -89,6 +89,7 @@ fi
 
 # Run
 DEBUG=$7
+tmp=${output}_tmp
 printf "\033[30;01m=== Running ${SUS}_${STAGE}_${EXC}_${DOF} ===\033[00m\n"
 echo "open" >tmp
 echo "restore "$template >>tmp
