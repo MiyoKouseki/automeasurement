@@ -25,23 +25,6 @@ if [ "$EXC" != "TEST" ] && [ "$EXC" != "COILOUTF" ]; then
     exit 1;
 fi
 
-# Check BW
-BW=$5
-if [ "$STAGE" = "BF" ]; then
-    if [ "$DOF" = "Y" ]; then    
-	BW=0.001
-    else
-	BW=0.003
-    fi
-elif [ "$STAGE" = "IP" ]; then
-    BW=0.003
-elif [ "$STAGE" = "GAS" ] || [ "$STAGE" = "IM" ] || [ "$STAGE" = "MN" ]; then
-    BW=0.01
-else
-    echo "${STAGE} is invalid stage name."
-    exit 1;
-fi
-
 # Check AVE
 AVE=3
 
@@ -64,6 +47,23 @@ DOF=$4
 if [ $STAGE = GAS ]; then
     STAGE=$4
     DOF=$2
+fi
+
+# Check BW
+BW=$5
+if [ "$STAGE" = "BF" ]; then
+    if [ "$DOF" = "Y" ]; then    
+	BW=0.001
+    else
+	BW=0.003
+    fi
+elif [ "$STAGE" = "IP" ]; then
+    BW=0.003
+elif [ "$STAGE" = "GAS" ] || [ "$STAGE" = "IM" ] || [ "$STAGE" = "MN" ]; then
+    BW=0.01
+else
+    echo "${STAGE} is invalid stage name."
+    exit 1;
 fi
 
 # Get Excitation Channel Number
