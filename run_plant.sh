@@ -44,10 +44,6 @@ fi
 
 # Check DOF
 DOF=$4
-if [ $STAGE = GAS ]; then
-    STAGE=$4
-    DOF=$2
-fi
 
 # Check BW
 BW=$5
@@ -64,6 +60,12 @@ elif [ "$STAGE" = "GAS" ] || [ "$STAGE" = "IM" ] || [ "$STAGE" = "MN" ]; then
 else
     echo "${STAGE} is invalid stage name."
     exit 1;
+fi
+
+# Replace STAGE and DOF 
+if [ $STAGE = GAS ]; then
+    STAGE=$4
+    DOF=$2
 fi
 
 # Get Excitation Channel Number

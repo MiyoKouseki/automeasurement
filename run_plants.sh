@@ -87,6 +87,7 @@ for STAGE in ${STAGES[@]}; do
 done
 
 # Open the latest XML file with diaggui
-latest=`ls -rt ${outputs_dir} | grep xml |tail -n 1`
-[ ${DEBUG} = "1" ] && cmd=diaggui || cmd=echo
-$cmd $outputs_dir/$latest
+#latest=`ls -rt ${outputs_dir} | grep xml |tail -n 1`
+#[ ${DEBUG} = "1" ] && cmd=diaggui || cmd=echo
+#$cmd $outputs_dir/$latest
+#ls $outputs_dir | grep $refnum | xargs -l -P 3 $cmd
