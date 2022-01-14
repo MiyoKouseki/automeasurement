@@ -7,23 +7,12 @@ if [ $# -ne 5 ]; then
   exit 1
 fi
 
-# Check SUS
+#
 SUS=$1
-
-# Check STAGE
 STAGE=$2
-
-# Check EXC
 EXC=$3
-
-# Check DOF
 DOF=$4
-
-# Check BW
 BW=$5
-
-# Check AVE
-AVE=3
 
 # Set Stages
 if [ "$STAGE" = "ALL" ]; then
@@ -51,8 +40,6 @@ fi
 echo -e " \033[1;31mSupension : ${SUS}\033[0;39m"
 echo -e " \033[1;31mStage     : ${STAGES[@]}\033[0;39m"
 echo -e " \033[1;31mDOF       : ${DOFS[@]}\033[0;39m"
-echo -e " \033[1;31mBW        : ${BW} Hz\033[0;39m"
-echo -e " \033[1;31mAVE       : ${AVE}\033[0;39m"
 read -p "(y/n):" YN
 if [ "${YN}" = "" ]; then
     DEBUG=0
@@ -66,31 +53,70 @@ fi
 # Check if other workers measure the same suspension.
 echo "OK. No one measure ${SUS}"
 
-# Check outputs_dir
-outputs_dir=${plants_dir}/${SUS}/`date +%Y/%m`
-if [ ! -e ${outputs_dir} ]; then
-  mkdir -p ${outputs_dir}
-fi
-
 # Set Refnumber
 refnum=`date +%Y%m%d%H%M`
 
-# Check STATE
-STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S` 
-if [ $? -gt 0 ]; then
-    exit # fixme
-fi
+get_grdstate(){
+    SUS=$1
+    STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S`
+    if [ $? -gt 0 ]; then
+	exit # fixme
+    fi
+    echo $STATE
+}
 
-# Run 
+get_exc_channel(){
+    SUS=$1
+    STAGE=$2
+    EXC=$3
+    DOF=$4
+    if [ $STAGE = GAS ]; then
+	STAGE=$4
+	DOF=$2
+    fi
+    echo K1:VIS-${SUS}_${STAGE}_${EXC}_${DOF}_EXC    
+}
+
+get_template(){
+    SUS=$1
+    STAGE=$2
+    template=${templates_dir}/PLANT_${SUS}_STATE_${STAGE}_0000.xml
+    if [ ! -f $template ]; then
+	echo "No template file ${template}"
+	exit 1;
+    fi    
+    echo $template
+}
+
+get_output(){
+    SUS=$1
+    STATE=$2
+    STAGE=$3
+    EXC=$4
+    DOF=$5
+    refnum=$6
+    # Check outputs_dir
+    outputs_dir=${plants_dir}/${SUS}/`date +%Y/%m`
+    if [ ! -e ${outputs_dir} ]; then
+	mkdir -p ${outputs_dir}
+    fi
+    # Check output file
+    output=${outputs_dir}/PLANT_${SUS}_${STATE}_${STAGE}_${EXC}_${DOF}_${refnum}.xml
+    if [ -f $output ]; then
+	echo '${output} already exists.'
+	exit 1;
+    fi
+    echo $output
+}
+
+# Run
+
+STATE=`get_grdstate $SUS`
 for STAGE in ${STAGES[@]}; do
+    template=`get_template $SUS $STAGE`
     for DOF in ${DOFS[@]}; do       	
-	output=${outputs_dir}/PLANT_${SUS}_${STATE}_${STAGE}_${EXC}_${DOF}_${refnum}.xml
-	run_plant ${SUS} ${STAGE} ${EXC} ${DOF} ${BW} ${output} ${DEBUG} ${STATE}
+	output=`get_output $SUS $STATE $STAGE $EXC $DOF $refnum`
+	exc_channel=`get_exc_channel ${SUS} ${STAGE} ${EXC} ${DOF}`
+	run_plant ${template} ${output} ${exc_channel} ${DEBUG} 
     done
 done
-
-# Open the latest XML file with diaggui
-#latest=`ls -rt ${outputs_dir} | grep xml |tail -n 1`
-#[ ${DEBUG} = "1" ] && cmd=diaggui || cmd=echo
-#$cmd $outputs_dir/$latest
-#ls $outputs_dir | grep $refnum | xargs -l -P 3 $cmd
