@@ -6,9 +6,9 @@ trap 'signal_stop' SIGHUP
 signal_stop(){
     echo "STOP"
     # 1. Stop Excitation Signal
-    #
+    # - EXCチャンネルからFECを取る必要あり
     # 2. Stop Test Points
-    #
+    # - EXCチャンネルからFECを取る必要あり
 }
 
 #
