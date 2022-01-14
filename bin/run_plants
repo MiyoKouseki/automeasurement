@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#
 if [ $# -ne 5 ]; then
   echo "指定された引数は$#個です。" 1>&2
   echo "実行するには4個の引数が必要です。" 1>&2
@@ -65,11 +66,13 @@ fi
 # Check if other workers measure the same suspension.
 echo "OK. No one measure ${SUS}"
 
-# Set Refnumber
-outputs_dir=/kagra/Dropbox/Measurements/VIS/PLANT/${SUS}/`date +%Y/%m`
+# Check outputs_dir
+outputs_dir=${plants_dir}/${SUS}/`date +%Y/%m`
 if [ ! -e ${outputs_dir} ]; then
   mkdir -p ${outputs_dir}
 fi
+
+# Set Refnumber
 refnum=`date +%Y%m%d%H%M`
 
 # Check STATE
