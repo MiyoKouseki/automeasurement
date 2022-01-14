@@ -1,4 +1,15 @@
-#!/bin/bash
+#!/bin/bash -eu
+
+trap 'signal_stop' SIGINT
+trap 'signal_stop' SIGHUP
+
+signal_stop(){
+    echo "STOP"
+    # 1. Stop Excitation Signal
+    #
+    # 2. Stop Test Points
+    #
+}
 
 #
 template=$1
