@@ -1,0 +1,5 @@
+
+
+export AUTOMEASUREMENT_PATH=/kagra/Dropbox/Measurements/VIS
+export AUTOMEASUREMENT_BIN_PATH=$AUTOMEASUREMENT_PATH/scripts/automeasurement/bin
+export PATH=$PATH:$AUTOMEASUREMENT_BIN_PATH
