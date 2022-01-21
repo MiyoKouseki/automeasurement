@@ -1,8 +1,2 @@
-DROPBOX_MEASUREMENT_PATH=/kagra/Dropbox/Measurements/VIS
-DROPBOX_SCRIPT_PATH=/kagra/Dropbox/Subsystems/VIS/Scripts
-
-export templates_dir=${DROPBOX_MEASUREMENT_PATH}/TEMPLATES
-export plants_dir=${DROPBOX_MEASUREMENT_PATH}/PLANT
-export spectra_dir=${DROPBOX_MEASUREMENT_PATH}/SPECTRA
 
 export PATH=$PATH:$DROPBOX_SCRIPT_PATH/automeasurement/bin

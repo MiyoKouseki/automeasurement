@@ -1,5 +1,13 @@
 #!/bin/bash
 
+DROPBOX_MEASUREMENT_PATH=/kagra/Dropbox/Measurements/VIS
+DROPBOX_SCRIPT_PATH=/kagra/Dropbox/Subsystems/VIS/Scripts
+
+export templates_dir=${DROPBOX_MEASUREMENT_PATH}/TEMPLATES
+export plants_dir=${DROPBOX_MEASUREMENT_PATH}/PLANT
+export spectra_dir=${DROPBOX_MEASUREMENT_PATH}/SPECTRA
+
+
 #
 if [ $# -ne 5 ]; then
   echo "指定された引数は$#個です。" 1>&2
@@ -45,6 +53,8 @@ if [ "${YN}" = "" ]; then
     DEBUG=0
 elif [ "${YN}" = "y" ]; then
     DEBUG=1
+elif [ "${YN}" = "quick" ]; then
+    DEBUG=2
 else
     echo "you chose ${YN}. Stop. "
   exit 1;
