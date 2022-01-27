@@ -171,7 +171,7 @@ composite {
 		height=112
 	}
 	"composite name"=""
-	"composite file"="./AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ETMX"
+	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ETMX"
 }
 composite {
 	object {
@@ -181,7 +181,7 @@ composite {
 		height=112
 	}
 	"composite name"=""
-	"composite file"="./AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ITMX"
+	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ITMX"
 }
 composite {
 	object {
@@ -191,7 +191,7 @@ composite {
 		height=112
 	}
 	"composite name"=""
-	"composite file"="./AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ETMY"
+	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ETMY"
 }
 composite {
 	object {
@@ -201,7 +201,7 @@ composite {
 		height=112
 	}
 	"composite name"=""
-	"composite file"="./AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ITMY"
+	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ITMY"
 }
 rectangle {
 	object {
