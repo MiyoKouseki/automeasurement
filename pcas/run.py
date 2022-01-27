@@ -17,7 +17,7 @@ params = list(itertools.product(suspensions,stages,states))
 pvdb = {refnum_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'int'} for sus,stg,sts in params}
 pvdb.update({refnum_fmt_sdf_dummy.format(sus=sus,stg=stg,sts=sts):{'type':'int'} for sus,stg,sts in params})
 pvdb.update({exec_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'int'} for sus,stg,sts in params})
-pvdb.update({status_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'enum','enums':['RUNNING','STOP']} for sus,stg,sts in params})
+pvdb.update({status_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'enum','enums':['RUN','STOP']} for sus,stg,sts in params})
 
 class myDriver(Driver):
     def  __init__(self):
