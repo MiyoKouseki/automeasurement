@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=2217
-		y=1324
+		x=1160
+		y=1589
 		width=533
-		height=149
+		height=232
 	}
 	clr=14
 	bclr=4
@@ -89,8 +89,8 @@ display {
 }
 text {
 	object {
-		x=238
-		y=14
+		x=293
+		y=27
 		width=20
 		height=15
 	}
@@ -102,1479 +102,462 @@ text {
 }
 composite {
 	object {
-		x=214
-		y=34
-		width=72
-		height=20
+		x=328
+		y=61
+		width=20
+		height=92
 	}
 	"composite name"=""
 	children {
-		composite {
+		rectangle {
 			object {
-				x=214
-				y=34
-				width=72
+				x=328
+				y=133
+				width=20
 				height=20
 			}
-			"composite name"=""
-			children {
-				composite {
-					object {
-						x=214
-						y=34
-						width=72
-						height=20
-					}
-					"composite name"=""
-					children {
-						rectangle {
-							object {
-								x=216
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=214
-								y=34
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=228
-								y=34
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=242
-								y=34
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=256
-								y=34
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=270
-								y=34
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=36
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
-							}
-						}
-					}
-				}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
 			}
 		}
-		"related display" {
+		rectangle {
 			object {
-				x=216
-				y=38
-				width=12
-				height=12
-			}
-			display[0] {
-				name="./AUTOMEASUREMENT_CTR.adl"
-				args="OPTIC=$(OPTIC),STAGE=IP,STATE=SAFE"
-			}
-			clr=14
-			bclr=4
-			label="-"
-			visual="invisible"
-		}
-		"related display" {
-			object {
-				x=230
-				y=38
-				width=12
-				height=12
-			}
-			display[0] {
-				name="./AUTOMEASUREMENT_CTR.adl"
-				args="OPTIC=$(OPTIC),STAGE=IP,STATE=STANDBY"
-			}
-			clr=14
-			bclr=4
-			label="-"
-			visual="invisible"
-		}
-		"related display" {
-			object {
-				x=244
-				y=38
-				width=12
-				height=12
-			}
-			display[0] {
-				name="./AUTOMEASUREMENT_CTR.adl"
-				args="OPTIC=$(OPTIC),STAGE=IP,STATE=ISOLATED"
-			}
-			clr=14
-			bclr=4
-			label="-"
-			visual="invisible"
-		}
-		"related display" {
-			object {
-				x=259
-				y=38
-				width=12
-				height=12
-			}
-			display[0] {
-				name="./AUTOMEASUREMENT_CTR.adl"
-				args="OPTIC=$(OPTIC),STAGE=IP,STATE=DAMPED"
-			}
-			clr=14
-			bclr=4
-			label="-"
-			visual="invisible"
-		}
-		"related display" {
-			object {
-				x=272
-				y=38
-				width=12
-				height=12
-			}
-			display[0] {
-				name="./AUTOMEASUREMENT_CTR.adl"
-				args="OPTIC=$(OPTIC),STAGE=IP,STATE=ALIGNED"
-			}
-			clr=14
-			bclr=4
-			label="-"
-			visual="invisible"
-		}
-	}
-}
-composite {
-	object {
-		x=214
-		y=52
-		width=72
-		height=20
-	}
-	"composite name"=""
-	children {
-		composite {
-			object {
-				x=214
-				y=52
-				width=72
+				x=328
+				y=115
+				width=20
 				height=20
 			}
-			"composite name"=""
-			children {
-				composite {
-					object {
-						x=214
-						y=52
-						width=72
-						height=20
-					}
-					"composite name"=""
-					children {
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=214
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=228
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=242
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=256
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=270
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-					}
-				}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
 			}
 		}
-		composite {
+		rectangle {
 			object {
-				x=214
-				y=52
-				width=72
+				x=328
+				y=97
+				width=20
 				height=20
 			}
-			"composite name"=""
-			children {
-				composite {
-					object {
-						x=214
-						y=52
-						width=72
-						height=20
-					}
-					"composite name"=""
-					children {
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=214
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=216
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=228
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=230
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=242
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=244
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=256
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=258
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=10
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=15
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B!=0&A=B"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=270
-								y=52
-								width=16
-								height=20
-							}
-							"basic attribute" {
-								clr=14
-								fill="outline"
-								width=2
-							}
-							"dynamic attribute" {
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=32
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="B=0&A!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-						rectangle {
-							object {
-								x=272
-								y=54
-								width=12
-								height=16
-							}
-							"basic attribute" {
-								clr=20
-								width=2
-							}
-							"dynamic attribute" {
-								vis="calc"
-								calc="A=0&B!=0"
-								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
-								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
-							}
-						}
-					}
-				}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=328
+				y=79
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=328
+				y=61
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
 			}
 		}
 		composite {
 			object {
-				x=216
-				y=56
-				width=68
-				height=12
+				x=330
+				y=63
+				width=16
+				height=88
 			}
 			"composite name"=""
 			children {
+				rectangle {
+					object {
+						x=330
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=330
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
+					}
+				}
 				"related display" {
 					object {
-						x=216
-						y=56
-						width=12
+						x=330
+						y=137
+						width=16
 						height=12
 					}
 					display[0] {
 						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=BF,STATE=SAFE"
+						args="OPTIC=$(OPTIC),STAGE=IM,STATE=SAFE"
 					}
 					clr=14
 					bclr=4
@@ -1583,14 +566,14 @@ composite {
 				}
 				"related display" {
 					object {
-						x=230
-						y=56
-						width=12
+						x=330
+						y=119
+						width=16
 						height=12
 					}
 					display[0] {
 						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=BF,STATE=STANDBY"
+						args="OPTIC=$(OPTIC),STAGE=IM,STATE=STANDBY"
 					}
 					clr=14
 					bclr=4
@@ -1599,14 +582,14 @@ composite {
 				}
 				"related display" {
 					object {
-						x=244
-						y=56
-						width=12
+						x=330
+						y=101
+						width=16
 						height=12
 					}
 					display[0] {
 						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=BF,STATE=ISOLATED"
+						args="OPTIC=$(OPTIC),STAGE=IM,STATE=ISOLATED"
 					}
 					clr=14
 					bclr=4
@@ -1615,14 +598,14 @@ composite {
 				}
 				"related display" {
 					object {
-						x=259
-						y=56
-						width=12
+						x=330
+						y=83
+						width=16
 						height=12
 					}
 					display[0] {
 						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=BF,STATE=DAMPED"
+						args="OPTIC=$(OPTIC),STAGE=IM,STATE=DAMPED"
 					}
 					clr=14
 					bclr=4
@@ -1631,14 +614,14 @@ composite {
 				}
 				"related display" {
 					object {
-						x=272
-						y=56
-						width=12
+						x=330
+						y=65
+						width=16
 						height=12
 					}
 					display[0] {
 						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=BF,STATE=ALIGNED"
+						args="OPTIC=$(OPTIC),STAGE=IM,STATE=ALIGNED"
 					}
 					clr=14
 					bclr=4
@@ -1651,479 +634,457 @@ composite {
 }
 composite {
 	object {
-		x=214
-		y=70
-		width=72
-		height=20
+		x=292
+		y=61
+		width=20
+		height=92
 	}
 	"composite name"=""
 	children {
+		rectangle {
+			object {
+				x=292
+				y=133
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=292
+				y=115
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=292
+				y=97
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=292
+				y=79
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=292
+				y=61
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
+			}
+		}
 		composite {
 			object {
-				x=214
-				y=70
-				width=72
-				height=20
+				x=294
+				y=63
+				width=16
+				height=88
 			}
 			"composite name"=""
 			children {
-				composite {
+				rectangle {
 					object {
-						x=214
-						y=70
-						width=72
-						height=20
+						x=294
+						y=135
+						width=16
+						height=16
 					}
-					"composite name"=""
-					children {
-						composite {
-							object {
-								x=214
-								y=70
-								width=72
-								height=20
-							}
-							"composite name"=""
-							children {
-								rectangle {
-									object {
-										x=216
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=214
-										y=70
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=228
-										y=70
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=242
-										y=70
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=256
-										y=70
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=270
-										y=70
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=72
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
-									}
-								}
-							}
-						}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=135
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=117
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=99
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=81
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=10
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=15
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B!=0&A=B"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=32
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="B=0&A!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=294
+						y=63
+						width=16
+						height=16
+					}
+					"basic attribute" {
+						clr=20
+						width=2
+					}
+					"dynamic attribute" {
+						vis="calc"
+						calc="A=0&B!=0"
+						chan="K1:ATM-VIS_$(OPTIC)_GAS_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_GAS_ALIGNED_REFNUM"
 					}
 				}
 				"related display" {
 					object {
-						x=216
-						y=74
-						width=12
+						x=294
+						y=137
+						width=16
 						height=12
 					}
 					display[0] {
@@ -2137,9 +1098,9 @@ composite {
 				}
 				"related display" {
 					object {
-						x=230
-						y=74
-						width=12
+						x=294
+						y=119
+						width=16
 						height=12
 					}
 					display[0] {
@@ -2153,9 +1114,9 @@ composite {
 				}
 				"related display" {
 					object {
-						x=244
-						y=74
-						width=12
+						x=294
+						y=101
+						width=16
 						height=12
 					}
 					display[0] {
@@ -2169,9 +1130,9 @@ composite {
 				}
 				"related display" {
 					object {
-						x=259
-						y=74
-						width=12
+						x=294
+						y=83
+						width=16
 						height=12
 					}
 					display[0] {
@@ -2185,9 +1146,9 @@ composite {
 				}
 				"related display" {
 					object {
-						x=272
-						y=74
-						width=12
+						x=294
+						y=65
+						width=16
 						height=12
 					}
 					display[0] {
@@ -2205,1005 +1166,972 @@ composite {
 }
 composite {
 	object {
-		x=214
-		y=88
-		width=72
-		height=20
+		x=274
+		y=61
+		width=20
+		height=92
 	}
 	"composite name"=""
 	children {
 		composite {
 			object {
-				x=214
-				y=88
-				width=72
-				height=20
+				x=274
+				y=61
+				width=20
+				height=92
 			}
 			"composite name"=""
 			children {
-				composite {
+				rectangle {
 					object {
-						x=214
-						y=88
-						width=72
+						x=274
+						y=133
+						width=20
 						height=20
 					}
-					"composite name"=""
-					children {
-						composite {
-							object {
-								x=214
-								y=88
-								width=72
-								height=20
-							}
-							"composite name"=""
-							children {
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=214
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=228
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=242
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=256
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=270
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-							}
-						}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=115
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=97
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=79
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=133
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=115
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=97
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=79
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=61
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=274
+						y=61
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
 					}
 				}
 				composite {
 					object {
-						x=214
-						y=88
-						width=72
-						height=20
+						x=276
+						y=63
+						width=16
+						height=88
 					}
 					"composite name"=""
 					children {
-						composite {
+						rectangle {
 							object {
-								x=214
-								y=88
-								width=72
-								height=20
+								x=276
+								y=135
+								width=16
+								height=16
 							}
-							"composite name"=""
-							children {
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=214
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=228
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=242
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=256
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=270
-										y=88
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=90
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
-									}
-								}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
 							}
 						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
+							}
+						}
+						"related display" {
+							object {
+								x=276
+								y=137
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=BF,STATE=SAFE"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=276
+								y=119
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=BF,STATE=STANDBY"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=276
+								y=101
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=BF,STATE=ISOLATED"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=276
+								y=83
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=BF,STATE=DAMPED"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=276
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_BF_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_BF_ALIGNED_REFNUM"
+							}
+						}
+						"related display" {
+							object {
+								x=276
+								y=65
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=BF,STATE=ALIGNED"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
 					}
-				}
-				"related display" {
-					object {
-						x=216
-						y=92
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=MN,STATE=SAFE"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=230
-						y=92
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=MN,STATE=STANDBY"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=244
-						y=92
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=MN,STATE=ISOLATED"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=259
-						y=92
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=MN,STATE=DAMPED"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=272
-						y=92
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=MN,STATE=ALIGNED"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
 				}
 			}
 		}
@@ -3211,555 +2139,1560 @@ composite {
 }
 composite {
 	object {
-		x=214
-		y=106
-		width=72
-		height=20
+		x=256
+		y=61
+		width=20
+		height=92
 	}
 	"composite name"=""
 	children {
 		composite {
 			object {
-				x=214
-				y=106
-				width=72
-				height=20
+				x=256
+				y=61
+				width=20
+				height=92
 			}
 			"composite name"=""
 			children {
+				rectangle {
+					object {
+						x=256
+						y=133
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=256
+						y=115
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=256
+						y=97
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=256
+						y=79
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
+					}
+				}
+				rectangle {
+					object {
+						x=256
+						y=61
+						width=20
+						height=20
+					}
+					"basic attribute" {
+						clr=14
+						fill="outline"
+						width=2
+					}
+					"dynamic attribute" {
+						chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
+						chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
+					}
+				}
 				composite {
 					object {
-						x=214
-						y=106
-						width=72
-						height=20
+						x=258
+						y=63
+						width=16
+						height=88
 					}
 					"composite name"=""
 					children {
-						composite {
+						rectangle {
 							object {
-								x=214
-								y=106
-								width=72
-								height=20
+								x=258
+								y=135
+								width=16
+								height=16
 							}
-							"composite name"=""
-							children {
-								rectangle {
-									object {
-										x=216
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=214
-										y=106
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=216
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=228
-										y=106
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=230
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=242
-										y=106
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=244
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=256
-										y=106
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=258
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=10
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=15
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B!=0&A=B"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=270
-										y=106
-										width=16
-										height=20
-									}
-									"basic attribute" {
-										clr=14
-										fill="outline"
-										width=2
-									}
-									"dynamic attribute" {
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=32
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="B=0&A!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
-									}
-								}
-								rectangle {
-									object {
-										x=272
-										y=108
-										width=12
-										height=16
-									}
-									"basic attribute" {
-										clr=20
-										width=2
-									}
-									"dynamic attribute" {
-										vis="calc"
-										calc="A=0&B!=0"
-										chan="K1:ATM-VIS_$(OPTIC)_IM_ALIGNED_REFNUM"
-										chanB="K1:VIS-$(OPTIC)_IM_ALIGNED_REFNUM"
-									}
-								}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
 							}
 						}
+						rectangle {
+							object {
+								x=258
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=135
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_SAFE_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_SAFE_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=117
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=99
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=81
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=10
+								width=2
+							}
+							"dynamic attribute" {
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=15
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B!=0&A=B"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=32
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="B=0&A!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
+							}
+						}
+						rectangle {
+							object {
+								x=258
+								y=63
+								width=16
+								height=16
+							}
+							"basic attribute" {
+								clr=20
+								width=2
+							}
+							"dynamic attribute" {
+								vis="calc"
+								calc="A=0&B!=0"
+								chan="K1:ATM-VIS_$(OPTIC)_IP_ALIGNED_REFNUM"
+								chanB="K1:VIS-$(OPTIC)_IP_ALIGNED_REFNUM"
+							}
+						}
+						"related display" {
+							object {
+								x=258
+								y=137
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=IP,STATE=SAFE"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=258
+								y=119
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=IP,STATE=STANDBY"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=258
+								y=101
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=IP,STATE=ISOLATED"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=258
+								y=83
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=IP,STATE=DAMPED"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
+						"related display" {
+							object {
+								x=258
+								y=65
+								width=16
+								height=12
+							}
+							display[0] {
+								name="./AUTOMEASUREMENT_CTR.adl"
+								args="OPTIC=$(OPTIC),STAGE=IP,STATE=ALIGNED"
+							}
+							clr=14
+							bclr=4
+							label="-"
+							visual="invisible"
+						}
 					}
-				}
-				"related display" {
-					object {
-						x=216
-						y=110
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=IM,STATE=SAFE"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=230
-						y=110
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=IM,STATE=STANDBY"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=244
-						y=110
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=IM,STATE=ISOLATED"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=259
-						y=110
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=IM,STATE=DAMPED"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
-				}
-				"related display" {
-					object {
-						x=272
-						y=110
-						width=12
-						height=12
-					}
-					display[0] {
-						name="./AUTOMEASUREMENT_CTR.adl"
-						args="OPTIC=$(OPTIC),STAGE=IM,STATE=ALIGNED"
-					}
-					clr=14
-					bclr=4
-					label="-"
-					visual="invisible"
 				}
 			}
 		}
 	}
+}
+composite {
+	object {
+		x=310
+		y=61
+		width=20
+		height=92
+	}
+	"composite name"=""
+	children {
+		rectangle {
+			object {
+				x=310
+				y=133
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=115
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=97
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=79
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=61
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=133
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=115
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=97
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=79
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=310
+				y=61
+				width=20
+				height=20
+			}
+			"basic attribute" {
+				clr=14
+				fill="outline"
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=135
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_SAFE_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_SAFE_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=117
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=99
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=81
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=10
+				width=2
+			}
+			"dynamic attribute" {
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=15
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B!=0&A=B"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=32
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="B=0&A!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		rectangle {
+			object {
+				x=312
+				y=63
+				width=16
+				height=16
+			}
+			"basic attribute" {
+				clr=20
+				width=2
+			}
+			"dynamic attribute" {
+				vis="calc"
+				calc="A=0&B!=0"
+				chan="K1:ATM-VIS_$(OPTIC)_MN_ALIGNED_REFNUM"
+				chanB="K1:VIS-$(OPTIC)_MN_ALIGNED_REFNUM"
+			}
+		}
+		"related display" {
+			object {
+				x=312
+				y=137
+				width=16
+				height=12
+			}
+			display[0] {
+				name="./AUTOMEASUREMENT_CTR.adl"
+				args="OPTIC=$(OPTIC),STAGE=MN,STATE=SAFE"
+			}
+			clr=14
+			bclr=4
+			label="-"
+			visual="invisible"
+		}
+		"related display" {
+			object {
+				x=312
+				y=119
+				width=16
+				height=12
+			}
+			display[0] {
+				name="./AUTOMEASUREMENT_CTR.adl"
+				args="OPTIC=$(OPTIC),STAGE=MN,STATE=STANDBY"
+			}
+			clr=14
+			bclr=4
+			label="-"
+			visual="invisible"
+		}
+		"related display" {
+			object {
+				x=312
+				y=101
+				width=16
+				height=12
+			}
+			display[0] {
+				name="./AUTOMEASUREMENT_CTR.adl"
+				args="OPTIC=$(OPTIC),STAGE=MN,STATE=ISOLATED"
+			}
+			clr=14
+			bclr=4
+			label="-"
+			visual="invisible"
+		}
+		"related display" {
+			object {
+				x=312
+				y=83
+				width=16
+				height=12
+			}
+			display[0] {
+				name="./AUTOMEASUREMENT_CTR.adl"
+				args="OPTIC=$(OPTIC),STAGE=MN,STATE=DAMPED"
+			}
+			clr=14
+			bclr=4
+			label="-"
+			visual="invisible"
+		}
+		"related display" {
+			object {
+				x=312
+				y=65
+				width=16
+				height=12
+			}
+			display[0] {
+				name="./AUTOMEASUREMENT_CTR.adl"
+				args="OPTIC=$(OPTIC),STAGE=MN,STATE=ALIGNED"
+			}
+			clr=14
+			bclr=4
+			label="-"
+			visual="invisible"
+		}
+	}
+}
+text {
+	object {
+		x=273
+		y=46
+		width=20
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="BF"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=255
+		y=46
+		width=20
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="IP"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=291
+		y=46
+		width=20
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="GAS"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=310
+		y=46
+		width=20
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="MN"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=328
+		y=46
+		width=20
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="IM"
+	align="horiz. centered"
 }
