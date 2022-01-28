@@ -179,7 +179,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
 	}
@@ -197,7 +197,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
 	}
@@ -215,7 +215,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_STANDBY_REFNUM"
 	}
@@ -248,7 +248,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
 	}
@@ -266,7 +266,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
 	}
@@ -284,7 +284,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_ISOLATED_REFNUM"
 	}
@@ -317,7 +317,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
 	}
@@ -335,7 +335,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
 	}
@@ -353,7 +353,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IM_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IM_DAMPED_REFNUM"
 	}
@@ -485,7 +485,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
 	}
@@ -503,7 +503,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
 	}
@@ -521,7 +521,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_STANDBY_REFNUM"
 	}
@@ -554,7 +554,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
 	}
@@ -572,7 +572,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
 	}
@@ -590,7 +590,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_ISOLATED_REFNUM"
 	}
@@ -623,7 +623,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
 	}
@@ -641,7 +641,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
 	}
@@ -659,7 +659,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_GAS_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_GAS_DAMPED_REFNUM"
 	}
@@ -842,7 +842,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
 	}
@@ -860,7 +860,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
 	}
@@ -878,7 +878,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
 	}
@@ -911,7 +911,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
 	}
@@ -929,7 +929,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
 	}
@@ -947,7 +947,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
 	}
@@ -980,7 +980,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
 	}
@@ -998,7 +998,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
 	}
@@ -1016,7 +1016,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
 	}
@@ -1049,7 +1049,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
 	}
@@ -1067,7 +1067,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
 	}
@@ -1085,7 +1085,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_STANDBY_REFNUM"
 	}
@@ -1118,7 +1118,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
 	}
@@ -1136,7 +1136,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
 	}
@@ -1154,7 +1154,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_ISOLATED_REFNUM"
 	}
@@ -1187,7 +1187,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
 	}
@@ -1205,7 +1205,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
 	}
@@ -1223,7 +1223,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_BF_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_BF_DAMPED_REFNUM"
 	}
@@ -1355,7 +1355,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
 	}
@@ -1373,7 +1373,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
 	}
@@ -1391,7 +1391,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_STANDBY_REFNUM"
 	}
@@ -1424,7 +1424,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
 	}
@@ -1442,7 +1442,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
 	}
@@ -1460,7 +1460,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_ISOLATED_REFNUM"
 	}
@@ -1493,7 +1493,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
 	}
@@ -1511,7 +1511,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
 	}
@@ -1529,7 +1529,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_IP_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_IP_DAMPED_REFNUM"
 	}
@@ -1712,7 +1712,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
 	}
@@ -1730,7 +1730,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
 	}
@@ -1748,7 +1748,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
 	}
@@ -1781,7 +1781,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
 	}
@@ -1799,7 +1799,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
 	}
@@ -1817,7 +1817,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
 	}
@@ -1850,7 +1850,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
 	}
@@ -1868,7 +1868,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
 	}
@@ -1886,7 +1886,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
 	}
@@ -1919,7 +1919,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
 	}
@@ -1937,7 +1937,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
 	}
@@ -1955,7 +1955,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_STANDBY_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_STANDBY_REFNUM"
 	}
@@ -1988,7 +1988,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
 	}
@@ -2006,7 +2006,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
 	}
@@ -2024,7 +2024,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_ISOLATED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_ISOLATED_REFNUM"
 	}
@@ -2057,7 +2057,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B!=0&A=B"
+		calc="B!=0.0&A=B"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
 	}
@@ -2075,7 +2075,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="B=0&A!=0"
+		calc="B=0&A!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
 	}
@@ -2093,7 +2093,7 @@ rectangle {
 	}
 	"dynamic attribute" {
 		vis="calc"
-		calc="A=0&B!=0"
+		calc="A=0.0&B!=0.0"
 		chan="K1:ATM-VIS_$(OPTIC)_MN_DAMPED_REFNUM"
 		chanB="K1:VIS-$(OPTIC)_MN_DAMPED_REFNUM"
 	}
