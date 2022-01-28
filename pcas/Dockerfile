@@ -12,4 +12,4 @@ RUN curl -O http://apt.ligo-wa.caltech.edu/debian/pool/buster/cdssoft-release-bu
 RUN mkdir /work
 COPY ./run.py /work/
 
-#ENTRYPOINT python3 run.py
+ENTRYPOINT python3 run.py

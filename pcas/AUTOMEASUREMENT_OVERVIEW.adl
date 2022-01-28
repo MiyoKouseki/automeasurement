@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=462
-		y=1326
-		width=644
-		height=562
+		x=1955
+		y=1390
+		width=493
+		height=611
 	}
 	clr=14
 	bclr=4
@@ -87,153 +87,420 @@ display {
 		1a7309,
 	}
 }
-text {
-	object {
-		x=106
-		y=88
-		width=20
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="DAMPED"
-	align="horiz. right"
-}
-text {
-	object {
-		x=106
-		y=70
-		width=20
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="ALIGNED"
-	align="horiz. right"
-}
-text {
-	object {
-		x=106
-		y=106
-		width=20
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="ISOLATED"
-	align="horiz. right"
-}
-text {
-	object {
-		x=106
-		y=124
-		width=20
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="STANDBY"
-	align="horiz. right"
-}
-text {
-	object {
-		x=106
-		y=142
-		width=20
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="SAFE"
-	align="horiz. right"
-}
 composite {
 	object {
-		x=128
-		y=35
-		width=93
-		height=126
-	}
-	"composite name"=""
-	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ETMX"
-}
-composite {
-	object {
-		x=224
-		y=35
-		width=93
-		height=126
-	}
-	"composite name"=""
-	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ITMX"
-}
-composite {
-	object {
-		x=319
-		y=35
-		width=93
-		height=126
-	}
-	"composite name"=""
-	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ETMY"
-}
-composite {
-	object {
-		x=414
-		y=35
-		width=93
-		height=126
-	}
-	"composite name"=""
-	"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI.adl;OPTIC=ITMY"
-}
-"related display" {
-	object {
-		x=36
-		y=524
-		width=60
-		height=20
-	}
-	display[0] {
-		name="/opt/rtcds/kamioka/k1/medm/sitemap.adl"
-	}
-	clr=57
-	bclr=13
-	label="-<<SiteMap"
-}
-composite {
-	object {
-		x=175
-		y=440
-		width=273
-		height=108
+		x=51
+		y=33
+		width=400
+		height=398
 	}
 	"composite name"=""
 	children {
-		rectangle {
+		composite {
 			object {
-				x=177
-				y=442
-				width=12
-				height=16
+				x=52
+				y=137
+				width=368
+				height=91
 			}
-			"basic attribute" {
-				clr=0
-				width=2
+			"composite name"=""
+			children {
+				composite {
+					object {
+						x=360
+						y=137
+						width=60
+						height=91
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=BS"
+				}
+				composite {
+					object {
+						x=74
+						y=137
+						width=60
+						height=91
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SRM"
+				}
+				composite {
+					object {
+						x=169
+						y=137
+						width=60
+						height=91
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR2"
+				}
+				composite {
+					object {
+						x=264
+						y=137
+						width=60
+						height=91
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR3"
+				}
+				text {
+					object {
+						x=52
+						y=175
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="DAMPED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=52
+						y=193
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="ISOLATED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=52
+						y=211
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="STANDBY"
+					align="horiz. right"
+				}
 			}
-			"dynamic attribute" {
-				chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-				chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
+		}
+		composite {
+			object {
+				x=51
+				y=33
+				width=400
+				height=90
 			}
+			"composite name"=""
+			children {
+				text {
+					object {
+						x=51
+						y=69
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="DAMPED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=51
+						y=87
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="ISOLATED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=51
+						y=105
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="STANDBY"
+					align="horiz. right"
+				}
+				composite {
+					object {
+						x=72
+						y=33
+						width=93
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMX"
+				}
+				composite {
+					object {
+						x=168
+						y=33
+						width=93
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMX"
+				}
+				composite {
+					object {
+						x=263
+						y=33
+						width=93
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMY"
+				}
+				composite {
+					object {
+						x=358
+						y=33
+						width=93
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMY"
+				}
+			}
+		}
+		composite {
+			object {
+				x=53
+				y=244
+				width=270
+				height=90
+			}
+			"composite name"=""
+			children {
+				composite {
+					object {
+						x=74
+						y=244
+						width=60
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PRM"
+				}
+				composite {
+					object {
+						x=169
+						y=244
+						width=60
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR2"
+				}
+				composite {
+					object {
+						x=263
+						y=244
+						width=60
+						height=90
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR3"
+				}
+				text {
+					object {
+						x=53
+						y=280
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="DAMPED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=53
+						y=298
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="ISOLATED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=53
+						y=316
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="STANDBY"
+					align="horiz. right"
+				}
+			}
+		}
+		composite {
+			object {
+				x=55
+				y=361
+				width=296
+				height=70
+			}
+			"composite name"=""
+			children {
+				composite {
+					object {
+						x=76
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCI"
+				}
+				text {
+					object {
+						x=55
+						y=395
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="DAMPED"
+					align="horiz. right"
+				}
+				text {
+					object {
+						x=55
+						y=414
+						width=20
+						height=15
+					}
+					"basic attribute" {
+						clr=14
+					}
+					textix="STANDBY"
+					align="horiz. right"
+				}
+				composite {
+					object {
+						x=101
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCO"
+				}
+				composite {
+					object {
+						x=126
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCE"
+				}
+				composite {
+					object {
+						x=172
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT1"
+				}
+				composite {
+					object {
+						x=201
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT2"
+				}
+				composite {
+					object {
+						x=266
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OSTM"
+				}
+				composite {
+					object {
+						x=298
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT1"
+				}
+				composite {
+					object {
+						x=330
+						y=361
+						width=21
+						height=70
+					}
+					"composite name"=""
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT2"
+				}
+			}
+		}
+	}
+}
+composite {
+	object {
+		x=76
+		y=462
+		width=350
+		height=86
+	}
+	"composite name"=""
+	children {
+		"related display" {
+			object {
+				x=366
+				y=523
+				width=60
+				height=20
+			}
+			display[0] {
+				name="/opt/rtcds/kamioka/k1/medm/sitemap.adl"
+			}
+			clr=57
+			bclr=13
+			label="-<<SiteMap"
 		}
 		rectangle {
 			object {
-				x=177
+				x=78
 				y=530
 				width=12
 				height=16
@@ -249,24 +516,7 @@ composite {
 		}
 		rectangle {
 			object {
-				x=175
-				y=440
-				width=16
-				height=20
-			}
-			"basic attribute" {
-				clr=14
-				fill="outline"
-				width=2
-			}
-			"dynamic attribute" {
-				chan="K1:ATM-VIS_$(OPTIC)_IM_SAFE_REFNUM"
-				chanB="K1:VIS-$(OPTIC)_IM_SAFE_REFNUM"
-			}
-		}
-		rectangle {
-			object {
-				x=177
+				x=78
 				y=486
 				width=12
 				height=16
@@ -283,7 +533,7 @@ composite {
 		}
 		rectangle {
 			object {
-				x=177
+				x=78
 				y=508
 				width=12
 				height=16
@@ -300,7 +550,7 @@ composite {
 		}
 		rectangle {
 			object {
-				x=175
+				x=76
 				y=506
 				width=16
 				height=20
@@ -317,7 +567,7 @@ composite {
 		}
 		rectangle {
 			object {
-				x=175
+				x=76
 				y=484
 				width=16
 				height=20
@@ -334,7 +584,7 @@ composite {
 		}
 		rectangle {
 			object {
-				x=175
+				x=76
 				y=528
 				width=16
 				height=20
@@ -351,19 +601,7 @@ composite {
 		}
 		text {
 			object {
-				x=198
-				y=443
-				width=250
-				height=15
-			}
-			"basic attribute" {
-				clr=14
-			}
-			textix="Not managed"
-		}
-		text {
-			object {
-				x=198
+				x=99
 				y=509
 				width=250
 				height=15
@@ -371,11 +609,11 @@ composite {
 			"basic attribute" {
 				clr=14
 			}
-			textix="no REFNUM, but wrong value added in SDF"
+			textix="Wrong REFNUM"
 		}
 		text {
 			object {
-				x=198
+				x=99
 				y=487
 				width=250
 				height=15
@@ -383,11 +621,11 @@ composite {
 			"basic attribute" {
 				clr=14
 			}
-			textix="REFNUM exists, but not added in SDF"
+			textix="No REFNUM"
 		}
 		text {
 			object {
-				x=198
+				x=99
 				y=531
 				width=250
 				height=15
@@ -395,11 +633,11 @@ composite {
 			"basic attribute" {
 				clr=14
 			}
-			textix="REFNUM exists, and added in SDF correctly."
+			textix="Correct REFNUM"
 		}
 		rectangle {
 			object {
-				x=177
+				x=78
 				y=464
 				width=12
 				height=16
@@ -415,7 +653,7 @@ composite {
 		}
 		rectangle {
 			object {
-				x=175
+				x=76
 				y=462
 				width=16
 				height=20
@@ -432,7 +670,7 @@ composite {
 		}
 		text {
 			object {
-				x=198
+				x=99
 				y=465
 				width=250
 				height=15
@@ -440,7 +678,7 @@ composite {
 			"basic attribute" {
 				clr=14
 			}
-			textix="Not Measured"
+			textix="No Measurement"
 		}
 	}
 }
