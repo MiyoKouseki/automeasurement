@@ -1,2 +1,3 @@
 PCAS_NAME=automeasurement
 VERSION=0.0.1
+DOCKER_IP=172.17.0.2

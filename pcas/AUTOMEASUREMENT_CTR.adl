@@ -5,10 +5,10 @@ file {
 }
 display {
 	object {
-		x=667
-		y=542
+		x=1955
+		y=1537
 		width=607
-		height=96
+		height=359
 	}
 	clr=14
 	bclr=4
@@ -85,19 +85,6 @@ display {
 		3cb420,
 		289315,
 		1a7309,
-	}
-}
-"choice button" {
-	object {
-		x=419
-		y=22
-		width=36
-		height=40
-	}
-	control {
-		chan="K1:ATM-VIS_$(OPTIC)_$(STAGE)_$(STATE)_STATUS"
-		clr=14
-		bclr=4
 	}
 }
 "text entry" {
@@ -216,4 +203,193 @@ polyline {
 	clr=57
 	bclr=13
 	label="-<<Up"
+}
+menu {
+	object {
+		x=241
+		y=102
+		width=50
+		height=21
+	}
+	control {
+		chan="K1:ATM-VIS_STGLIST"
+		clr=14
+		bclr=4
+	}
+}
+menu {
+	object {
+		x=300
+		y=102
+		width=70
+		height=21
+	}
+	control {
+		chan="K1:ATM-VIS_STSLIST"
+		clr=14
+		bclr=4
+	}
+}
+text {
+	object {
+		x=246
+		y=83
+		width=40
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="STAGE"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=311
+		y=83
+		width=40
+		height=16
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="GRDSTATE"
+	align="horiz. centered"
+}
+"message button" {
+	object {
+		x=42
+		y=110
+		width=40
+		height=17
+	}
+	control {
+		chan="K1:ATM-VIS_ETMX"
+		clr=14
+		bclr=4
+	}
+	label="ETMX"
+	release_msg="1"
+}
+byte {
+	object {
+		x=25
+		y=111
+		width=15
+		height=15
+	}
+	monitor {
+		chan="K1:ATM-VIS_ETMX_BIT"
+		clr=30
+		bclr=4
+	}
+	direction="down"
+	sbit=1
+	ebit=1
+}
+text {
+	object {
+		x=42
+		y=89
+		width=40
+		height=15
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="SUSPENSION"
+	align="horiz. centered"
+}
+"message button" {
+	object {
+		x=42
+		y=130
+		width=40
+		height=17
+	}
+	control {
+		chan="K1:ATM-VIS_ITMX"
+		clr=14
+		bclr=4
+	}
+	label="ITMX"
+	release_msg="1"
+}
+byte {
+	object {
+		x=25
+		y=131
+		width=15
+		height=15
+	}
+	monitor {
+		chan="K1:ATM-VIS_ITMX_BIT"
+		clr=30
+		bclr=4
+	}
+	direction="down"
+	sbit=1
+	ebit=1
+}
+"message button" {
+	object {
+		x=42
+		y=150
+		width=40
+		height=17
+	}
+	control {
+		chan="K1:ATM-VIS_ETMY"
+		clr=14
+		bclr=4
+	}
+	label="ETMY"
+	release_msg="1"
+}
+byte {
+	object {
+		x=25
+		y=151
+		width=15
+		height=15
+	}
+	monitor {
+		chan="K1:ATM-VIS_ETMY_BIT"
+		clr=30
+		bclr=4
+	}
+	direction="down"
+	sbit=1
+	ebit=1
+}
+"message button" {
+	object {
+		x=42
+		y=171
+		width=40
+		height=17
+	}
+	control {
+		chan="K1:ATM-VIS_ITMY"
+		clr=14
+		bclr=4
+	}
+	label="ITMY"
+	release_msg="1"
+}
+byte {
+	object {
+		x=25
+		y=172
+		width=15
+		height=15
+	}
+	monitor {
+		chan="K1:ATM-VIS_ITMY_BIT"
+		clr=30
+		bclr=4
+	}
+	direction="down"
+	sbit=1
+	ebit=1
 }
