@@ -1,0 +1,12 @@
+UAG(GatewayAdmin) {controls}
+
+ASG(DEFAULT) {
+   RULE(1,READ)
+}
+
+ASG(GatewayAdmin) {
+   RULE(1,READ)
+   RULE(1,WRITE,TRAPWRITE){
+     UAG(GatewayAdmin)
+   }
+}

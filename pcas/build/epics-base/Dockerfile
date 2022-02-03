@@ -38,5 +38,6 @@ RUN cd /epics/src/ca-gateway \
  && make -j$(nproc) \
  && ln -s /epics/ca-gateway/bin/linux-x86_64/gateway /epics/base/bin/gateway
 
-ENV EPICS_CA_AUTO_ADDR_LIST=YES 
-ENTRYPOINT ["gateway"]
+COPY users ./
+COPY pvaccess ./
+#ENTRYPOINT ["gateway -cip 172.17.0.255 -sip 172.17.0.3 -server -archive -no_cache -access users -pvlist pvaccess"]

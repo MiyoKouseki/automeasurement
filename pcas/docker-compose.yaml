@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  epics-gateway:
+    image: epics-base:$VERSION
+    container_name: epics-gateway
+    tty: true
+    stdin_open: true 
+  pcas:
+    container_name: pcas    
+    image: $PCAS_NAME:${VERSION}
+    working_dir: /work

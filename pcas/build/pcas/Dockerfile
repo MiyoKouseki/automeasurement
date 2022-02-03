@@ -9,6 +9,8 @@ RUN curl -O http://apt.ligo-wa.caltech.edu/debian/pool/buster/cdssoft-release-bu
     apt install --assume-yes --no-install-recommends net-tools procps && \
     apt install -y emacs
     
+ENV EPICS_CA_ADDR_LIST=172.18.0.2
+
 RUN mkdir /work
 COPY ./run.py /work/
 
