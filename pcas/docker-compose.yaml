@@ -4,8 +4,30 @@ services:
     image: epics-base:$VERSION
     container_name: epics-gateway
     tty: true
-    stdin_open: true 
+    stdin_open: true
+    networks:
+      local-ioc-network:
+        ipv4_address: 172.10.0.3
+      host-network:
+        ipv4_address: 172.20.0.2        
+    command: -sip 172.20.0.2 -cip 172.10.0.255 -pvlist /epics/pvaccess -access /epics/users -log /epics/logs
   pcas:
     container_name: pcas    
     image: $PCAS_NAME:${VERSION}
     working_dir: /work
+    networks:
+      local-ioc-network:
+        ipv4_address: 172.10.0.2
+networks:
+  local-ioc-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.10.0.0/24"
+
+  host-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.20.0.0/24"
+    

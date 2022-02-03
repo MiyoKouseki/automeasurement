@@ -6,7 +6,7 @@ RUN curl -O http://apt.ligo-wa.caltech.edu/debian/pool/buster/cdssoft-release-bu
     apt update && \
     apt install --assume-yes --no-install-recommends epics-catools
 
-RUN apt update && apt install -yq wget git build-essential
+RUN apt update && apt install -yq wget git build-essential procps
 
 WORKDIR /var/cache
 RUN wget -q --show-progress https://epics.anl.gov/download/base/base-3.15.9.tar.gz \
@@ -40,4 +40,5 @@ RUN cd /epics/src/ca-gateway \
 
 COPY users ./
 COPY pvaccess ./
-#ENTRYPOINT ["gateway -cip 172.17.0.255 -sip 172.17.0.3 -server -archive -no_cache -access users -pvlist pvaccess"]
+
+ENTRYPOINT ["gateway"]
