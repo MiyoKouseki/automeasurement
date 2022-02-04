@@ -198,7 +198,7 @@ polyline {
 		height=20
 	}
 	display[0] {
-		name="./AUTOMEASUREMENT_OVERVIEW.adl"
+		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW.adl"
 	}
 	clr=57
 	bclr=13

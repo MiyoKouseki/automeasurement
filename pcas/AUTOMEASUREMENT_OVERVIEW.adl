@@ -113,7 +113,7 @@ composite {
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=BS"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=BS"
 				}
 				composite {
 					object {
@@ -123,7 +123,7 @@ composite {
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SRM"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SRM"
 				}
 				composite {
 					object {
@@ -133,7 +133,7 @@ composite {
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR2"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR2"
 				}
 				composite {
 					object {
@@ -143,7 +143,7 @@ composite {
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR3"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR3"
 				}
 				text {
 					object {
@@ -242,7 +242,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMX"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMX"
 				}
 				composite {
 					object {
@@ -252,7 +252,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMX"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMX"
 				}
 				composite {
 					object {
@@ -262,7 +262,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMY"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMY"
 				}
 				composite {
 					object {
@@ -272,7 +272,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMY"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMY"
 				}
 			}
 		}
@@ -293,7 +293,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PRM"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PRM"
 				}
 				composite {
 					object {
@@ -303,7 +303,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR2"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR2"
 				}
 				composite {
 					object {
@@ -313,7 +313,7 @@ composite {
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR3"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR3"
 				}
 				text {
 					object {
@@ -373,7 +373,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCI"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCI"
 				}
 				text {
 					object {
@@ -409,7 +409,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCO"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCO"
 				}
 				composite {
 					object {
@@ -419,7 +419,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCE"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCE"
 				}
 				composite {
 					object {
@@ -429,7 +429,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT1"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT1"
 				}
 				composite {
 					object {
@@ -439,7 +439,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT2"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT2"
 				}
 				composite {
 					object {
@@ -449,7 +449,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OSTM"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OSTM"
 				}
 				composite {
 					object {
@@ -459,7 +459,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT1"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT1"
 				}
 				composite {
 					object {
@@ -469,7 +469,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT2"
+					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT2"
 				}
 			}
 		}

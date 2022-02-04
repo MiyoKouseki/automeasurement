@@ -280,7 +280,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="./AUTOMEASUREMENT_CTR.adl"
+		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=STANDBY"
 	}
 	clr=14
@@ -296,7 +296,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="./AUTOMEASUREMENT_CTR.adl"
+		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=DAMPED"
 	}
 	clr=14
