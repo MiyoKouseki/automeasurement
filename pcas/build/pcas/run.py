@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import itertools
 from pcaspy import Driver, SimpleServer
+from ezca import Ezca
 
 prefix = 'K1:'
 
@@ -22,16 +23,44 @@ pvdb.update({refnum_fmt_sdf_dummy.format(sus=sus,stg=stg,sts=sts):{'type':'float
 pvdb.update({exec_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'int'} for sus,stg,sts in params})
 pvdb.update({status_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'enum','enums':['RUN','STOP']} for sus,stg,sts in params})
 pvdb.update({'ATM-VIS_RN{0:02d}'.format(i):{'type':'float','value':0} for i in range(10)})
-#pvdb.update({'ATM-VIS_{sus}'.format(sus=sus):{'type':'enum','enums':['o','x']} for sus in suspensions})
-pvdb.update({'ATM-VIS_{sus}'.format(sus=sus):{'type':'int','value':0} for sus in suspensions})
-pvdb.update({'ATM-VIS_{sus}_BIT'.format(sus=sus):{'type':'int','value':0} for sus in suspensions})
-pvdb.update({'ATM-VIS_STGLIST':{'type':'enum','enums':stages}})
-pvdb.update({'ATM-VIS_STSLIST':{'type':'enum','enums':states}})
+pvdb.update({'ATM-VIS_SELECT_{sus}'.format(sus=sus):{'type':'int','value':0} for sus in suspensions})
+pvdb.update({'ATM-VIS_SELECT_{sus}_BIT'.format(sus=sus):{'type':'int','value':0} for sus in suspensions})
+pvdb.update({'ATM-VIS_SELECT_{stg}'.format(stg=stg):{'type':'int','value':0} for stg in stages})
+pvdb.update({'ATM-VIS_SELECT_{stg}_BIT'.format(stg=stg):{'type':'int','value':0} for stg in stages})
+pvdb.update({'ATM-VIS_SELECT_{sts}'.format(sts=sts):{'type':'int','value':0} for sts in states})
+pvdb.update({'ATM-VIS_SELECT_{sts}_BIT'.format(sts=sts):{'type':'int','value':0} for sts in states})
 pvdb.update({'HOGE':{'type':'float'}})
+pvdb.update({'ATM-VIS_SELECT_SUS':{'type':'str'}})
+pvdb.update({'ATM-VIS_SELECT_STG':{'type':'str'}})
+pvdb.update({'ATM-VIS_SELECT_STS':{'type':'str'}})
+
+ezca = Ezca('K1')
+
+def get_suslist():
+    suslist = ['ETMX','ETMY']
+    print(ezca['ATM-VIS_SELECT_ETMX'])
+    return suslist
 
 class myDriver(Driver):
     def  __init__(self):
         super(myDriver, self).__init__()
+        self.tid = None
+
+    def write(self, reason, value):
+        status = True
+        self.setParam(reason, value)
+        for key in suspensions:
+            if reason=='ATM-VIS_SELECT_{key}'.format(key=key):
+                _val = self.getParam('ATM-VIS_SELECT_{key}_BIT'.format(key=key))
+                self.setParam('ATM-VIS_SELECT_{key}_BIT'.format(key=key),_val+2)
+                suslist = get_suslist()
+                self.setParam('ATM-VIS_SELECT_SUS'," ".join(suslist))
+            else:
+                status = False
+        self.updatePVs()
+        
+        return True
+
 
 if __name__ == '__main__':
     server = SimpleServer()
