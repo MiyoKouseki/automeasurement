@@ -1,6 +1,6 @@
 
 file {
-	name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_CTR.adl"
+	name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 	version=030109
 }
 display {
@@ -198,7 +198,7 @@ polyline {
 		height=20
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW.adl"
 	}
 	clr=57
 	bclr=13
