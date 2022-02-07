@@ -1,6 +1,6 @@
 
 file {
-	name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl"
+	name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl"
 	version=030109
 }
 display {
@@ -366,7 +366,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=STANDBY"
 	}
 	clr=14
@@ -382,7 +382,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=ISOLATED"
 	}
 	clr=14
@@ -398,7 +398,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=DAMPED"
 	}
 	clr=14
@@ -672,7 +672,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=GAS,STATE=STANDBY"
 	}
 	clr=14
@@ -688,7 +688,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=GAS,STATE=ISOLATED"
 	}
 	clr=14
@@ -704,7 +704,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=GAS,STATE=DAMPED"
 	}
 	clr=14
@@ -1236,7 +1236,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=BF,STATE=STANDBY"
 	}
 	clr=14
@@ -1252,7 +1252,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=BF,STATE=ISOLATED"
 	}
 	clr=14
@@ -1268,7 +1268,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=BF,STATE=DAMPED"
 	}
 	clr=14

@@ -1,13 +1,13 @@
 
 file {
-	name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW.adl"
+	name="/home/miyo/Repositories/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW.adl"
 	version=030109
 }
 display {
 	object {
-		x=734
-		y=1295
-		width=779
+		x=46
+		y=346
+		width=710
 		height=611
 	}
 	clr=14
@@ -91,7 +91,7 @@ composite {
 	object {
 		x=52
 		y=33
-		width=400
+		width=409
 		height=398
 	}
 	"composite name"=""
@@ -100,50 +100,50 @@ composite {
 			object {
 				x=53
 				y=137
-				width=368
+				width=376
 				height=91
 			}
 			"composite name"=""
 			children {
 				composite {
 					object {
-						x=361
+						x=368
 						y=137
-						width=60
+						width=61
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=BS"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;prefix=$(prefix),OPTIC=BS"
 				}
 				composite {
 					object {
 						x=75
 						y=137
-						width=60
+						width=61
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SRM"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;prefix=$(prefix),OPTIC=SRM"
 				}
 				composite {
 					object {
-						x=170
+						x=173
 						y=137
-						width=60
+						width=61
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR2"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;prefix=$(prefix),OPTIC=SR2"
 				}
 				composite {
 					object {
-						x=265
+						x=270
 						y=137
-						width=60
+						width=61
 						height=91
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;OPTIC=SR3"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEB.adl;prefix=$(prefix),OPTIC=SR3"
 				}
 				text {
 					object {
@@ -190,7 +190,7 @@ composite {
 			object {
 				x=52
 				y=33
-				width=400
+				width=409
 				height=90
 			}
 			"composite name"=""
@@ -238,41 +238,41 @@ composite {
 					object {
 						x=73
 						y=33
-						width=93
+						width=95
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMX"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;prefix=$(prefix),OPTIC=ETMX"
 				}
 				composite {
 					object {
-						x=169
+						x=172
 						y=33
-						width=93
+						width=95
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMX"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;prefix=$(prefix),OPTIC=ITMX"
 				}
 				composite {
 					object {
-						x=264
+						x=269
 						y=33
-						width=93
+						width=95
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ETMY"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;prefix=$(prefix),OPTIC=ETMY"
 				}
 				composite {
 					object {
-						x=359
+						x=366
 						y=33
-						width=93
+						width=95
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;OPTIC=ITMY"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEA.adl;prefix=$(prefix),OPTIC=ITMY"
 				}
 			}
 		}
@@ -280,7 +280,7 @@ composite {
 			object {
 				x=54
 				y=244
-				width=270
+				width=276
 				height=90
 			}
 			"composite name"=""
@@ -289,31 +289,31 @@ composite {
 					object {
 						x=75
 						y=244
-						width=60
+						width=61
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PRM"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;prefix=$(prefix),OPTIC=PRM"
 				}
 				composite {
 					object {
-						x=170
+						x=173
 						y=244
-						width=60
+						width=61
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR2"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;prefix=$(prefix),OPTIC=PR2"
 				}
 				composite {
 					object {
-						x=264
+						x=269
 						y=244
-						width=60
+						width=61
 						height=90
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;OPTIC=PR3"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEBP.adl;prefix=$(prefix),OPTIC=PR3"
 				}
 				text {
 					object {
@@ -360,7 +360,7 @@ composite {
 			object {
 				x=56
 				y=361
-				width=296
+				width=303
 				height=70
 			}
 			"composite name"=""
@@ -373,7 +373,7 @@ composite {
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCI"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=MCI"
 				}
 				text {
 					object {
@@ -403,73 +403,73 @@ composite {
 				}
 				composite {
 					object {
-						x=102
+						x=103
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCO"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=MCO"
 				}
 				composite {
 					object {
-						x=127
+						x=129
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=MCE"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=MCE"
 				}
 				composite {
 					object {
-						x=173
+						x=176
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT1"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=IMMT1"
 				}
 				composite {
 					object {
-						x=202
+						x=205
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=IMMT2"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=IMMT2"
 				}
 				composite {
 					object {
-						x=267
+						x=272
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OSTM"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=OSTM"
 				}
 				composite {
 					object {
-						x=299
+						x=305
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT1"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=OMMT1"
 				}
 				composite {
 					object {
-						x=331
+						x=338
 						y=361
 						width=21
 						height=70
 					}
 					"composite name"=""
-					"composite file"="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;OPTIC=OMMT2"
+					"composite file"="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl;prefix=$(prefix),OPTIC=OMMT2"
 				}
 			}
 		}
@@ -682,708 +682,1255 @@ composite {
 		}
 	}
 }
-"message button" {
+composite {
+	object {
+		x=483
+		y=507
+		width=206
+		height=69
+	}
+	"composite name"=""
+	children {
+		"text update" {
+			object {
+				x=483
+				y=507
+				width=206
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_LIST"
+				clr=14
+				bclr=4
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=483
+				y=526
+				width=206
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STG_LIST"
+				clr=14
+				bclr=4
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=483
+				y=544
+				width=206
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STS_LIST"
+				clr=14
+				bclr=4
+			}
+			limits {
+			}
+		}
+		"text update" {
+			object {
+				x=483
+				y=561
+				width=206
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_REF_LIST"
+				clr=14
+				bclr=4
+			}
+			limits {
+			}
+		}
+	}
+}
+composite {
 	object {
 		x=495
-		y=54
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_ETMX"
-		clr=14
-		bclr=4
-	}
-	label="ETMX"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=55
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_ETMX_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-text {
-	object {
-		x=548
-		y=33
-		width=40
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="SUSPENSION"
-	align="horiz. centered"
-}
-"message button" {
-	object {
-		x=495
-		y=74
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_ITMX"
-		clr=14
-		bclr=4
-	}
-	label="ITMX"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=75
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_ITMX_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=495
-		y=94
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_ETMY"
-		clr=14
-		bclr=4
-	}
-	label="ETMY"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=95
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_ETMY_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=495
-		y=114
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_ITMY"
-		clr=14
-		bclr=4
-	}
-	label="ITMY"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=115
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_ITMY_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-text {
-	object {
-		x=548
-		y=237
-		width=40
-		height=16
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="GRDSTATE"
-	align="horiz. centered"
-}
-"message button" {
-	object {
-		x=557
-		y=54
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_SRM"
-		clr=14
-		bclr=4
-	}
-	label="SRM"
-	release_msg="1"
-}
-byte {
-	object {
-		x=540
-		y=55
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_SRM_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=557
-		y=74
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_SR2"
-		clr=14
-		bclr=4
-	}
-	label="SR2"
-	release_msg="1"
-}
-byte {
-	object {
-		x=540
-		y=75
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_SR2_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=557
-		y=94
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_SR3"
-		clr=14
-		bclr=4
-	}
-	label="SR3"
-	release_msg="1"
-}
-byte {
-	object {
-		x=540
-		y=95
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_SR3_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=557
-		y=114
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_BS"
-		clr=14
-		bclr=4
-	}
-	label="BS"
-	release_msg="1"
-}
-byte {
-	object {
-		x=540
-		y=115
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_BS_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=618
-		y=54
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_PRM"
-		clr=14
-		bclr=4
-	}
-	label="PRM"
-	release_msg="1"
-}
-byte {
-	object {
-		x=600
-		y=55
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_PRM_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=618
-		y=74
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_PR2"
-		clr=14
-		bclr=4
-	}
-	label="PR2"
-	release_msg="1"
-}
-byte {
-	object {
-		x=600
-		y=75
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_PR2_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=618
-		y=94
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_PR3"
-		clr=14
-		bclr=4
-	}
-	label="PR3"
-	release_msg="1"
-}
-byte {
-	object {
-		x=600
-		y=95
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_PR3_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=495
-		y=177
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_IP"
-		clr=14
-		bclr=4
-	}
-	label="IP"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=178
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_IP_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=557
-		y=177
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_GAS"
-		clr=14
-		bclr=4
-	}
-	label="GAS"
-	release_msg="1"
-}
-byte {
-	object {
-		x=540
-		y=178
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_GAS_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=618
-		y=177
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_BF"
-		clr=14
-		bclr=4
-	}
-	label="IP"
-	release_msg="1"
-}
-byte {
-	object {
-		x=600
-		y=178
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_BF_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=495
-		y=197
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_MN"
-		clr=14
-		bclr=4
-	}
-	label="MN"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=198
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_MN_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=557
-		y=197
-		width=40
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_IM"
-		clr=14
-		bclr=4
-	}
-	label="IM"
-	release_msg="1"
-}
-byte {
-	object {
-		x=540
-		y=198
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_IM_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-text {
-	object {
-		x=548
-		y=155
-		width=40
-		height=15
-	}
-	"basic attribute" {
-		clr=14
-	}
-	textix="STAGE"
-	align="horiz. centered"
-}
-"message button" {
-	object {
-		x=495
-		y=257
-		width=60
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_ALIGNED"
-		clr=14
-		bclr=4
-	}
-	label="ALIGNED"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=258
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_ALIGNED_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=495
-		y=277
-		width=60
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_DAMPED"
-		clr=14
-		bclr=4
-	}
-	label="DAMPED"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=278
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_DAMPED_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=495
-		y=297
-		width=60
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_ISOLATED"
-		clr=14
-		bclr=4
-	}
-	label="ISOLATED"
-	release_msg="1"
-}
-byte {
-	object {
-		x=478
-		y=298
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_ISOLATED_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=577
-		y=257
-		width=60
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_STANDBY"
-		clr=14
-		bclr=4
-	}
-	label="STANDBY"
-	release_msg="1"
-}
-byte {
-	object {
-		x=560
-		y=258
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_STANDBY_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"message button" {
-	object {
-		x=577
-		y=277
-		width=60
-		height=17
-	}
-	control {
-		chan="K1:ATM-VIS_SELECT_SAFE"
-		clr=14
-		bclr=4
-	}
-	label="SAFE"
-	release_msg="1"
-}
-byte {
-	object {
-		x=560
-		y=278
-		width=15
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_SAFE_BIT"
-		clr=30
-		bclr=4
-	}
-	direction="down"
-	sbit=1
-	ebit=1
-}
-"text update" {
-	object {
-		x=448
-		y=400
-		width=209
-		height=15
-	}
-	monitor {
-		chan="K1:ATM-VIS_SELECT_SUS"
-		clr=14
-		bclr=4
-	}
-	limits {
+		y=30
+		width=191
+		height=450
+	}
+	"composite name"=""
+	children {
+		"message button" {
+			object {
+				x=523
+				y=47
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_ETMX"
+				clr=14
+				bclr=4
+			}
+			label="ETMX"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=506
+				y=48
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_ETMX_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		text {
+			object {
+				x=499
+				y=30
+				width=40
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="SUSPENSION"
+		}
+		"message button" {
+			object {
+				x=523
+				y=67
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_ITMX"
+				clr=14
+				bclr=4
+			}
+			label="ITMX"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=506
+				y=68
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_ITMX_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=523
+				y=87
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_ETMY"
+				clr=14
+				bclr=4
+			}
+			label="ETMY"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=506
+				y=88
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_ETMY_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=523
+				y=107
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_ITMY"
+				clr=14
+				bclr=4
+			}
+			label="ITMY"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=506
+				y=108
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_ITMY_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		text {
+			object {
+				x=495
+				y=191
+				width=40
+				height=16
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="GRDSTATE"
+		}
+		"message button" {
+			object {
+				x=585
+				y=47
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_SRM"
+				clr=14
+				bclr=4
+			}
+			label="SRM"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=568
+				y=48
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_SRM_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=585
+				y=67
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_SR2"
+				clr=14
+				bclr=4
+			}
+			label="SR2"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=568
+				y=68
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_SR2_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=585
+				y=87
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_SR3"
+				clr=14
+				bclr=4
+			}
+			label="SR3"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=568
+				y=88
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_SR3_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=585
+				y=107
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_BS"
+				clr=14
+				bclr=4
+			}
+			label="BS"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=568
+				y=108
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_BS_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=646
+				y=47
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_PRM"
+				clr=14
+				bclr=4
+			}
+			label="PRM"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=628
+				y=48
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_PRM_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=646
+				y=67
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_PR2"
+				clr=14
+				bclr=4
+			}
+			label="PR2"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=628
+				y=68
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_PR2_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=646
+				y=87
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_SUS_PR3"
+				clr=14
+				bclr=4
+			}
+			label="PR3"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=628
+				y=88
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_SUS_PR3_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=523
+				y=147
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STG_IP"
+				clr=14
+				bclr=4
+			}
+			label="IP"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=506
+				y=148
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STG_IP_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=585
+				y=147
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STG_GAS"
+				clr=14
+				bclr=4
+			}
+			label="GAS"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=568
+				y=148
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STG_GAS_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=646
+				y=147
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STG_BF"
+				clr=14
+				bclr=4
+			}
+			label="IP"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=628
+				y=148
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STG_BF_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=523
+				y=167
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STG_MN"
+				clr=14
+				bclr=4
+			}
+			label="MN"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=506
+				y=168
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STG_MN_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=585
+				y=167
+				width=40
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STG_IM"
+				clr=14
+				bclr=4
+			}
+			label="IM"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=568
+				y=168
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STG_IM_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		text {
+			object {
+				x=497
+				y=131
+				width=40
+				height=15
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="STAGE"
+		}
+		"message button" {
+			object {
+				x=522
+				y=209
+				width=60
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STS_ALIGNED"
+				clr=14
+				bclr=4
+			}
+			label="ALIGNED"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=505
+				y=210
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STS_ALIGNED_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=522
+				y=229
+				width=60
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STS_DAMPED"
+				clr=14
+				bclr=4
+			}
+			label="DAMPED"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=505
+				y=230
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STS_DAMPED_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=522
+				y=249
+				width=60
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STS_ISOLATED"
+				clr=14
+				bclr=4
+			}
+			label="ISOLATED"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=505
+				y=250
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STS_ISOLATED_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=604
+				y=209
+				width=60
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STS_STANDBY"
+				clr=14
+				bclr=4
+			}
+			label="STANDBY"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=587
+				y=210
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STS_STANDBY_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		"message button" {
+			object {
+				x=604
+				y=229
+				width=60
+				height=17
+			}
+			control {
+				chan="K1:ATM-VIS_SELECT_STS_SAFE"
+				clr=14
+				bclr=4
+			}
+			label="SAFE"
+			release_msg="1"
+		}
+		byte {
+			object {
+				x=587
+				y=230
+				width=15
+				height=15
+			}
+			monitor {
+				chan="K1:ATM-VIS_SELECT_STS_SAFE_BIT"
+				clr=30
+				bclr=4
+			}
+			direction="down"
+			sbit=1
+			ebit=1
+		}
+		composite {
+			object {
+				x=505
+				y=291
+				width=146
+				height=189
+			}
+			"composite name"=""
+			children {
+				"text update" {
+					object {
+						x=551
+						y=292
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_00_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=311
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_01_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=330
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_02_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=349
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_03_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=368
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_04_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=388
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_05_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=407
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_06_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=426
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_07_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				byte {
+					object {
+						x=505
+						y=292
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_00_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=311
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_01_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=330
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_02_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=349
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_03_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=368
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_04_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				"message button" {
+					object {
+						x=522
+						y=291
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_00"
+						clr=14
+						bclr=4
+					}
+					label="00"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=310
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_01"
+						clr=14
+						bclr=4
+					}
+					label="01"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=329
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_02"
+						clr=14
+						bclr=4
+					}
+					label="02"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=348
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_03"
+						clr=14
+						bclr=4
+					}
+					label="03"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=367
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_04"
+						clr=14
+						bclr=4
+					}
+					label="04"
+					release_msg="1"
+				}
+				byte {
+					object {
+						x=505
+						y=388
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_05_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=407
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_06_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=426
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_07_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=445
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_08_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				byte {
+					object {
+						x=505
+						y=464
+						width=15
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_09_BIT"
+						clr=30
+						bclr=4
+					}
+					direction="down"
+					sbit=1
+					ebit=1
+				}
+				"message button" {
+					object {
+						x=522
+						y=387
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_05"
+						clr=14
+						bclr=4
+					}
+					label="05"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=406
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_06"
+						clr=14
+						bclr=4
+					}
+					label="06"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=425
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_07"
+						clr=14
+						bclr=4
+					}
+					label="07"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=444
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_08"
+						clr=14
+						bclr=4
+					}
+					label="08"
+					release_msg="1"
+				}
+				"message button" {
+					object {
+						x=522
+						y=463
+						width=20
+						height=17
+					}
+					control {
+						chan="K1:ATM-VIS_SELECT_REF_09"
+						clr=14
+						bclr=4
+					}
+					label="09"
+					release_msg="1"
+				}
+				"text update" {
+					object {
+						x=551
+						y=445
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_08_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+				"text update" {
+					object {
+						x=551
+						y=464
+						width=100
+						height=15
+					}
+					monitor {
+						chan="K1:ATM-VIS_SELECT_REF_09_VAL"
+						clr=14
+						bclr=4
+					}
+					limits {
+					}
+				}
+			}
+		}
+		text {
+			object {
+				x=496
+				y=271
+				width=40
+				height=16
+			}
+			"basic attribute" {
+				clr=14
+			}
+			textix="REFNUMBER"
+		}
 	}
 }

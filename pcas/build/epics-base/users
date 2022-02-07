@@ -1,4 +1,4 @@
-UAG(GatewayAdmin) {controls}
+UAG(GatewayAdmin) {controls,miyo}
 
 ASG(DEFAULT) {
    RULE(1,READ)

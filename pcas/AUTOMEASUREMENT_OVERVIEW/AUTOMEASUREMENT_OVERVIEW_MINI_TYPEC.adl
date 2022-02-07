@@ -1,6 +1,6 @@
 
 file {
-	name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl"
+	name="$(prefix)/AUTOMEASUREMENT_OVERVIEW_MINI_TYPEC.adl"
 	version=030109
 }
 display {
@@ -280,7 +280,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=STANDBY"
 	}
 	clr=14
@@ -296,7 +296,7 @@ rectangle {
 		height=12
 	}
 	display[0] {
-		name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
+		name="$(prefix)/AUTOMEASUREMENT_OVERVIEW/AUTOMEASUREMENT_CTR.adl"
 		args="OPTIC=$(OPTIC),STAGE=IM,STATE=DAMPED"
 	}
 	clr=14
