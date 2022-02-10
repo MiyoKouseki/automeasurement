@@ -30,13 +30,16 @@ def are_both_in(items,string):
     return all([True for item in items if item in string])
 
     
-def _search(prefix,sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['.*']):
-    fname = '/*/*/*/PLANT_*_*_*_*_*_*.xml'
-    ans = glob.glob(prefix+fname)
-    # ans = [_ans for _ans in ans if is_in(sus,_ans) \
-    #        and is_in(stg,_ans) and is_in(sts,_ans) \
-    #        and is_in(exc,_ans) and is_in(dof,_ans) \
-    #        and is_in(ref,_ans)]
+def _search(prefix,sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['.*'],cache=False):
+    if cache:
+        with open('flist.cache','r') as f:
+            ans = f.readlines()    
+    else:
+        fname = '/*/*/*/PLANT_*_*_*_*_*_*.xml'
+        ans = glob.glob(prefix+fname)
+        with open('flist.txt','w') as f:
+            f.write('\n'.join(ans))
+    
     ans = [_ans for _ans in ans if are_in(sus,stg,sts,exc,dof,ref,_ans)]
     return ans
 
@@ -82,6 +85,6 @@ if __name__=='__main__':
 
     args = parser.parse_args()
     prefix = args.prefix
-    kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc, 'ref':args.ref, 'dof':args.dof}        
+    kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc, 'ref':args.ref, 'dof':args.dof}
     suslist,stslist,stglist,exclist,doflist,reflist = search(prefix,**kwargs)
     print(suslist,stslist,stglist,exclist,doflist,reflist)
