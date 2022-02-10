@@ -18,6 +18,11 @@ def is_in(items,string):
         return False
     
 def are_in(sus,stg,sts,exc,dof,ref,string):
+    # fmt = '.*PLANT_({0})_({1})_({2})_({3})_({4})_({5}).xml'.\
+    #     format('|'.join(sus),'|'.join(sts),'|'.join(stg),
+    #            '|'.join(exc),'|'.join(dof),'|'.join(ref))
+    # print(fmt,string)
+    
     if re.search('.*PLANT_({0})_({1})_({2})_({3})_({4})_({5}).xml'.\
                  format('|'.join(sus),'|'.join(sts),'|'.join(stg),
                         '|'.join(exc),'|'.join(dof),'|'.join(ref))
@@ -30,7 +35,7 @@ def are_both_in(items,string):
     return all([True for item in items if item in string])
 
     
-def _search(prefix,sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['.*'],cache=False):
+def _search(prefix='./',sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['.*'],cache=True):    
     if cache:
         with open('flist.txt','r') as f:
             ans = f.readlines()    
@@ -40,19 +45,38 @@ def _search(prefix,sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['
         with open('flist.txt','w') as f:
             f.write('\n'.join(ans))
     if not ans:
-        raise ValueError('No file list')    
+        raise ValueError('No file list')
     ans = [_ans for _ans in ans if are_in(sus,stg,sts,exc,dof,ref,_ans)]
     return ans
 
 import numpy as np
-def search(prefix,maxlist=10,**kwargs):
-    ans = np.array([_parse(fname) for fname in _search(prefix,**kwargs)])
+def search(maxlist=10,**kwargs):
+    print(kwargs)
+    if not kwargs['sus']:
+        kwargs['sus'] = ['.*']
+    if not kwargs['stg']:
+        kwargs['stg'] = ['.*']
+    if not kwargs['sts']:
+        kwargs['sts'] = ['.*']
+    if not kwargs['exc']:
+        kwargs['exc'] = ['.*']
+    if not kwargs['dof']:
+        kwargs['dof'] = ['.*']
+    if not kwargs['ref']:
+        kwargs['ref'] = ['.*']        
+    
+    ans = np.array([_parse(fname) for fname in _search(**kwargs)])
+    try:
+        row,col = ans.shape
+    except:
+        return [],[],[],[],[],[]        
     suslist = list(np.unique(ans[:,0]))
     stslist = list(np.unique(ans[:,1]))
     stglist = list(np.unique(ans[:,2]))
     exclist = list(np.unique(ans[:,3]))
     doflist = list(np.unique(ans[:,4]))        
     reflist = list(np.unique(ans[:,5]))
+
     if not set(suslist)==set(kwargs['sus']) and not kwargs['sus']==['.*']:
         print('1')
         return [],[],[],[],[],[]
@@ -87,6 +111,6 @@ if __name__=='__main__':
 
     args = parser.parse_args()
     prefix = args.prefix
-    kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc, 'ref':args.ref, 'dof':args.dof, 'cache':args.nocache}
-    suslist,stslist,stglist,exclist,doflist,reflist = search(prefix,**kwargs)
+    kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc, 'ref':args.ref, 'dof':args.dof, 'prefix':args.prefix, 'cache':args.nocache}
+    suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
     print(suslist,stslist,stglist,exclist,doflist,reflist)

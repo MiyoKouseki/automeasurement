@@ -12,7 +12,7 @@ services:
         ipv4_address: 172.20.0.2        
     command: -sip 172.20.0.2 -cip 172.10.0.255 -pvlist /epics/pvaccess -access /epics/users -log /epics/logs
   pcas:
-    container_name: pcas    
+    container_name: pcas
     image: $PCAS_NAME:${VERSION}
     working_dir: /work
     tty: true
@@ -20,6 +20,9 @@ services:
     networks:
       local-ioc-network:
         ipv4_address: 172.10.0.2
+    volumes:
+      - ../lib:/work
+
 networks:
   local-ioc-network:
     ipam:

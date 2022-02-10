@@ -8,3 +8,5 @@ tmp
 templates
 *_BAK.adl
 .env
+__pycache__
+core

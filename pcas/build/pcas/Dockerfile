@@ -6,12 +6,12 @@ RUN curl -O http://apt.ligo-wa.caltech.edu/debian/pool/buster/cdssoft-release-bu
     dpkg -i $DEB && rm $DEB &&\
     apt update && \
     apt install --assume-yes --no-install-recommends python3-setuptools epics-catools python3-ezca python3-pcaspy && \
+    apt install --assume-yes --no-install-recommends python3-numpy && \    
     apt install --assume-yes --no-install-recommends net-tools procps && \
     apt install -y emacs
     
 ENV EPICS_CA_ADDR_LIST=172.18.0.2
 
 RUN mkdir /work
-COPY ./run.py /work/
 
 #ENTRYPOINT python3 run.py

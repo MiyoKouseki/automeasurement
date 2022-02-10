@@ -4,7 +4,7 @@ from pcaspy import Driver, SimpleServer
 from ezca import Ezca
 import random
 
-from .. import search
+from search import search
 
 prefix = 'K1:'
 
@@ -52,6 +52,10 @@ class myDriver(Driver):
     def  __init__(self):
         super(myDriver, self).__init__()
         self.tid = None
+        kwargs = {'sus':['.*'], 'stg':['.*'], 'sts':['.*'], 'exc':['.*'], 'ref':['.*'], 'dof':['.*'], 'cache':True}            
+        suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
+        [self.setParam('ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),reflist)]                    
+        
 
     def write(self, reason, value):
         status = True
@@ -73,11 +77,16 @@ class myDriver(Driver):
             self.setParam('ATM-VIS_SELECT_STG_LIST',' '.join(stglist))
             stslist = [ sts for sts in states if self.getParam('ATM-VIS_SELECT_STS_{0}_BIT'.format(sts))%4]
             self.setParam('ATM-VIS_SELECT_STS_LIST',' '.join(stslist))            
-            searched_reflist = search_reflist(suslist,stglist,stslist)
-            [self.setParam('ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(i), val) for i,val in zip(range(10),searched_reflist)]
+            #searched_reflist = search_reflist(suslist,stglist,stslist)
+            #[self.setParam('ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(i), val) for i,val in zip(range(10),searched_reflist)]
             reflist = [self.getParam('ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(ref)) for ref in range(10) \
                        if self.getParam('ATM-VIS_SELECT_REF_{0:02d}_BIT'.format(ref))%4]
-            self.setParam('ATM-VIS_SELECT_REF_LIST',' '.join(map(str,reflist)))                        
+            self.setParam('ATM-VIS_SELECT_REF_LIST',' '.join(map(str,reflist)))
+            kwargs = {'sus':suslist, 'stg':stglist, 'sts':stslist, 'exc':['.*'], 'ref':['.*'], 'dof':['.*'], 'cache':True}            
+            suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
+            print(suslist,stslist,stglist,exclist,doflist,reflist)
+            [self.setParam('ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),[0]*10)]            
+            [self.setParam('ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),reflist)]            
         else:
             pass
         
