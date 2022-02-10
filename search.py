@@ -32,14 +32,15 @@ def are_both_in(items,string):
     
 def _search(prefix,sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['.*'],cache=False):
     if cache:
-        with open('flist.cache','r') as f:
+        with open('flist.txt','r') as f:
             ans = f.readlines()    
     else:
         fname = '/*/*/*/PLANT_*_*_*_*_*_*.xml'
         ans = glob.glob(prefix+fname)
         with open('flist.txt','w') as f:
             f.write('\n'.join(ans))
-    
+    if not ans:
+        raise ValueError('No file list')    
     ans = [_ans for _ans in ans if are_in(sus,stg,sts,exc,dof,ref,_ans)]
     return ans
 
@@ -82,9 +83,10 @@ if __name__=='__main__':
     parser.add_argument('--exc',nargs='+',default=['.*'])
     parser.add_argument('--ref',nargs='+',default=['.*'])
     parser.add_argument('--dof',nargs='+',default=['.*'])
+    parser.add_argument('--nocache',action='store_false')    
 
     args = parser.parse_args()
     prefix = args.prefix
-    kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc, 'ref':args.ref, 'dof':args.dof}
+    kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc, 'ref':args.ref, 'dof':args.dof, 'cache':args.nocache}
     suslist,stslist,stglist,exclist,doflist,reflist = search(prefix,**kwargs)
     print(suslist,stslist,stglist,exclist,doflist,reflist)

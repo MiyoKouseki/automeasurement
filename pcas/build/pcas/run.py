@@ -4,6 +4,8 @@ from pcaspy import Driver, SimpleServer
 from ezca import Ezca
 import random
 
+from .. import search
+
 prefix = 'K1:'
 
 suspensions = ['ETMX','ETMY','ITMX','ITMY',
