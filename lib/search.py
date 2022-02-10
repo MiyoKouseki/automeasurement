@@ -76,6 +76,8 @@ def search(maxlist=10,**kwargs):
     exclist = list(np.unique(ans[:,3]))
     doflist = list(np.unique(ans[:,4]))        
     reflist = list(np.unique(ans[:,5]))
+    reflist.sort(reverse=True)
+    print(reflist)
 
     if not set(suslist)==set(kwargs['sus']) and not kwargs['sus']==['.*']:
         print('1')

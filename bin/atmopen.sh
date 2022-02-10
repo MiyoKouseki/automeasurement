@@ -14,6 +14,7 @@ fi
 DOCKER_HOST=k1ctr27
 EPICS_GATEWAY=172.20.0.2
 ADL=/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW.adl
+PREFIX=/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas
 
 exec xterm \
     -si -sk +sb \
@@ -23,5 +24,5 @@ exec xterm \
     -fa Monospace \
     -fs 10 \
     -title "AutoMeasurement: $*" \
-    -e "ssh -X ${DOCKER_HOST} -o ControlMaster=auto -o ControlPersist=600 -t env EPICS_CA_ADDR_LIST=${EPICS_GATEWAY} EPICS_CA_AUTO_ADDR_LIST=NO medm -x ${ADL}" \
+    -e "ssh -X ${DOCKER_HOST} -o ControlMaster=auto -o ControlPersist=600 -t env EPICS_CA_ADDR_LIST=${EPICS_GATEWAY} EPICS_CA_AUTO_ADDR_LIST=NO medm -x -macro "prefix=${PREFIX}" ${ADL}" \
     &
