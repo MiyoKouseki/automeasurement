@@ -44,6 +44,7 @@ def _search(prefix='./',sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],r
         ans = glob.glob(prefix+fname)
         with open('flist.txt','w') as f:
             f.write('\n'.join(ans))
+        exit()
     if not ans:
         raise ValueError('No file list')
     ans = [_ans for _ans in ans if are_in(sus,stg,sts,exc,dof,ref,_ans)]
