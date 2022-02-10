@@ -1934,3 +1934,19 @@ composite {
 		}
 	}
 }
+"shell command" {
+	object {
+		x=190
+		y=20
+		width=15
+		height=15
+	}
+	command[0] {
+		label="Reload Flie List"
+		name="xterm -fn 6x13 -geometry 60x50 -e"
+		args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/reload_cache | less -R' &"
+	}
+	clr=0
+	bclr=12
+	label="-"
+}

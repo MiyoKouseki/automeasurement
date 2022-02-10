@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pushd /kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/lib
+echo hello
+python search.py --nocache
+popd
