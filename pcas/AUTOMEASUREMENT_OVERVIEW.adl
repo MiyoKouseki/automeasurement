@@ -699,7 +699,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_LIST"
+				chan="K1:ATM-VIS_SELECT_LIST_SUS"
 				clr=14
 				bclr=4
 			}
@@ -714,7 +714,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STG_LIST"
+				chan="K1:ATM-VIS_SELECT_LIST_STG"
 				clr=14
 				bclr=4
 			}
@@ -729,7 +729,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STS_LIST"
+				chan="K1:ATM-VIS_SELECT_LIST_STS"
 				clr=14
 				bclr=4
 			}
@@ -744,7 +744,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_REF_LIST"
+				chan="K1:ATM-VIS_SELECT_LIST_REF"
 				clr=14
 				bclr=4
 			}
@@ -770,7 +770,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_ETMX"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ETMX"
 				clr=14
 				bclr=4
 			}
@@ -785,7 +785,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_ETMX_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ETMX_BIT"
 				clr=30
 				bclr=4
 			}
@@ -813,7 +813,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_ITMX"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ITMX"
 				clr=14
 				bclr=4
 			}
@@ -828,7 +828,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_ITMX_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ITMX_BIT"
 				clr=30
 				bclr=4
 			}
@@ -844,7 +844,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_ETMY"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ETMY"
 				clr=14
 				bclr=4
 			}
@@ -859,7 +859,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_ETMY_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ETMY_BIT"
 				clr=30
 				bclr=4
 			}
@@ -875,7 +875,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_ITMY"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ITMY"
 				clr=14
 				bclr=4
 			}
@@ -890,7 +890,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_ITMY_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_ITMY_BIT"
 				clr=30
 				bclr=4
 			}
@@ -918,7 +918,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_SRM"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_SRM"
 				clr=14
 				bclr=4
 			}
@@ -933,7 +933,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_SRM_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_SRM_BIT"
 				clr=30
 				bclr=4
 			}
@@ -949,7 +949,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_SR2"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_SR2"
 				clr=14
 				bclr=4
 			}
@@ -964,7 +964,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_SR2_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_SR2_BIT"
 				clr=30
 				bclr=4
 			}
@@ -980,7 +980,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_SR3"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_SR3"
 				clr=14
 				bclr=4
 			}
@@ -995,7 +995,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_SR3_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_SR3_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1011,7 +1011,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_BS"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_BS"
 				clr=14
 				bclr=4
 			}
@@ -1026,7 +1026,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_BS_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_BS_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1042,7 +1042,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_PRM"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_PRM"
 				clr=14
 				bclr=4
 			}
@@ -1057,7 +1057,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_PRM_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_PRM_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1073,7 +1073,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_PR2"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_PR2"
 				clr=14
 				bclr=4
 			}
@@ -1088,7 +1088,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_PR2_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_PR2_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1104,7 +1104,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_SUS_PR3"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_PR3"
 				clr=14
 				bclr=4
 			}
@@ -1119,7 +1119,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_SUS_PR3_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_SUS_PR3_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1135,7 +1135,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STG_IP"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_IP"
 				clr=14
 				bclr=4
 			}
@@ -1150,7 +1150,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STG_IP_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_IP_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1166,7 +1166,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STG_GAS"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_GAS"
 				clr=14
 				bclr=4
 			}
@@ -1181,7 +1181,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STG_GAS_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_GAS_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1197,7 +1197,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STG_BF"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_BF"
 				clr=14
 				bclr=4
 			}
@@ -1212,7 +1212,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STG_BF_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_BF_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1228,7 +1228,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STG_MN"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_MN"
 				clr=14
 				bclr=4
 			}
@@ -1243,7 +1243,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STG_MN_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_MN_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1259,7 +1259,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STG_IM"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_IM"
 				clr=14
 				bclr=4
 			}
@@ -1274,7 +1274,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STG_IM_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STG_IM_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1302,7 +1302,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STS_ALIGNED"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_ALIGNED"
 				clr=14
 				bclr=4
 			}
@@ -1317,7 +1317,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STS_ALIGNED_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_ALIGNED_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1333,7 +1333,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STS_DAMPED"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_DAMPED"
 				clr=14
 				bclr=4
 			}
@@ -1348,7 +1348,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STS_DAMPED_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_DAMPED_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1364,7 +1364,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STS_ISOLATED"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_ISOLATED"
 				clr=14
 				bclr=4
 			}
@@ -1379,7 +1379,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STS_ISOLATED_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_ISOLATED_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1395,7 +1395,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STS_STANDBY"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_STANDBY"
 				clr=14
 				bclr=4
 			}
@@ -1410,7 +1410,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STS_STANDBY_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_STANDBY_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1426,7 +1426,7 @@ composite {
 				height=17
 			}
 			control {
-				chan="K1:ATM-VIS_SELECT_STS_SAFE"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_SAFE"
 				clr=14
 				bclr=4
 			}
@@ -1441,7 +1441,7 @@ composite {
 				height=15
 			}
 			monitor {
-				chan="K1:ATM-VIS_SELECT_STS_SAFE_BIT"
+				chan="K1:ATM-VIS_SELECT_BUTTON_STS_SAFE_BIT"
 				clr=30
 				bclr=4
 			}
@@ -1466,7 +1466,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_00_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_00_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1481,7 +1481,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_01_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_01_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1496,7 +1496,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_02_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_02_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1511,7 +1511,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_03_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_03_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1526,7 +1526,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_04_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_04_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1541,7 +1541,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_05_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_05_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1556,7 +1556,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_06_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_06_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1571,7 +1571,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_07_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_07_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1586,7 +1586,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_00_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_00_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1602,7 +1602,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_01_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_01_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1618,7 +1618,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_02_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_02_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1634,7 +1634,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_03_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_03_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1650,7 +1650,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_04_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_04_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1666,7 +1666,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_00"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_00"
 						clr=14
 						bclr=4
 					}
@@ -1681,7 +1681,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_01"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_01"
 						clr=14
 						bclr=4
 					}
@@ -1696,7 +1696,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_02"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_02"
 						clr=14
 						bclr=4
 					}
@@ -1711,7 +1711,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_03"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_03"
 						clr=14
 						bclr=4
 					}
@@ -1726,7 +1726,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_04"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_04"
 						clr=14
 						bclr=4
 					}
@@ -1741,7 +1741,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_05_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_05_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1757,7 +1757,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_06_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_06_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1773,7 +1773,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_07_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_07_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1789,7 +1789,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_08_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_08_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1805,7 +1805,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_09_BIT"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_09_BIT"
 						clr=30
 						bclr=4
 					}
@@ -1821,7 +1821,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_05"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_05"
 						clr=14
 						bclr=4
 					}
@@ -1836,7 +1836,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_06"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_06"
 						clr=14
 						bclr=4
 					}
@@ -1851,7 +1851,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_07"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_07"
 						clr=14
 						bclr=4
 					}
@@ -1866,7 +1866,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_08"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_08"
 						clr=14
 						bclr=4
 					}
@@ -1881,7 +1881,7 @@ composite {
 						height=17
 					}
 					control {
-						chan="K1:ATM-VIS_SELECT_REF_09"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_09"
 						clr=14
 						bclr=4
 					}
@@ -1896,7 +1896,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_08_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_08_VAL"
 						clr=14
 						bclr=4
 					}
@@ -1911,7 +1911,7 @@ composite {
 						height=15
 					}
 					monitor {
-						chan="K1:ATM-VIS_SELECT_REF_09_VAL"
+						chan="K1:ATM-VIS_SELECT_BUTTON_REF_09_VAL"
 						clr=14
 						bclr=4
 					}
