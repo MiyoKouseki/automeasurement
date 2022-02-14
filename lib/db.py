@@ -1,29 +1,29 @@
 import itertools
-from vis import suspensions,stages,states
+from vis import suspensions,stages,states,key2dict
 
-refnum_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_REFNUM' # dont need?
+refnum_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_REFNUM'
 refnum_fmt_sdf_dummy = 'VIS-{sus}_{stg}_{sts}_REFNUM'
-exec_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_EXEC'
-status_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_STATUS'
 
 params = list(itertools.product(suspensions,stages,states))
-pvdb = {refnum_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'float','value':0} for sus,stg,sts in params}
-pvdb.update({refnum_fmt_sdf_dummy.format(sus=sus,stg=stg,sts=sts):{'type':'float','value':0} for sus,stg,sts in params})
-pvdb.update({exec_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'int'} for sus,stg,sts in params})
-pvdb.update({status_fmt.format(sus=sus,stg=stg,sts=sts):{'type':'enum','enums':['RUN','STOP']} for sus,stg,sts in params})
-pvdb.update({'ATM-VIS_SELECT_SUS_LIST':{'type':'str'}})
-pvdb.update({'ATM-VIS_SELECT_SUS_{sus}'.format(sus=sus):{'type':'int','value':0} for sus in suspensions})
-pvdb.update({'ATM-VIS_SELECT_SUS_{sus}_BIT'.format(sus=sus):{'type':'int','value':0} for sus in suspensions})
-pvdb.update({'ATM-VIS_SELECT_STG_LIST':{'type':'str'}})
-pvdb.update({'ATM-VIS_SELECT_STG_{stg}'.format(stg=stg):{'type':'int','value':0} for stg in stages})
-pvdb.update({'ATM-VIS_SELECT_STG_{stg}_BIT'.format(stg=stg):{'type':'int','value':0} for stg in stages})
-pvdb.update({'ATM-VIS_SELECT_STS_LIST':{'type':'str'}})
-pvdb.update({'ATM-VIS_SELECT_STS_{sts}'.format(sts=sts):{'type':'int','value':0} for sts in states})
-pvdb.update({'ATM-VIS_SELECT_STS_{sts}_BIT'.format(sts=sts):{'type':'int','value':0} for sts in states})
-pvdb.update({'ATM-VIS_SELECT_REF_{0:02d}'.format(i):{'type':'int','value':0} for i in range(10)})
-pvdb.update({'ATM-VIS_SELECT_REF_{0:02d}_BIT'.format(i):{'type':'int','value':0} for i in range(10)})
-pvdb.update({'ATM-VIS_SELECT_REF_{0:02d}_VAL'.format(i):{'type':'float','value':0} for i in range(10)})
-pvdb.update({'ATM-VIS_SELECT_REF_LIST':{'type':'str'}})
+pvdb = {refnum_fmt.format(sus=sus,stg=stg,sts=sts):
+        {'type':'float','value':0} for sus,stg,sts in params}
+pvdb.update({refnum_fmt_sdf_dummy.format(sus=sus,stg=stg,sts=sts):
+             {'type':'float','value':0} for sus,stg,sts in params})
+
+list_fmt = 'ATM-VIS_SELECT_{key1}_LIST'
+select_fmt = 'ATM-VIS_SELECT_{key1}_{key2}'
+select_bit_fmt = 'ATM-VIS_SELECT_{key1}_{key2}_BIT'
+for key1 in ['SUS','STG','STS','REF']:
+    pvdb.update({list_fmt.format(key1=key1):{'type':'str'}})
+    pvdb.update({select_fmt.format(key1=key1,key2=key2):
+                 {'type':'int','value':0} for key2 in key2dict[key1]})
+    pvdb.update({select_bit_fmt.format(key1=key1,key2=key2):
+                 {'type':'int','value':0} for key2 in key2dict[key1]})
+    if 'REF'==key1:
+        pvdb.update({'ATM-VIS_SELECT_{key1}_{key2}_VAL'.format(key1=key1,key2=key2):
+                     {'type':'float',
+                      'value':0} for key2 in key2dict[key1]})
+
 pvdb.update({'HOGE':{'type':'float'}})
 pvdb.update({'ATM-VIS_SEARCH':{'type':'str'}})
 
