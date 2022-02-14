@@ -5,5 +5,6 @@ suspensions = ['ETMX','ETMY','ITMX','ITMY',
 stages = ['IP','GAS','BF','MN','IM']
 states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED']
 refs = ['00','01','02','03','04','05','06','07','08','09']
+ansnums = ['00','01','02','03','04','05','06','07','08','09']
 
-key2dict = {'SUS':suspensions,'STG':stages,'STS':states,'REF':refs}
+key2dict = {'SUS':suspensions,'STG':stages,'STS':states,'REF':refs,'ANS':ansnums}

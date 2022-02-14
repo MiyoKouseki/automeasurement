@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import numpy as np
 from pcaspy import Driver, SimpleServer
 import random
 
@@ -15,16 +16,24 @@ def is_pushed(self,key1,key2):
 def get_pushed_list(self,key1):
     '''
     '''
-    _list = [ key2 for key2 in key2dict[key1] if is_pushed(self,key1,key2)]
+    if key1=='REF': 
+        _list = [ self.getParam('ATM-VIS_SELECT_BUTTON_REF_{key2}_VAL'.format(key2=key2)) for key2 in key2dict[key1] if is_pushed(self,key1,key2)]
+        _list = list(map(str,_list))
+    else:
+        _list = [ key2 for key2 in key2dict[key1] if is_pushed(self,key1,key2)]    
+    return _list
+
+def set_selected_items(self,key1):
+    _list = get_pushed_list(self,key1)
+    self.setParam('ATM-VIS_SELECT_LIST_{key1}'.format(key1=key1),' '.join(_list))    
     return _list
 
 class myDriver(Driver):
     def  __init__(self):
         super(myDriver, self).__init__()
         self.tid = None
-        kwargs = {'sus':['.*'], 'stg':['.*'], 'sts':['.*'], 'exc':['.*'], 'ref':['.*'], 'dof':['.*'], 'cache':True}      
-        suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
-        [self.setParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),reflist)]        
+        #suslist,stslist,stglist,exclist,doflist,reflist = search()
+        #[self.setParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),reflist)]        
 
     def write(self, reason, value):
         status = True
@@ -36,27 +45,44 @@ class myDriver(Driver):
             stglist = self.getParam('ATM-VIS_SELECT_LIST_STG')
             stslist = self.getParam('ATM-VIS_SELECT_LIST_STS')
         elif 'ATM-VIS_SELECT' in reason:
+            # SELECT_BUTTON
             key1,key2 = reason.split('_')[-2:]
             _val = self.getParam('ATM-VIS_SELECT_BUTTON_{0}_{1}_BIT'.format(key1,key2))
             self.setParam('ATM-VIS_SELECT_BUTTON_{0}_{1}_BIT'.format(key1,key2),_val+2)
             
             # push されているボタンのリストを取得
-            suslist = get_pushed_list(self,'SUS')
-            stglist = get_pushed_list(self,'STG')
-            stslist = get_pushed_list(self,'STS')                        
-            self.setParam('ATM-VIS_SELECT_LIST_SUS',' '.join(suslist))            
-            self.setParam('ATM-VIS_SELECT_LIST_STG',' '.join(stglist))
-            self.setParam('ATM-VIS_SELECT_LIST_STS',' '.join(stslist))
-
-            reflist = [self.getParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(ref)) for ref in range(10) \
-                       if self.getParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_BIT'.format(ref))%4]
-            self.setParam('ATM-VIS_SELECT_LIST_REF',' '.join(map(str,reflist)))
-            
-            kwargs = {'sus':suslist, 'stg':stglist, 'sts':stslist, 'exc':['.*'], 'ref':['.*'], 'dof':['.*'], 'cache':True}            
-            suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
-            #print(suslist,stslist,stglist,exclist,doflist,reflist)
-            [self.setParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),[0]*10)]            
-            [self.setParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(i), int(val)) for i,val in zip(range(10),reflist)]            
+            suslist = set_selected_items(self,'SUS')
+            stglist = set_selected_items(self,'STG')
+            stslist = set_selected_items(self,'STS')
+            reflist = set_selected_items(self,'REF')
+            kwargs = {'sus':suslist, 'stg':stglist, 'sts':stslist, 'ref':reflist}
+            ans = search(**kwargs)
+            #
+            try:
+                num = min(10,ans.shape[0])                
+            except:
+                num = 10
+                ans = np.array(['---']*10*6).reshape(10,6)    
+            #
+            reflist = ans[:,-1]
+            print(reflist)
+            [self.setParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(i), str(val)) for i,val in zip(range(10),['---']*10)]
+            [self.setParam('ATM-VIS_SELECT_BUTTON_REF_{0:02d}_VAL'.format(i), str(val)) for i,val in zip(range(10),np.unique(reflist))]
+            #
+            [self.setParam('ATM-VIS_ANS_{0:02d}_SUS'.format(i), str('---')) for i in range(10)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_STS'.format(i), str('---')) for i in range(10)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_STG'.format(i), str('---')) for i in range(10)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_EXC'.format(i), str('---')) for i in range(10)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_DOF'.format(i), str('---')) for i in range(10)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_REF'.format(i), str('---')) for i in range(10)]                                                            
+            #
+            [self.setParam('ATM-VIS_ANS_{0:02d}_SUS'.format(i), str(ans[i][0])) for i in range(num)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_STS'.format(i), str(ans[i][1])) for i in range(num)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_STG'.format(i), str(ans[i][2])) for i in range(num)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_EXC'.format(i), str(ans[i][3])) for i in range(num)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_DOF'.format(i), str(ans[i][4])) for i in range(num)]
+            [self.setParam('ATM-VIS_ANS_{0:02d}_REF'.format(i), str(ans[i][5])) for i in range(num)]                                                
+            #
         else:
             pass
         

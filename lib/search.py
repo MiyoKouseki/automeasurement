@@ -8,34 +8,35 @@ def _parse(fname):
 
 import glob
 import re
-def is_in(items,string):
-    if re.search('.*_({0})_.*'.format('|'.join(items)),string):
-        if 'GAS' in string:
-            print('.*_({0})_.*'.format('|'.join(items)))
-            print(string)
-        return True
-    else:
-        return False
     
 def are_in(sus,stg,sts,exc,dof,ref,string):
-    # fmt = '.*PLANT_({0})_({1})_({2})_({3})_({4})_({5}).xml'.\
-    #     format('|'.join(sus),'|'.join(sts),'|'.join(stg),
-    #            '|'.join(exc),'|'.join(dof),'|'.join(ref))
-    # print(fmt,string)
-    
+    # key同士はANDだがkey自身はORで検索    
     if re.search('.*PLANT_({0})_({1})_({2})_({3})_({4})_({5}).xml'.\
                  format('|'.join(sus),'|'.join(sts),'|'.join(stg),
                         '|'.join(exc),'|'.join(dof),'|'.join(ref))
                  ,string):
         return True
     else:
-        return False
+        return False    
     
-def are_both_in(items,string):
-    return all([True for item in items if item in string])
+def _search_or(**kwargs):
+    '''
+    '''
+    prefix = kwargs.get('prefix','./')
+    sus = kwargs.get('sus',['.*'])
+    stg = kwargs.get('stg',['.*'])
+    sts = kwargs.get('sts',['.*'])
+    exc = kwargs.get('exc',['.*'])
+    dof = kwargs.get('dof',['.*'])
+    ref = kwargs.get('ref',['.*'])
+    cache  = kwargs.get('cache',True)
+    if not sus: sus=['.*']
+    if not stg: stg=['.*']
+    if not sts: sts=['.*']
+    if not exc: exc=['.*']
+    if not dof: dof=['.*']
+    if not ref: ref=['.*']    
 
-    
-def _search(prefix='./',sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],ref=['.*'],cache=True):    
     if cache:
         with open('flist.txt','r') as f:
             ans = f.readlines()    
@@ -45,32 +46,41 @@ def _search(prefix='./',sus=['.*'],stg=['.*'],sts=['.*'],exc=['.*'],dof=['.*'],r
         with open('flist.txt','w') as f:
             f.write('\n'.join(ans))
         exit()
+        
     if not ans:
         raise ValueError('No file list')
+
+    # key同士はANDだがkey自身はORで検索
     ans = [_ans for _ans in ans if are_in(sus,stg,sts,exc,dof,ref,_ans)]
     return ans
 
 import numpy as np
+
+def compress_dof(ans):
+    col = 4 # means dof    
+    func = lambda _ans: '_'.join(_ans)
+    ans_u = np.unique([func(_ans) for _ans in np.delete(ans,col,axis=1)])
+    ans_dof = np.array([" ".join(np.sort(list([ _ans[col] for _ans in ans if func(np.delete(_ans,col))==txt]))) for txt in ans_u])
+    ans_u = np.array(list(map(lambda _ans: _ans.split("_"),ans_u)))
+    ans = np.insert(ans_u,4,ans_dof,axis=1)    
+    return ans
+
 def search(maxlist=10,**kwargs):
-    print(kwargs)
-    if not kwargs['sus']:
-        kwargs['sus'] = ['.*']
-    if not kwargs['stg']:
-        kwargs['stg'] = ['.*']
-    if not kwargs['sts']:
-        kwargs['sts'] = ['.*']
-    if not kwargs['exc']:
-        kwargs['exc'] = ['.*']
-    if not kwargs['dof']:
-        kwargs['dof'] = ['.*']
-    if not kwargs['ref']:
-        kwargs['ref'] = ['.*']        
-    
-    ans = np.array([_parse(fname) for fname in _search(**kwargs)])
+    sus = kwargs.get('sus',['.*'])
+    stg = kwargs.get('stg',['.*'])
+    sts = kwargs.get('sts',['.*'])
+    exc = kwargs.get('exc',['.*'])
+    dof = kwargs.get('dof',['.*'])
+    ref = kwargs.get('ref',['.*'])    
+
+    ans = np.array([_parse(fname) for fname in _search_or(**kwargs)])
     try:
         row,col = ans.shape
     except:
-        return [],[],[],[],[],[]        
+        return [],[],[],[],[],[]
+    
+    ans = compress_dof(ans)
+    
     suslist = list(np.unique(ans[:,0]))
     stslist = list(np.unique(ans[:,1]))
     stglist = list(np.unique(ans[:,2]))
@@ -78,27 +88,7 @@ def search(maxlist=10,**kwargs):
     doflist = list(np.unique(ans[:,4]))        
     reflist = list(np.unique(ans[:,5]))
     reflist.sort(reverse=True)
-    print(reflist)
-
-    if not set(suslist)==set(kwargs['sus']) and not kwargs['sus']==['.*']:
-        print('1')
-        return [],[],[],[],[],[]
-    if not set(stglist)==set(kwargs['stg']) and not kwargs['stg']==['.*']:
-        print('2')        
-        return [],[],[],[],[],[]        
-    if not set(stslist)==set(kwargs['sts']) and not kwargs['sts']==['.*']:
-        print('3')        
-        return [],[],[],[],[],[]                
-    if not set(exclist)==set(kwargs['exc']) and not kwargs['exc']==['.*']:
-        print('4')        
-        return [],[],[],[],[],[]                        
-    if not set(doflist)==set(kwargs['dof']) and not kwargs['dof']==['.*']:
-        print('5')        
-        return [],[],[],[],[],[]                        
-    if not set(reflist)==set(kwargs['ref']) and not kwargs['ref']==['.*']:
-        print('6')        
-        return [],[],[],[],[],[]                        
-    return suslist,stslist,stglist,exclist,doflist,reflist
+    return ans
     
 if __name__=='__main__':
     import argparse
