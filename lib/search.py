@@ -1,4 +1,5 @@
-
+#
+#! coding:utf-8
 
 import re
 def _parse(fname):
@@ -45,6 +46,7 @@ def _search_or(**kwargs):
         ans = glob.glob(prefix+fname)
         with open('flist.txt','w') as f:
             f.write('\n'.join(ans))
+        print('reloaded')
         exit()
         
     if not ans:
