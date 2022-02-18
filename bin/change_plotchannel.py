@@ -2,10 +2,14 @@
 
 if __name__=="__main__":
     import re
+    import argparse
 
-    src = './PLANT_ETMX_SAFE_MN_TEST_P_202202101531.xml'
-    #src = './PLANT_ETMX_SAFE_GAS_TEST_F3_202202101531.xml'
-    #src = './PLANT_ETMX_SAFE_IP_TEST_Y_202202101531.xml'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('src')
+
+    args = parser.parse_args()
+    src = args.src
+    
     pattern = '.*/PLANT_([A-Z]+[1-2]?)_([A-Z]+)_([A-Z]+)_([A-Z]+)_([A-Z]+[0-3]?)_([0-9]*)\.xml'
     sus,sts,stg,exc,dof,ref = re.findall(pattern,src)[0]
     
