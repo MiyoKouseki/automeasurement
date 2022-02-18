@@ -10,3 +10,4 @@ templates
 .env
 __pycache__
 core
+daqchannels.txt
