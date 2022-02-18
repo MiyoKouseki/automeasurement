@@ -10,7 +10,7 @@ if __name__=="__main__":
     args = parser.parse_args()
     src = args.src
     
-    pattern = '.*/PLANT_([A-Z]+[1-2]?)_([A-Z]+)_([A-Z]+)_([A-Z]+)_([A-Z]+[0-3]?)_([0-9]*)\.xml'
+    pattern = '.*PLANT_([A-Z]+[1-2]?)_([A-Z]+)_([A-Z]+)_([A-Z]+)_([A-Z]+[0-3]?)_([0-9]*)\.xml'
     sus,sts,stg,exc,dof,ref = re.findall(pattern,src)[0]
     
     text = open(src,'r').read()
