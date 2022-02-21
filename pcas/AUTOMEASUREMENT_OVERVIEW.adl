@@ -7,7 +7,7 @@ display {
 	object {
 		x=27
 		y=333
-		width=1101
+		width=1087
 		height=611
 	}
 	clr=14
@@ -1554,22 +1554,6 @@ composite {
 		"shell command" {
 			object {
 				x=998
-				y=418
-				width=60
-				height=40
-			}
-			command[0] {
-				label="Reload Flie List"
-				name="xterm -fn 6x13 -geometry 60x50 -e"
-				args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/reload_cache | less -R' &"
-			}
-			clr=0
-			bclr=9
-			label="-Plot"
-		}
-		"shell command" {
-			object {
-				x=998
 				y=465
 				width=60
 				height=40
@@ -1577,7 +1561,7 @@ composite {
 			command[0] {
 				label="Reload Flie List"
 				name="xterm -fn 6x13 -geometry 60x50 -e"
-				args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/reload_cache | less -R' &"
+				args="'eog /kagra/Dropbox/Measurements/VIS/figures/now.png' &"
 			}
 			clr=0
 			bclr=9
@@ -3665,6 +3649,6 @@ composite {
 		clr=14
 		bclr=4
 	}
-	label="-Plot"
+	label="Plot"
 	press_msg="on"
 }
