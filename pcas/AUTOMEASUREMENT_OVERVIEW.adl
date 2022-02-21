@@ -1,6 +1,6 @@
 
 file {
-	name="/home/miyo/Repositories/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW.adl"
+	name="/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW.adl"
 	version=030109
 }
 display {
@@ -3652,4 +3652,19 @@ composite {
 			}
 		}
 	}
+}
+"message button" {
+	object {
+		x=1007
+		y=380
+		width=45
+		height=26
+	}
+	control {
+		chan="K1:ATM-VIS_PLOT"
+		clr=14
+		bclr=4
+	}
+	label="-Plot"
+	press_msg="on"
 }

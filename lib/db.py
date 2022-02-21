@@ -30,4 +30,6 @@ for key3 in ['SUS','STG','STS','EXC','DOF','REF']:
         
 pvdb.update({'HOGE':{'type':'float'}})
 pvdb.update({'ATM-VIS_SEARCH':{'type':'str'}})
+pvdb.update({'ATM-VIS_PLOT':{'type':'str'}})
+pvdb.update({'ATM-VIS_MEASURE':{'type':'str'}})
 

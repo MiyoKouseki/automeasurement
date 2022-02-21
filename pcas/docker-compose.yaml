@@ -21,7 +21,9 @@ services:
       local-ioc-network:
         ipv4_address: 172.10.0.2
     volumes:
-      - ../lib:/work
+      - ../lib:/work:ro
+      - /kagra/Dropbox/Measurements/VIS:/diagdata:ro
+      - /kagra/Dropbox/Measurements/VIS/figures:/figures
 
 networks:
   local-ioc-network:
