@@ -91,7 +91,9 @@ def make_plot(self):
         print(suslist,stglist,stslist,exclist,doflist,reflist)
         suslist,stg,sts,exc,ref = list(suslist),list(stglist)[0],list(stslist)[0],list(exclist)[0],list(reflist)
         read = read_dict[stg][0] # fix me
-        for dof in list(doflist)[0].split(" ")[:1]:
+        dofs = [ dof for dof in list(doflist)[0].split(" ") if not ''==dof]
+        print(dofs)
+        for dof in dofs:
             ch_from = '%s_%s_%s'%(stg,exc,dof)
             ch_to = '%s_%s_%s'%(stg,read,dof)
             print(suslist,ch_from,ch_to,ref,sts)            

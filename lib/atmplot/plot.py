@@ -105,5 +105,6 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     figname = '/kagra/Dropbox/Measurements/VIS/figures/{refnums}_{ch_from}_{ch_to}.png'.format(refnums="_".join(refnumbers),ch_from=ch_from,ch_to=ch_to)
     figname = '/figures/{refnums}_{ch_from}_{ch_to}.png'.format(refnums="_".join(refnumbers),ch_from=ch_from,ch_to=ch_to)    
     plot.savefig(figname)
+    plot.savefig('/figures/now.png')    
     plot.close()
         
