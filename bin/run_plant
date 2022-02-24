@@ -35,7 +35,7 @@ else
     exit 1;
 fi
 
-#BW=`python -c "print($BW*30)"`
+BW=`python -c "print($BW*30)"`
 
 # Find Excitation Channel in the DTT template file
 printf "\033[30;01m=== Use ${exc_channel} ===\033[00m\n"

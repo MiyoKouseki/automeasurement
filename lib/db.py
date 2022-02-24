@@ -1,3 +1,4 @@
+import settings
 import itertools
 from vis import suspensions,stages,states,key2dict
 

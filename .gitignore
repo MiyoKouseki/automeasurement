@@ -5,7 +5,6 @@ tmp
 .#*
 *#
 *xml
-templates
 *_BAK.adl
 .env
 __pycache__

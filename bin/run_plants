@@ -94,9 +94,32 @@ get_template(){
     if [ ! -f $template ]; then
 	echo "No template file ${template}"
 	exit 1;
-    fi    
+    fi
     echo $template
 }
+
+# sus_type_is(){
+#     SUS=$1
+#     TYPEA='ETMX,ETMY,ITMX,ITMY'
+#     TYPEB='SR2,SR3,SRM,BS'
+#     TYPEBP='PR2,PR3,PRM'
+#     TYPECI='MCI,MCE,MCO,IMMT1,IMMT2'
+#     TYPECO='OSTM,OMMT1,OMMT2'
+#     if [[ "$TYPEA" == *$SUS* ]]; then
+# 	echo TYPEA
+#     elif [[ "$TYPEB" == *$SUS* ]]; then
+# 	echo TYPEB
+#     elif [[ "$TYPEBP" == *$SUS* ]]; then
+# 	echo TYPEBP
+#     elif [[ "$TYPECI" == *$SUS* ]]; then
+# 	echo TYPECI
+#     elif [[ "$TYPECO" == *$SUS* ]]; then
+# 	echo TYPECO
+#     else
+# 	echo 'Error'
+# 	exit 1;	
+#     fi	
+#     }
 
 get_output(){
     SUS=$1
@@ -130,3 +153,5 @@ for STAGE in ${STAGES[@]}; do
 	run_plant ${template} ${output} ${exc_channel} ${DEBUG} 
     done
 done
+
+echo Done
