@@ -4,7 +4,6 @@ tmp
 .nfs*
 .#*
 *#
-*xml
 *_BAK.adl
 .env
 __pycache__
