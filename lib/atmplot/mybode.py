@@ -129,9 +129,10 @@ class BodePlot(Plot):
         # 
         ylims = [[-120,20],[-180,180],[0,1.01]]
         [ax.set_ylim(*ylim) for ax,ylim in zip(self.axes,ylims)]
+        [ax.set_xlim(1e-3,20) for ax in self.axes]
         self.axes[1].set_yticks(range(-180,181,90))
         label = kwargs.pop('label', True)        
-        [ax.legend(label,alpha=0.7,loc='upper left',fontsize=10) for \
+        [ax.legend(label,alpha=0.7,fontsize=10) for \
          ax in self.axes[:1]]
             
         if coherence:
@@ -269,11 +270,12 @@ class BodePlot(Plot):
             if not power:
                 mag *= 2.
         # get phase
-        phase = numpy.angle(spectrum.value, deg=True)                   
+        phase = numpy.angle(spectrum.value, deg=True)         
         # plot
         w = spectrum.frequencies.value
         mline = self.maxes.plot(w, mag, **kwargs)[0]
-        pline = self.paxes.plot(w, phase, **kwargs)[0]
+        pline = self.paxes.plot(w, phase, 'o', markersize='2',
+                                **kwargs)[0]
         if coherence:
             coh = coherence.value
             w = coherence.frequencies.value

@@ -67,11 +67,14 @@ import numpy as np
 def compress_dof(ans):
     col = 4 # means dof    
     func = lambda _ans: '_'.join(_ans)
-    ans_u = np.unique([func(_ans) for _ans in np.delete(ans,col,axis=1)])
-    ans_dof = np.array([" ".join(np.sort(list([ _ans[col] for _ans in ans if func(np.delete(_ans,col))==txt]))) for txt in ans_u])
+    ans_u = [func(_ans) for _ans in np.delete(ans,col,axis=1)]
+    ans_u = np.unique(ans_u)
+    
+    ans_dof = [" ".join(np.sort(list([ _ans[col] for _ans in ans if func(np.delete(_ans,col))==txt]))) for txt in ans_u]
+    ans_dof = np.array(ans_dof)
     ans_u = np.array(list(map(lambda _ans: _ans.split("_"),ans_u)))
-    ans = np.insert(ans_u,4,ans_dof,axis=1)    
-    return ans
+    _ans = np.insert(ans_u,4,ans_dof,axis=1)
+    return _ans
 
 def search(maxlist=10,**kwargs):
     sus = kwargs.get('sus',['.*'])
