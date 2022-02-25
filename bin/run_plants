@@ -59,7 +59,7 @@ elif [ "${YN}" = "y" ]; then
     DEBUG=1
     QUICK=0    
 elif [ "${YN}" = "q" ]; then
-    DEBUG=0    
+    DEBUG=1    
     QUICK=1
 else
     echo "you chose ${YN}. Stop. "

@@ -1559,7 +1559,7 @@ composite {
 				height=40
 			}
 			command[0] {
-				label="Reload Flie List"
+				label="Open now png"
 				name="xterm -fn 6x13 -geometry 60x50 -e"
 				args="'eog /kagra/Dropbox/Measurements/VIS/figures/now.png' &"
 			}
@@ -3651,4 +3651,20 @@ composite {
 	}
 	label="Plot"
 	press_msg="on"
+}		
+"shell command" {
+       object {
+       	      x=990
+	      y=375
+	      width=15
+	      height=15
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 00 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
 }
