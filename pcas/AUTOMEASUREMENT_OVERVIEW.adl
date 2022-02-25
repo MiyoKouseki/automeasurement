@@ -3651,18 +3651,163 @@ composite {
 	}
 	label="Plot"
 	press_msg="on"
-}		
+}
+
 "shell command" {
        object {
-       	      x=990
-	      y=375
-	      width=15
-	      height=15
+       	      x=988
+	      y=376
+	      width=10
+	      height=16
 	      }
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
 			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 00 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=394
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 01 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=414
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 02 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=432
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 03 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=450
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 04 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=468
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 05 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=489
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 06 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=510
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 07 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=530
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 08 | less -R' &"
+			 }			
+	clr=14
+	bclr=5
+	label="-"
+}
+"shell command" {
+       object {
+       	      x=988
+	      y=550
+	      width=10
+	      height=16
+	      }
+	      command[0] {
+	      		 label="Reload Flie List"
+			 name="xterm -fn 6x13 -geometry 60x50 -e"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 09 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
