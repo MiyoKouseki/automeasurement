@@ -16,6 +16,7 @@ template=$1
 output=$2
 exc_channel=$3
 DEBUG=$4
+QUICK=$5
 
 # Custum Band Width
 if [[ "$exc_channel" == K1:VIS-*_BF_TEST_Y_EXC ]]; then    
@@ -35,7 +36,11 @@ else
     exit 1;
 fi
 
-BW=`python -c "print($BW*30)"`
+# Change the bandwidth
+if [ ${QUICK} = "1" ]; then
+    BW=`python -c "print($BW*30)"` # fix me
+fi
+    
 
 # Find Excitation Channel in the DTT template file
 printf "\033[30;01m=== Use ${exc_channel} ===\033[00m\n"

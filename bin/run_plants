@@ -49,12 +49,18 @@ echo -e " \033[1;31mSupension : ${SUS}\033[0;39m"
 echo -e " \033[1;31mStage     : ${STAGES[@]}\033[0;39m"
 echo -e " \033[1;31mDOF       : ${DOFS[@]}\033[0;39m"
 read -p "(y/n):" YN
-if [ "${YN}" = "" ]; then
+if [ "${YN}" = "debug" ]; then
     DEBUG=0
+    QUICK=0
+elif [ "${YN}" = "quick" ]; then
+    DEBUG=0
+    QUICK=1        
 elif [ "${YN}" = "y" ]; then
     DEBUG=1
-elif [ "${YN}" = "quick" ]; then
-    DEBUG=2
+    QUICK=0    
+elif [ "${YN}" = "q" ]; then
+    DEBUG=0    
+    QUICK=1
 else
     echo "you chose ${YN}. Stop. "
   exit 1;
@@ -98,29 +104,6 @@ get_template(){
     echo $template
 }
 
-# sus_type_is(){
-#     SUS=$1
-#     TYPEA='ETMX,ETMY,ITMX,ITMY'
-#     TYPEB='SR2,SR3,SRM,BS'
-#     TYPEBP='PR2,PR3,PRM'
-#     TYPECI='MCI,MCE,MCO,IMMT1,IMMT2'
-#     TYPECO='OSTM,OMMT1,OMMT2'
-#     if [[ "$TYPEA" == *$SUS* ]]; then
-# 	echo TYPEA
-#     elif [[ "$TYPEB" == *$SUS* ]]; then
-# 	echo TYPEB
-#     elif [[ "$TYPEBP" == *$SUS* ]]; then
-# 	echo TYPEBP
-#     elif [[ "$TYPECI" == *$SUS* ]]; then
-# 	echo TYPECI
-#     elif [[ "$TYPECO" == *$SUS* ]]; then
-# 	echo TYPECO
-#     else
-# 	echo 'Error'
-# 	exit 1;	
-#     fi	
-#     }
-
 get_output(){
     SUS=$1
     STATE=$2
@@ -150,7 +133,7 @@ for STAGE in ${STAGES[@]}; do
     for DOF in ${DOFS[@]}; do       	
 	output=`get_output $SUS $STATE $STAGE $EXC $DOF $refnum`
 	exc_channel=`get_exc_channel ${SUS} ${STAGE} ${EXC} ${DOF}`
-	run_plant ${template} ${output} ${exc_channel} ${DEBUG} 
+	run_plant ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}
     done
 done
 
