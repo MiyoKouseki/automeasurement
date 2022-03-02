@@ -97,11 +97,11 @@
     <Param Name="StimulusFrequency[2]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusFrequency[3]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusFrequency[4]" Type="double" Unit="Hz">0</Param>
-    <Param Name="StimulusAmplitude[0]" Type="double">29000</Param>
+    <Param Name="StimulusAmplitude[0]" Type="double">5000</Param>
     <Param Name="StimulusAmplitude[1]" Type="double">3000</Param>
-    <Param Name="StimulusAmplitude[2]" Type="double">2500</Param>
-    <Param Name="StimulusAmplitude[3]" Type="double">15000</Param>
-    <Param Name="StimulusAmplitude[4]" Type="double">38000</Param>
+    <Param Name="StimulusAmplitude[2]" Type="double">5000</Param>
+    <Param Name="StimulusAmplitude[3]" Type="double">10000</Param>
+    <Param Name="StimulusAmplitude[4]" Type="double">5000</Param>
     <Param Name="StimulusOffset[0]" Type="double">0</Param>
     <Param Name="StimulusOffset[1]" Type="double">0</Param>
     <Param Name="StimulusOffset[2]" Type="double">0</Param>
@@ -300,7 +300,7 @@
     <Param Name="StimulusChannel[5]" Type="string" Unit="channel">K1:VIS-SR2_IM_TEST_Y_EXC</Param>
     <Param Name="StimulusActive[5]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[5]" Type="string" Unit="channel"></Param>
-    <Param Name="StimulusAmplitude[5]" Type="double">2400</Param>
+    <Param Name="StimulusAmplitude[5]" Type="double">1000</Param>
     <Param Name="StimulusFrequency[5]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[5]" Type="double">0</Param>
     <Param Name="StimulusPhase[5]" Type="double">0</Param>

@@ -96,9 +96,9 @@
     <Param Name="StimulusFrequency[2]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusFrequency[3]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusFrequency[4]" Type="double" Unit="Hz">0</Param>
-    <Param Name="StimulusAmplitude[0]" Type="double">25000</Param>
-    <Param Name="StimulusAmplitude[1]" Type="double">40000</Param>
-    <Param Name="StimulusAmplitude[2]" Type="double">35000</Param>
+    <Param Name="StimulusAmplitude[0]" Type="double">10000</Param>
+    <Param Name="StimulusAmplitude[1]" Type="double">10000</Param>
+    <Param Name="StimulusAmplitude[2]" Type="double">10000</Param>
     <Param Name="StimulusAmplitude[3]" Type="double">40000</Param>
     <Param Name="StimulusAmplitude[4]" Type="double">35000</Param>
     <Param Name="StimulusOffset[0]" Type="double">0</Param>
