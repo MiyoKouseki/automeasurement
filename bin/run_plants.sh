@@ -1,12 +1,5 @@
 #!/bin/bash
-
-DROPBOX_MEASUREMENT_PATH=/kagra/Dropbox/Measurements/VIS
-DROPBOX_SCRIPT_PATH=/kagra/Dropbox/Subsystems/VIS/Scripts
-
-export templates_dir=${DROPBOX_MEASUREMENT_PATH}/TEMPLATES
-export plants_dir=${DROPBOX_MEASUREMENT_PATH}/PLANT
-export spectra_dir=${DROPBOX_MEASUREMENT_PATH}/SPECTRA
-
+source /kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/settings
 
 #
 if [ $# -ne 5 ]; then
@@ -96,7 +89,7 @@ get_exc_channel(){
 get_template(){
     SUS=$1
     STAGE=$2
-    template=${templates_dir}/PLANT_${SUS}_${STAGE}.xml
+    template=${TEMPLATES_DIR}/PLANT_${SUS}_${STAGE}.xml
     if [ ! -f $template ]; then
 	echo "No template file ${template}"
 	exit 1;
@@ -112,7 +105,7 @@ get_output(){
     DOF=$5
     refnum=$6
     # Check outputs_dir
-    outputs_dir=${plants_dir}/${SUS}/`date +%Y/%m`
+    outputs_dir=${PLANTS_DIR}/${SUS}/`date +%Y/%m`
     if [ ! -e ${outputs_dir} ]; then
 	mkdir -p ${outputs_dir}
     fi

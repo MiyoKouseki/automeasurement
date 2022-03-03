@@ -1,3 +1,7 @@
 ATM_DIR=/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement
 ATM_SAVE_DIR=/kagra/Dropbox/Measurements/VIS/
+
+export TEMPLATES_DIR=${ATM_SAVE_DIR}/TEMPLATES
+export PLANTS_DIR=${ATM_SAVE_DIR}/PLANT
+
 export EPICS_CA_ADDR_LIST=172.20.0.2

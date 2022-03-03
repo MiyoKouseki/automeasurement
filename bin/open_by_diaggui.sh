@@ -17,7 +17,7 @@ mm=${ref:4:2}
 echo $dofs
 read -p "Choose dofs:" dof
 if [[ "$dofs" == *${dof}* ]]; then
-    fname=${plants_dir}/${sus}/${yyyy}/${mm}/PLANT_${sus}_${sts}_${stg}_${exc}_${dof}_${ref}.xml
+    fname=${PLANTS_DIR}/${sus}/${yyyy}/${mm}/PLANT_${sus}_${sts}_${stg}_${exc}_${dof}_${ref}.xml
 else
     echo "Error $dof"
     exit 1;
