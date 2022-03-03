@@ -103,7 +103,8 @@ def search(maxlist=10,**kwargs):
     
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--prefix',default='/kagra/Dropbox/Measurements/VIS/PLANT')
+    parser.add_argument('--prefix',
+                        default='/kagra/Dropbox/Measurements/VIS/PLANT')
     parser.add_argument('--sus',nargs='+',default=['.*'])
     parser.add_argument('--sts',nargs='+',default=['.*'])
     parser.add_argument('--stg',nargs='+',default=['.*'])
@@ -115,6 +116,7 @@ if __name__=='__main__':
     args = parser.parse_args()
     prefix = args.prefix
     kwargs = {'sus':args.sus, 'stg':args.stg, 'sts':args.sts, 'exc':args.exc,
-              'ref':args.ref, 'dof':args.dof, 'prefix':args.prefix, 'cache':args.nocache}
+              'ref':args.ref, 'dof':args.dof, 'prefix':args.prefix,
+              'cache':args.nocache}
     suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
     print(suslist,stslist,stglist,exclist,doflist,reflist)    
