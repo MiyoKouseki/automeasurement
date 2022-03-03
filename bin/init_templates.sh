@@ -8,8 +8,8 @@ SUSPENSIONS=(ETMX ITMX ETMY ITMY)
 STAGES=(IP BF GAS MN IM)
 for SUS in ${SUSPENSIONS[@]}; do
     for STG in ${STAGES[@]}; do    
-	from=${prefix_from}/PLANT_TYPEA_STATE_${STG}_0000.xml
-	to=${prefix_to}/PLANT_${SUS}_STATE_${STG}_0000.xml
+	from=${prefix_from}/PLANT_TYPEA_${STG}.xml
+	to=${prefix_to}/PLANT_${SUS}_${STG}.xml
 	cp ${from} ${to}
 	sed -i -e "s/-ETMX_/-${SUS}_/" ${to}
     done
@@ -21,8 +21,8 @@ SUSPENSIONS=(SR2 SR3 SRM BS)
 STAGES=(IP GAS IM)
 for SUS in ${SUSPENSIONS[@]}; do
     for STG in ${STAGES[@]}; do    
-	from=${prefix_from}/PLANT_TYPEB_STATE_${STG}_0000.xml
-	to=${prefix_to}/PLANT_${SUS}_STATE_${STG}_0000.xml
+	from=${prefix_from}/PLANT_TYPEB_${STG}.xml
+	to=${prefix_to}/PLANT_${SUS}_${STG}.xml
 	cp ${from} ${to}
 	sed -i -e "s/-SR2_/-${SUS}_/" ${to}
     done
@@ -34,8 +34,8 @@ SUSPENSIONS=(PR2 PR3 PRM)
 STAGES=(BF GAS IM)
 for SUS in ${SUSPENSIONS[@]}; do
     for STG in ${STAGES[@]}; do    
-	from=${prefix_from}/PLANT_TYPEBP_STATE_${STG}_0000.xml
-	to=${prefix_to}/PLANT_${SUS}_STATE_${STG}_0000.xml
+	from=${prefix_from}/PLANT_TYPEBP_${STG}.xml
+	to=${prefix_to}/PLANT_${SUS}_${STG}.xml
 	cp ${from} ${to}
 	sed -i -e "s/-PR2_/-${SUS}_/" ${to}
     done

@@ -96,7 +96,7 @@ get_exc_channel(){
 get_template(){
     SUS=$1
     STAGE=$2
-    template=${templates_dir}/PLANT_${SUS}_STATE_${STAGE}_0000.xml
+    template=${templates_dir}/PLANT_${SUS}_${STAGE}.xml
     if [ ! -f $template ]; then
 	echo "No template file ${template}"
 	exit 1;
