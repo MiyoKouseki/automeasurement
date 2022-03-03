@@ -1,7 +1,7 @@
 #!/bin/bash
 if [[ "$1" == '-h' || "$1" == '--help' ]] ; then
     cat <<EOF
-usage: atmopen 
+usage: open_overview_adl
 
 Open the automeasurement in special X window.
 EOF

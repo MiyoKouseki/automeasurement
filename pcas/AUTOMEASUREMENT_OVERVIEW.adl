@@ -1709,7 +1709,7 @@ composite {
 									command[0] {
 										label="Reload Flie List"
 										name="xterm -fn 6x13 -geometry 60x50 -e"
-										args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/reload_cache | less -R' &"
+										args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/reload_measured_flist.sh | less -R' &"
 									}
 									clr=14
 									bclr=5
@@ -3663,7 +3663,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 00 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 00 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3679,7 +3679,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 01 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 01 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3695,7 +3695,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 02 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 02 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3711,7 +3711,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 03 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 03 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3727,7 +3727,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 04 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 04 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3743,7 +3743,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 05 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 05 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3759,7 +3759,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 06 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 06 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3775,7 +3775,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 07 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 07 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3791,7 +3791,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 08 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 08 | less -R' &"
 			 }			
 	clr=14
 	bclr=5
@@ -3807,7 +3807,7 @@ composite {
 	      command[0] {
 	      		 label="Reload Flie List"
 			 name="xterm -fn 6x13 -geometry 60x50 -e"
-			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_diaggui.sh 09 | less -R' &"
+			 args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/open_by_diaggui.sh 09 | less -R' &"
 			 }			
 	clr=14
 	bclr=5

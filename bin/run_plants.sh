@@ -133,7 +133,7 @@ for STAGE in ${STAGES[@]}; do
     for DOF in ${DOFS[@]}; do       	
 	output=`get_output $SUS $STATE $STAGE $EXC $DOF $refnum`
 	exc_channel=`get_exc_channel ${SUS} ${STAGE} ${EXC} ${DOF}`
-	run_plant ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}
+	run_plant.sh ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}
     done
 done
 

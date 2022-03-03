@@ -97,17 +97,17 @@ display {
 	command[0] {
 		label="Automeasure ALL (3h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'run_plants $(OPTIC) ALL TEST ALL 0.1 | less -R' &"
+		args="'run_plants.sh $(OPTIC) ALL TEST ALL 0.1 | less -R' &"
 	}
 	command[1] {
 		label="Automeasure TOWER (2h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'run_plants $(OPTIC) TWR TEST ALL 0.1 | less -R' &"
+		args="'run_plants.sh $(OPTIC) TWR TEST ALL 0.1 | less -R' &"
 	}
 	command[2] {
 		label="Automeasure PAYLOAD (1h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'run_plants $(OPTIC) PAY TEST ALL 0.1 | less -R' &"
+		args="'run_plants.sh $(OPTIC) PAY TEST ALL 0.1 | less -R' &"
 	}
 	clr=0
 	bclr=12

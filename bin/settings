@@ -1,2 +1,0 @@
-
-export PATH=$PATH:$DROPBOX_SCRIPT_PATH/automeasurement/bin

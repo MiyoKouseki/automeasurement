@@ -1,4 +1,0 @@
-#!/bin/bash
-
-latest=`get_latest_refnumber | head -n1`
-find /kagra/Dropbox/Measurements/VIS/PLANT/ -name "*${latest}.xml"
