@@ -68,6 +68,8 @@ def set_all_ans(self,key1,vals):
         
 def update_ans(self,ans):
     if not isinstance(ans,np.ndarray):
+        print(ans)
+        print(type(ans))
         raise RunError('invalid type. %s'%(type(ans)))
     if not ans.shape[1]==6:
         raise RunError('ans should have 6 cols: sus,sts,stg,exc,dof,ref.')
