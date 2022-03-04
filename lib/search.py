@@ -64,7 +64,7 @@ def _search_or(**kwargs):
 
 import numpy as np
 
-def compress_dof(ans):
+def compress_dof(ans): # simple me
     _ans = ans
     col = 4 # means dof    
     func = lambda _ans: '_'.join(_ans)
@@ -94,10 +94,7 @@ def search(maxlist=10,**kwargs):
     ref = kwargs.get('ref',['.*'])    
 
     ans = [_get_params(fname) for fname in _search_or(**kwargs)]
-    print(ans)
     ans = np.array(ans).astype('U20')
-    print(ans.dtype)
-    #ans = np.array([_get_params(fname) for fname in _search_or(**kwargs)])    
     try:
         row,col = ans.shape
     except:
