@@ -98,7 +98,7 @@ def search(maxlist=10,**kwargs):
     try:
         row,col = ans.shape
     except:
-        return [],[],[],[],[],[]
+        return np.array([['---']*6])
 
     
     ans = compress_dof(ans)
