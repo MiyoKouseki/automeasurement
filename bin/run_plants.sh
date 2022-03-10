@@ -2,7 +2,7 @@
 source /kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/settings
 export EPICS_CA_ADDR_LIST=10.68.10.5
 #
-if [ $# -ne 5 ]; then
+if [ $# -ne 4 ]; then
   echo "指定された引数は$#個です。" 1>&2
   echo "実行するには4個の引数が必要です。" 1>&2
   exit 1
@@ -13,7 +13,6 @@ SUS=$1
 STAGE=$2
 EXC=$3
 DOF=$4
-BW=$5
 
 # Set Stages
 if [ "$STAGE" = "ALL" ]; then
@@ -41,8 +40,8 @@ fi
 echo -e " \033[1;31mSupension : ${SUS}\033[0;39m"
 echo -e " \033[1;31mStage     : ${STAGES[@]}\033[0;39m"
 echo -e " \033[1;31mDOF       : ${DOFS[@]}\033[0;39m"
-echo -e " \033[1;31mTypeB ignore F2 F3 and BF damper.\033[0;39m"
-echo -e " \033[1;31mTypeBp ignore F1 F2 F3.\033[0;39m"
+echo -e " \033[1;31m [Note] TypeB ignore F2 F3 and BF damper.\033[0;39m"
+echo -e " \033[1;31m [Note] TypeBp ignore F1 F2 F3.\033[0;39m"
 read -p "(y/n):" YN
 if [ "${YN}" = "debug" ]; then
     DEBUG=0
@@ -72,6 +71,7 @@ get_grdstate(){
     if [ $? -gt 0 ]; then
 	exit # fixme
     fi
+    STATE=${STATE/_/}
     echo $STATE
 }
 
@@ -122,6 +122,7 @@ get_output(){
 # Run
 
 STATE=`get_grdstate $SUS`
+echo $STATE
 for STAGE in ${STAGES[@]}; do
     template=`get_template $SUS $STAGE`
     for DOF in ${DOFS[@]}; do       	
