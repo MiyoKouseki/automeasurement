@@ -1,6 +1,6 @@
 #!/bin/bash
 source /kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/settings
-
+export EPICS_CA_ADDR_LIST=10.68.10.5
 #
 if [ $# -ne 5 ]; then
   echo "指定された引数は$#個です。" 1>&2
@@ -41,6 +41,8 @@ fi
 echo -e " \033[1;31mSupension : ${SUS}\033[0;39m"
 echo -e " \033[1;31mStage     : ${STAGES[@]}\033[0;39m"
 echo -e " \033[1;31mDOF       : ${DOFS[@]}\033[0;39m"
+echo -e " \033[1;31mTypeB ignore F2 F3 and BF damper.\033[0;39m"
+echo -e " \033[1;31mTypeBp ignore F1 F2 F3.\033[0;39m"
 read -p "(y/n):" YN
 if [ "${YN}" = "debug" ]; then
     DEBUG=0
@@ -64,7 +66,6 @@ echo "OK. No one measure ${SUS}"
 
 # Set Refnumber
 refnum=`date +%Y%m%d%H%M`
-
 get_grdstate(){
     SUS=$1
     STATE=`caget -t K1:GRD-VIS_${SUS}_STATE_S`
@@ -126,7 +127,7 @@ for STAGE in ${STAGES[@]}; do
     for DOF in ${DOFS[@]}; do       	
 	output=`get_output $SUS $STATE $STAGE $EXC $DOF $refnum`
 	exc_channel=`get_exc_channel ${SUS} ${STAGE} ${EXC} ${DOF}`
-	run_plant.sh ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}
+	run_plant.sh ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}	
     done
 done
 

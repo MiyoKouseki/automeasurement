@@ -33,5 +33,7 @@ pvdb.update({'HOGE':{'type':'float'}})
 pvdb.update({'ATM-VIS_SEARCH':{'type':'str'}})
 pvdb.update({'ATM-VIS_PLOT':{'type':'str'}})
 pvdb.update({'ATM-VIS_MEASURE':{'type':'str'}})
-pvdb.update({'ATM-VIS_NOTIFY':{'type':'str'}})
+pvdb.update({'ATM-VIS_NOTIFY_00':{'type':'str'}})
+pvdb.update({'ATM-VIS_NOTIFY_01':{'type':'str'}})
+pvdb.update({'ATM-VIS_NOTIFY_02':{'type':'str'}})
 
