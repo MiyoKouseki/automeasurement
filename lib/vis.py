@@ -13,6 +13,9 @@ ansnums = ['00','01','02','03','04','05','06','07','08','09']
 key2dict = {'SUS':suspensions,'STG':stages,
             'STS':states,'REF':refs,
             'ANS':ansnums}
+key2dict = {'SUS':refs,'STG':refs,
+            'STS':refs,'REF':refs,
+            'ANS':ansnums}
 
 read_dict = {
     'IP':['IDAMP','BLEND_ACC','BLEND_LVDT'],

@@ -102,9 +102,8 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     # Plot
     plot = BodePlot(*tfdata,coherence=codata,figsize=(8,8),title=title,label=label)
     #plot.add_coherence(codata)
-    figname = '/kagra/Dropbox/Measurements/VIS/figures/{refnums}_{ch_from}_{ch_to}.png'.format(refnums="_".join(refnumbers),ch_from=ch_from,ch_to=ch_to)
     figname = '/figures/{refnums}_{ch_from}_{ch_to}.png'.format(refnums="_".join(refnumbers),ch_from=ch_from,ch_to=ch_to)    
     plot.savefig(figname)
     plot.savefig('/figures/now.png')    
     plot.close()
-        
+    return figname.split('/')[2]

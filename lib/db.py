@@ -19,11 +19,8 @@ for key1 in ['SUS','STG','STS','REF','ANS']:
     pvdb.update({select_fmt.format(key1=key1,key2=key2):
                  {'type':'int','value':0} for key2 in key2dict[key1]})
     pvdb.update({select_bit_fmt.format(key1=key1,key2=key2):
-                 {'type':'int','value':0} for key2 in key2dict[key1]})
-    
-    if 'REF'==key1: # fixme
-        pvdb.update({'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_VAL'.format(key1=key1,key2=key2):
-                     {'type':'str','value':'---'} for key2 in key2dict[key1]})
+                 {'type':'int','value':0} for key2 in key2dict[key1]})    
+    pvdb.update({'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_VAL'.format(key1=key1,key2=key2):{'type':'str','value':'---'} for key2 in key2dict[key1]})
         
 ans_fmt = 'ATM-VIS_ANS_{key2}_{key3}'
 for key3 in ['SUS','STG','STS','EXC','DOF','REF']:
@@ -36,4 +33,7 @@ pvdb.update({'ATM-VIS_MEASURE':{'type':'str'}})
 pvdb.update({'ATM-VIS_NOTIFY_00':{'type':'str'}})
 pvdb.update({'ATM-VIS_NOTIFY_01':{'type':'str'}})
 pvdb.update({'ATM-VIS_NOTIFY_02':{'type':'str'}})
+pvdb.update({'ATM-VIS_NOTIFY_03':{'type':'str'}})
+pvdb.update({'ATM-VIS_NOTIFY_04':{'type':'str'}})
+pvdb.update({'ATM-VIS_NOTIFY_05':{'type':'str'}})
 

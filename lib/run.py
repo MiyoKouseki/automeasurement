@@ -13,7 +13,7 @@ from atmplot import plot
 prefix = 'K1:'
 
 select_bit_fmt = 'ATM-VIS_SELECT_BUTTON_{0}_{1}_BIT'
-select_val_fmt = 'ATM-VIS_SELECT_BUTTON_REF_{key2}_VAL'
+select_val_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_VAL'
 ans_fmt = 'ATM-VIS_ANS_{key2}_{key1}'
 select_list = 'ATM-VIS_SELECT_LIST_{key1}'
 
@@ -33,12 +33,19 @@ def _get_pushed(self,key1,key2): # Fix me
     サスペンションやステージが増える可能性があると思えば、そうしてもいい気
     がする。
     '''
-    if key1 in ['REF']:
-        return str(self.getParam(select_val_fmt.format(key2=key2)))
-    elif key1 in ['SUS','STG','STS','ANS']:
+    if not key1 in ['ANS']:
+        return str(self.getParam(select_val_fmt.format(key1=key1,key2=key2)))
+    elif key1 in ['ANS']:
         return key2
     else:
         raise RunError(key1,key2)
+
+    # if key1 in ['REF']:
+    #     return str(self.getParam(select_val_fmt.format(key1=key1,key2=key2)))
+    # elif key1 in ['SUS','STG','STS','ANS']:
+    #     return key2
+    # else:
+    #     raise RunError(key1,key2)
 
 def get_pushed_list(self,key1):
     _list = [
@@ -56,11 +63,16 @@ def get_pushed_ans_list(self,key1,ansnum):
     return set(_list)
 
 def notify(self,message):
-    self.setParam('ATM-VIS_NOTIFY_01',message)
+    for i in range(6)[::-1]:
+        if i==0:
+            self.setParam('ATM-VIS_NOTIFY_00',message)
+        else:
+            _oldmessage = self.getParam('ATM-VIS_NOTIFY_%02d'%(i-1))
+            self.setParam('ATM-VIS_NOTIFY_%02d'%(i),_oldmessage)
 
 def set_all_val(self,key1,vals):
     for key2,val in zip(key2dict[key1],vals):
-        self.setParam(select_val_fmt.format(key2=key2),str(val))
+        self.setParam(select_val_fmt.format(key1=key1,key2=key2),str(val))
 
 def set_all_ans(self,key1,vals):
     for key2,val in zip(key2dict['ANS'],vals):
@@ -75,6 +87,15 @@ def update_ans(self,ans):
     num = min(10,ans.shape[0])                    
                 
     # update reflist
+    suslist = ans[:,0]
+    set_all_val(self,'SUS',['---']*10)
+    set_all_val(self,'SUS',np.unique(suslist)[::-1])
+    stslist = ans[:,1]
+    set_all_val(self,'STS',['---']*10)
+    set_all_val(self,'STS',np.unique(stslist)[::-1])            
+    stglist = ans[:,2]
+    set_all_val(self,'STG',['---']*10)
+    set_all_val(self,'STG',np.unique(stglist)[::-1])    
     reflist = ans[:,5]
     set_all_val(self,'REF',['---']*10)
     set_all_val(self,'REF',np.unique(reflist)[::-1])    
@@ -96,7 +117,7 @@ def update_ans(self,ans):
     set_all_ans(self,'REF',ans[:,5])    
     
 def make_plot(self):
-    pushed_ans = get_pushed_list(self,'ANS')            
+    pushed_ans = get_pushed_list(self,'ANS')
     suslist = get_pushed_ans_list(self,'SUS',pushed_ans)
     stglist = get_pushed_ans_list(self,'STG',pushed_ans)
     stslist = get_pushed_ans_list(self,'STS',pushed_ans)
@@ -120,10 +141,11 @@ def make_plot(self):
             ch_from = '%s_%s_%s'%(stg,exc,dof)
             ch_to = '%s_%s_%s'%(stg,read,dof)
             print(suslist,ch_from,ch_to,ref,sts)            
-            plot(suslist,ch_from,ch_to,ref,sts)            
+            figname = plot(suslist,ch_from,ch_to,ref,sts)
+            notify(self,figname)
     else:
         notify(self,'can not plot.')
-        print('Can not compair.')
+        print('Can not plot.')
     
 def blink_select_button(self,reason):
     key1,key2 = reason.split('_')[-2:]
@@ -141,9 +163,11 @@ def get_search_with_selected_items(self):
 class myDriver(Driver):
     def  __init__(self):
         super(myDriver, self).__init__()
+        ans = get_search_with_selected_items(self)
+        update_ans(self,ans)                    
 
     def write(self, reason, value):
-        notify(self,'')                    
+        #notify(self,'')                    
         if 'ATM-VIS_PLOT' in reason:
             make_plot(self)            
         elif 'ATM-VIS_SELECT_BUTTON' in reason:
