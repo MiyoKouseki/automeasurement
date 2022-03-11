@@ -1,8 +1,6 @@
 # automeasurement
 
-VISの伝達関数測定を半自動で行うためのパッケージ
-
-## Install
+VISの伝達関数測定を半自動で行うためのパッケージ。
 
 ## Usage
 

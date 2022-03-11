@@ -18,7 +18,7 @@ susdict = {'TYPE-A':typea,
 
 key2dict = {'SUS':refs,'STG':refs,
             'STS':refs,'REF':refs,
-            'TYP':refs,'EXC':refs,
+            'TYP':refs,'EXC':refs,'DOF':refs,
             'ANS':ansnums}
 
 read_dict = {

@@ -6,6 +6,7 @@ import random
 from search import search
 
 from db import pvdb
+from db import select_bit_fmt,select_val_fmt,ans_fmt
 from vis import suspensions,stages,states,sustypes
 from vis import key2dict,read_dict,get_sustype
 from vis import get_suslist_belong_sustype
@@ -14,17 +15,12 @@ from atmplot import plot
 
 prefix = 'K1:'
 
-select_bit_fmt = 'ATM-VIS_SELECT_BUTTON_{0}_{1}_BIT'
-select_val_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_VAL'
-ans_fmt = 'ATM-VIS_ANS_{key2}_{key1}'
-select_list = 'ATM-VIS_SELECT_LIST_{key1}'
-
 class RunError(Exception):
     pass
 
 def is_pushed(self,key1,key2):
     # 4 で割った余りは直したい。
-    return self.getParam(select_bit_fmt.format(key1,key2))%4 # fixme
+    return self.getParam(select_bit_fmt.format(key1=key1,key2=key2))%4 # fixme
 
 def _get_pushed(self,key1,key2): # Fix me
     '''
@@ -41,13 +37,6 @@ def _get_pushed(self,key1,key2): # Fix me
         return key2
     else:
         raise RunError(key1,key2)
-
-    # if key1 in ['REF']:
-    #     return str(self.getParam(select_val_fmt.format(key1=key1,key2=key2)))
-    # elif key1 in ['SUS','STG','STS','ANS']:
-    #     return key2
-    # else:
-    #     raise RunError(key1,key2)
 
 def get_pushed_list(self,key1):
     _list = [
@@ -162,8 +151,8 @@ def make_plot(self):
 def blink_select_button(self,reason):
     key1,key2 = reason.split('_')[-2:]
     self.setParam(
-        select_bit_fmt.format(key1,key2),
-        self.getParam(select_bit_fmt.format(key1,key2)) + 2
+        select_bit_fmt.format(key1=key1,key2=key2),
+        self.getParam(select_bit_fmt.format(key1=key1,key2=key2)) + 2
     )
 
 def get_search_with_selected_items(self):
@@ -195,7 +184,9 @@ class myDriver(Driver):
     def write(self, reason, value):
         #notify(self,'')                    
         if 'ATM-VIS_PLOT' in reason:
-            make_plot(self)            
+            make_plot(self)
+        elif 'ATM-VIS_SELECT_FIND' in reason:
+            pass
         elif 'ATM-VIS_SELECT_BUTTON' in reason:
             blink_select_button(self,reason)            
             ans = get_search_with_selected_items(self)

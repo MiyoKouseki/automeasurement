@@ -54,11 +54,11 @@ for key1 in ['SUS','STG','STS','REF','ANS','TYP','EXC']:
     )
 
 # ANS
-ans_fmt = 'ATM-VIS_ANS_{key2}_{key3}'
-for key3 in ['SUS','STG','STS','EXC','DOF','REF']:
+ans_fmt = 'ATM-VIS_ANS_{key2}_{key1}'
+for key1 in ['SUS','STG','STS','EXC','DOF','REF']:
     pvdb.update(
         {
-            ans_fmt.format(key2=key2,key3=key3):
+            ans_fmt.format(key2=key2,key1=key1):
             {'type':'str','value':'---'}
             for key2 in key2dict['ANS']
         }
