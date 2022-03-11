@@ -4,7 +4,7 @@ typebp = ['PRM','PR2','PR3']
 typeci = ['MCI','MCO','MCE','IMMT1','IMMT2']
 typeco = ['OSTM','OMMT1','OMMT2']
 suspensions = typea + typeb + typebp + typeci + typeco
-               
+sustypes = ['TYPE-A','TYPE-B','TYPE-Bp','TYPE-Ci','TYPE-Co']
 stages = ['IP','GAS','BF','MN','IM']
 states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
 refs = ['00','01','02','03','04']
@@ -46,13 +46,29 @@ def _sustype_is(sus):
 def get_sustype(suslist):
     return [ _sustype_is(sus) for sus in suslist]
 
+def _get_correct_typlist(typlist):
+    return [ typ for typ in typlist if typ in sustypes]        
+
+def _get_correct_suslist(suslist):
+    return [ sus for sus in suslist if sus in suspensions]        
+
+def _get_correct_stglist(stglist):
+    return [ stg for stg in stglist if stg in stages]        
+
+def _get_correct_stslist(stslist):
+    return [ sts for sts in stslist if sts in states]        
+
 def get_suslist_belong_sustype(suslist,typlist): # fix me
-    _suslist = [sus for typ in typlist for sus in susdict[typ]]    
+    typlist = _get_correct_typlist(typlist)
+    _suslist = [sus for typ in typlist for sus in susdict[typ]]
+    print(suslist,_suslist)
     if suslist and _suslist:
         _susset = set(_suslist)
         susset = set(suslist)
         union = _susset & susset
-        return union
+        print('!!!')        
+        return _suslist
+    #return list(union)
     elif suslist and not _suslist:
         return suslist
     elif not suslist and _suslist:

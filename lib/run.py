@@ -91,6 +91,8 @@ def update_ans(self,ans):
     # update reflist
     suslist = ans[:,0]
     set_all_val(self,'SUS',['---']*15)
+    typlist = get_pushed_list(self,'TYP')
+    suslist = get_suslist_belong_sustype(list(np.unique(suslist)),typlist)
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
     typlist = get_sustype(suslist)
     set_all_val(self,'TYP',['---']*15)
@@ -165,7 +167,17 @@ def blink_select_button(self,reason):
 def get_search_with_selected_items(self):
     typlist = get_pushed_list(self,'TYP')
     suslist = get_pushed_list(self,'SUS')
-    suslist = get_suslist_belong_sustype(suslist,typlist)
+    if not typlist and suslist:
+        pass
+    elif not typlist and not suslist:
+        pass
+    elif typlist and not suslist:
+        suslist = get_suslist_belong_sustype(suslist,typlist)
+    elif typlist and suslist:
+        pass
+    else:
+        raise ValueError('A')
+        
     return search(sus=suslist,
                   stg=get_pushed_list(self,'STG'),
                   sts=get_pushed_list(self,'STS'),
