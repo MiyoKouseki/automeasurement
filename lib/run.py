@@ -85,32 +85,33 @@ def update_ans(self,ans):
     if not ans.shape[1]==6:
         raise RunError('ans should have 6 cols: sus,sts,stg,exc,dof,ref.')
 
-    num = min(10,ans.shape[0])                    
+    
+    num = min(15,ans.shape[0])                    
                 
     # update reflist
     suslist = ans[:,0]
-    set_all_val(self,'SUS',['---']*10)
+    set_all_val(self,'SUS',['---']*15)
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
     typlist = get_sustype(suslist)
-    set_all_val(self,'TYP',['---']*10)
+    set_all_val(self,'TYP',['---']*15)
     set_all_val(self,'TYP',np.unique(typlist)[::-1])    
     stslist = ans[:,1]
-    set_all_val(self,'STS',['---']*10)
+    set_all_val(self,'STS',['---']*15)
     set_all_val(self,'STS',np.unique(stslist)[::-1])            
     stglist = ans[:,2]
-    set_all_val(self,'STG',['---']*10)
+    set_all_val(self,'STG',['---']*15)
     set_all_val(self,'STG',np.unique(stglist)[::-1])    
     reflist = ans[:,5]
-    set_all_val(self,'REF',['---']*10)
+    set_all_val(self,'REF',['---']*15)
     set_all_val(self,'REF',np.unique(reflist)[::-1])    
 
     # init answers
-    set_all_ans(self,'SUS',['---']*10)
-    set_all_ans(self,'STG',['---']*10)
-    set_all_ans(self,'STS',['---']*10)
-    set_all_ans(self,'EXC',['---']*10)
-    set_all_ans(self,'DOF',['---']*10)
-    set_all_ans(self,'REF',['---']*10)    
+    set_all_ans(self,'SUS',['---']*15)
+    set_all_ans(self,'STG',['---']*15)
+    set_all_ans(self,'STS',['---']*15)
+    set_all_ans(self,'EXC',['---']*15)
+    set_all_ans(self,'DOF',['---']*15)
+    set_all_ans(self,'REF',['---']*15)    
     
     # write answers
     set_all_ans(self,'SUS',ans[:,0])
