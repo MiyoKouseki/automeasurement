@@ -100,7 +100,10 @@ def update_ans(self,ans):
     set_all_val(self,'STS',np.unique(stslist)[::-1])            
     stglist = ans[:,2]
     set_all_val(self,'STG',['---']*15)
-    set_all_val(self,'STG',np.unique(stglist)[::-1])    
+    set_all_val(self,'STG',np.unique(stglist)[::-1])
+    exclist = ans[:,3]
+    set_all_val(self,'EXC',['---']*15)
+    set_all_val(self,'EXC',np.unique(exclist)[::-1])        
     reflist = ans[:,5]
     set_all_val(self,'REF',['---']*15)
     set_all_val(self,'REF',np.unique(reflist)[::-1])    
@@ -166,6 +169,7 @@ def get_search_with_selected_items(self):
     return search(sus=suslist,
                   stg=get_pushed_list(self,'STG'),
                   sts=get_pushed_list(self,'STS'),
+                  exc=get_pushed_list(self,'EXC'),
                   ref=get_pushed_list(self,'REF'))    
         
 class myDriver(Driver):

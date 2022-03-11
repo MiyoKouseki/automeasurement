@@ -16,12 +16,9 @@ susdict = {'TYPE-A':typea,
            'TYPE-Ci':typeci,
            'TYPE-Co':typeco}
 
-key2dict = {'SUS':suspensions,'STG':stages,
-            'STS':states,'REF':refs,
-            'ANS':ansnums}
 key2dict = {'SUS':refs,'STG':refs,
             'STS':refs,'REF':refs,
-            'TYP':refs,
+            'TYP':refs,'EXC':refs,
             'ANS':ansnums}
 
 read_dict = {
