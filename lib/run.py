@@ -56,7 +56,7 @@ def get_pushed_ans_list(self,key1,ansnum):
     return set(_list)
 
 def notify(self,message):
-    self.setParam('ATM-VIS_NOTIFY',message)
+    self.setParam('ATM-VIS_NOTIFY_01',message)
 
 def set_all_val(self,key1,vals):
     for key2,val in zip(key2dict[key1],vals):
@@ -108,7 +108,11 @@ def make_plot(self):
         stg,sts = list(stglist)[0],list(stslist)[0]
         exc,ref = list(exclist)[0],list(reflist)
         suslist = list(suslist)
-        read = read_dict[stg][0] # fix me
+        if not stg=='---':
+            read = read_dict[stg][0] # fix me
+        else:
+            notify(self,'can not plot.')            
+            return None
         dofs = [ dof for dof in list(doflist)[0].split(" ")
                  if not ''==dof]
         print(dofs)
@@ -139,7 +143,8 @@ class myDriver(Driver):
         super(myDriver, self).__init__()
 
     def write(self, reason, value):
-        if 'ATM-VIS_PLOT' in reason:            
+        notify(self,'')                    
+        if 'ATM-VIS_PLOT' in reason:
             make_plot(self)            
         elif 'ATM-VIS_SELECT_BUTTON' in reason:
             blink_select_button(self,reason)            

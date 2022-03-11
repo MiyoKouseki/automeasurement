@@ -91,23 +91,23 @@ display {
 	object {
 		x=190
 		y=20
-		width=7
-		height=7
+		width=10
+		height=10
 	}
 	command[0] {
 		label="Automeasure ALL (3h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'run_plants.sh $(OPTIC) ALL TEST ALL 0.1 | less -R' &"
+		args="'run_plants.sh $(OPTIC) ALL TEST ALL| less -R' &"
 	}
 	command[1] {
 		label="Automeasure TOWER (2h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'run_plants.sh $(OPTIC) TWR TEST ALL 0.1 | less -R' &"
+		args="'run_plants.sh $(OPTIC) TWR TEST ALL| less -R' &"
 	}
 	command[2] {
 		label="Automeasure PAYLOAD (1h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'run_plants.sh $(OPTIC) PAY TEST ALL 0.1 | less -R' &"
+		args="'run_plants.sh $(OPTIC) PAY TEST ALL| less -R' &"
 	}
 	clr=0
 	bclr=12

@@ -6,7 +6,7 @@ typeco = ['OSTM','OMMT1','OMMT2']
 suspensions = typea + typeb + typebp + typeci + typeco
                
 stages = ['IP','GAS','BF','MN','IM']
-states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED']
+states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
 refs = ['00','01','02','03','04','05','06','07','08','09']
 ansnums = ['00','01','02','03','04','05','06','07','08','09']
 
