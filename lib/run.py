@@ -6,7 +6,8 @@ import random
 from search import search
 
 from db import pvdb
-from vis import suspensions,stages,states,key2dict,read_dict,get_sustype
+from vis import suspensions,stages,states,sustypes
+from vis import key2dict,read_dict,get_sustype
 from vis import get_suslist_belong_sustype
 
 from atmplot import plot
@@ -96,7 +97,8 @@ def update_ans(self,ans):
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
     typlist = get_sustype(suslist)
     set_all_val(self,'TYP',['---']*15)
-    set_all_val(self,'TYP',np.unique(typlist)[::-1])    
+    #set_all_val(self,'TYP',np.unique(typlist)[::-1])
+    set_all_val(self,'TYP',sustypes)        
     stslist = ans[:,1]
     set_all_val(self,'STS',['---']*15)
     set_all_val(self,'STS',np.unique(stslist)[::-1])            

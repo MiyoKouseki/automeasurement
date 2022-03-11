@@ -4,7 +4,7 @@ typebp = ['PRM','PR2','PR3']
 typeci = ['MCI','MCO','MCE','IMMT1','IMMT2']
 typeco = ['OSTM','OMMT1','OMMT2']
 suspensions = typea + typeb + typebp + typeci + typeco
-sustypes = ['TYPE-A','TYPE-B','TYPE-Bp','TYPE-Ci','TYPE-Co']
+sustypes = ['TYPE-A','TYPE-B','TYPE-BP','TYPE-CI','TYPE-CO']
 stages = ['IP','GAS','BF','MN','IM']
 states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
 refs = ['00','01','02','03','04']
@@ -12,9 +12,9 @@ ansnums = ['00','01','02','03','04','05','06','07','08','09','10','11','12','13'
 
 susdict = {'TYPE-A':typea,
            'TYPE-B':typeb,
-           'TYPE-Bp':typebp,
-           'TYPE-Ci':typeci,
-           'TYPE-Co':typeco}
+           'TYPE-BP':typebp,
+           'TYPE-CI':typeci,
+           'TYPE-CO':typeco}
 
 key2dict = {'SUS':refs,'STG':refs,
             'STS':refs,'REF':refs,
@@ -35,11 +35,11 @@ def _sustype_is(sus):
     elif sus in typeb:
         return 'TYPE-B'
     elif sus in typebp:
-        return 'TYPE-Bp'
+        return 'TYPE-BP'
     elif sus in typeci:
-        return 'TYPE-Ci'
+        return 'TYPE-CI'
     elif sus in typeco:
-        return 'TYPE-Co'
+        return 'TYPE-CO'
     else:
         raise ValueError('Invalid %s'%(sus))
     
