@@ -6,7 +6,8 @@ import random
 from search import search
 
 from db import pvdb
-from vis import suspensions,stages,states,key2dict,read_dict
+from vis import suspensions,stages,states,key2dict,read_dict,get_sustype
+from vis import get_suslist_belong_sustype
 
 from atmplot import plot
 
@@ -76,7 +77,7 @@ def set_all_val(self,key1,vals):
 
 def set_all_ans(self,key1,vals):
     for key2,val in zip(key2dict['ANS'],vals):
-        self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val))
+        self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val))        
         
 def update_ans(self,ans):
     if not isinstance(ans,np.ndarray):
@@ -90,6 +91,9 @@ def update_ans(self,ans):
     suslist = ans[:,0]
     set_all_val(self,'SUS',['---']*10)
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
+    typlist = get_sustype(suslist)
+    set_all_val(self,'TYP',['---']*10)
+    set_all_val(self,'TYP',np.unique(typlist)[::-1])    
     stslist = ans[:,1]
     set_all_val(self,'STS',['---']*10)
     set_all_val(self,'STS',np.unique(stslist)[::-1])            
@@ -155,7 +159,10 @@ def blink_select_button(self,reason):
     )
 
 def get_search_with_selected_items(self):
-    return search(sus=get_pushed_list(self,'SUS'),
+    typlist = get_pushed_list(self,'TYP')
+    suslist = get_pushed_list(self,'SUS')
+    suslist = get_suslist_belong_sustype(suslist,typlist)
+    return search(sus=suslist,
                   stg=get_pushed_list(self,'STG'),
                   sts=get_pushed_list(self,'STS'),
                   ref=get_pushed_list(self,'REF'))    
