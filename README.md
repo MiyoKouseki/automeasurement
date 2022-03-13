@@ -6,6 +6,16 @@ AutoMeasurement(ATM) は VIS サスペンションのヘルスチェックの作
  2. 他のサスペンションとの比較プロット
  3. 過去の測定結果との比較用プロット
 
+## 目次
+
+ * ファイル構成
+  *  詳細
+  *  テンプレートファイル
+  *  測定結果ファイル
+  *  測定実行スクリプト
+  *  プロット用スクリプト
+ *  メモ, ToDo
+
 ## ファイル構成
 
 AutoMeasurement の基本的なファイルは atmctl と atmplot のディレクトリに分けた。これらディレクトリで、diaggui 測定の自動化操作や、測定結果のプロットをおこなう。また補助的に、 ユーザーが medm 画面で GUI 操作できるようにするために portable channel access server (pcas) を立て、関連したEPICSチャンネルを生成している。pcas は pcas ディレクトリ内の docker で サーバーを動かし、medm 画面は medm ディレクトリにある。
