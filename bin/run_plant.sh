@@ -62,5 +62,5 @@ open
 quit
 EOF
 #echo --- wait 10 seconds; sleep 10
-[ ${DEBUG} = "1" ] && cmd=change_plotchannel.py || cmd=echo
+[ ${DEBUG} = "1" ] && cmd=/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/change_plotchannel.py || cmd=echo
 $cmd ${output}

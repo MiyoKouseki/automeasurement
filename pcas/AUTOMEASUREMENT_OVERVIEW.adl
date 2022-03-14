@@ -1513,22 +1513,6 @@ text {
 }
 "shell command" {
 	object {
-		x=1122
-		y=247
-		width=60
-		height=60
-	}
-	command[0] {
-		label="Open now png"
-		name="xterm -fn 6x13 -geometry 60x50 -e"
-		args="'eog /kagra/Dropbox/Measurements/VIS/figures/now.png' &"
-	}
-	clr=0
-	bclr=10
-	label="-Measure"
-}
-"shell command" {
-	object {
 		x=894
 		y=23
 		width=50
@@ -2187,7 +2171,7 @@ composite {
 "message button" {
 	object {
 		x=1055
-		y=247
+		y=253
 		width=60
 		height=60
 	}
@@ -4971,4 +4955,20 @@ byte {
 	}
 	limits {
 	}
+}
+"shell command" {
+	object {
+		x=1123
+		y=253
+		width=60
+		height=60
+	}
+	command[0] {
+		label="Reload Flie List"
+		name="xterm -fn 6x13 -geometry 60x50 -e"
+		args="'/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/bin/run_atm.sh | less -R' &"
+	}
+	clr=0
+	bclr=10
+	label="-Measure"
 }
