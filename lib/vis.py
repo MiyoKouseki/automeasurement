@@ -10,6 +10,36 @@ states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
 refs = ['00','01','02','03','04']
 ansnums = ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14']
 
+class VisError(Exception):
+    pass
+
+vis_dofs = {
+    'TYPE-A': {'IP':['L','T','Y'],
+               'GAS':['F0','F1','F2','F3','BF'],
+               'BF':['L','T','V','P','Y','R'],
+               'MN':['L','T','V','P','Y','R'],
+               'IM':['L','T','V','P','Y','R'],
+               'TM':['L','P','Y']},        
+    'TYPE-B': {'IP':['L','T','Y'],
+               'GAS':['F0','F1','BF'],
+               'IM':['L','T','V','P','Y','R'],
+               'TM':['L','P','Y']},        
+    'TYPE-BP': {'GAS':['SF','BF'],
+                'BF':['L','T','V','P','Y','R'],
+                'IM':['L','T','V','P','Y','R'],
+                'TM':['L','P','Y']},    
+    'TYPE-CI': {'TM':['L','P','Y']},
+    'TYPE-CO': {'TM':['L','P','Y']}
+}
+
+def get_dofs(sus,stg):
+    try:
+        return vis_dofs[_sustype_is(sus)][stg]
+    except KeyError as e:
+        return []
+    except:
+        raise VisError('{sus} does not have {stg}.'.format(sus=sus,stg=stg))
+
 susdict = {'TYPE-A':typea,
            'TYPE-B':typeb,
            'TYPE-BP':typebp,
