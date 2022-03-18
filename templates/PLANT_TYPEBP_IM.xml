@@ -316,9 +316,9 @@
     <Param Name="StimulusFrequency[6]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[6]" Type="double">0</Param>
     <Param Name="StimulusPhase[6]" Type="double">0</Param>
-    <Param Name="StimulusType[6]" Type="int">0</Param>
+    <Param Name="StimulusType[6]" Type="int">7</Param>
     <Param Name="StimulusRatio[6]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[6]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequencyRange[6]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[6]" Type="double">0</Param>
     <Param Name="StimulusFilter[6]" Type="string"></Param>
     <Param Name="StimulusChannel[7]" Type="string" Unit="channel">K1:VIS-PR2_IM_COILOUTF_H2_EXC</Param>
@@ -328,9 +328,9 @@
     <Param Name="StimulusFrequency[7]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[7]" Type="double">0</Param>
     <Param Name="StimulusPhase[7]" Type="double">0</Param>
-    <Param Name="StimulusType[7]" Type="int">0</Param>
+    <Param Name="StimulusType[7]" Type="int">7</Param>
     <Param Name="StimulusRatio[7]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[7]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequencyRange[7]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[7]" Type="double">0</Param>
     <Param Name="StimulusFilter[7]" Type="string"></Param>
     <Param Name="StimulusChannel[8]" Type="string" Unit="channel">K1:VIS-PR2_IM_COILOUTF_H3_EXC</Param>
@@ -340,9 +340,9 @@
     <Param Name="StimulusFrequency[8]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[8]" Type="double">0</Param>
     <Param Name="StimulusPhase[8]" Type="double">0</Param>
-    <Param Name="StimulusType[8]" Type="int">0</Param>
+    <Param Name="StimulusType[8]" Type="int">7</Param>
     <Param Name="StimulusRatio[8]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[8]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequencyRange[8]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[8]" Type="double">0</Param>
     <Param Name="StimulusFilter[8]" Type="string"></Param>
     <Param Name="StimulusChannel[9]" Type="string" Unit="channel">K1:VIS-PR2_IM_COILOUTF_V1_EXC</Param>
@@ -352,9 +352,9 @@
     <Param Name="StimulusFrequency[9]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[9]" Type="double">0</Param>
     <Param Name="StimulusPhase[9]" Type="double">0</Param>
-    <Param Name="StimulusType[9]" Type="int">0</Param>
+    <Param Name="StimulusType[9]" Type="int">7</Param>
     <Param Name="StimulusRatio[9]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[9]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequencyRange[9]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[9]" Type="double">0</Param>
     <Param Name="StimulusFilter[9]" Type="string"></Param>
     <Param Name="StimulusChannel[10]" Type="string" Unit="channel">K1:VIS-PR2_IM_COILOUTF_V2_EXC</Param>
@@ -364,9 +364,9 @@
     <Param Name="StimulusFrequency[10]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[10]" Type="double">0</Param>
     <Param Name="StimulusPhase[10]" Type="double">0</Param>
-    <Param Name="StimulusType[10]" Type="int">0</Param>
+    <Param Name="StimulusType[10]" Type="int">7</Param>
     <Param Name="StimulusRatio[10]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[10]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequencyRange[10]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[10]" Type="double">0</Param>
     <Param Name="StimulusFilter[10]" Type="string"></Param>
     <Param Name="StimulusChannel[11]" Type="string" Unit="channel">K1:VIS-PR2_IM_COILOUTF_V3_EXC</Param>
@@ -376,9 +376,9 @@
     <Param Name="StimulusFrequency[11]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[11]" Type="double">0</Param>
     <Param Name="StimulusPhase[11]" Type="double">0</Param>
-    <Param Name="StimulusType[11]" Type="int">0</Param>
+    <Param Name="StimulusType[11]" Type="int">7</Param>
     <Param Name="StimulusRatio[11]" Type="double">0.5</Param>
-    <Param Name="StimulusFrequencyRange[11]" Type="double" Unit="Hz">0</Param>
+    <Param Name="StimulusFrequencyRange[11]" Type="double" Unit="Hz">20</Param>
     <Param Name="StimulusAmplitudeRange[11]" Type="double">0</Param>
     <Param Name="StimulusFilter[11]" Type="string"></Param>
   </LIGO_LW>
