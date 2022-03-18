@@ -17,7 +17,6 @@ output=$2
 exc_channel=$3
 DEBUG=$4
 QUICK=$5
-
 # Custum Band Width
 if [[ "$exc_channel" == K1:VIS-*_BF_TEST_Y_EXC ]]; then    
     BW=0.001
@@ -31,10 +30,12 @@ elif [[ "$exc_channel" == K1:VIS-*_MN_*_*_EXC ]]; then
     BW=0.01
 elif [[ "$exc_channel" == K1:VIS-*_IM_*_*_EXC ]]; then
     BW=0.01
+elif [[ "$exc_channel" == K1:VIS-*_TM_*_*_EXC ]]; then
+    BW=0.01
 elif [[ "$exc_channel" == K1:VIS-*_*_*_GAS_EXC ]]; then
     BW=0.01
 else
-    printf "\n\033[1;31m Invalid Excitation Channel\033[0;39m\n\n"
+    #printf "\n\033[1;31m Invalid Excitation Channel ${exc_channel} \033[0;39m\n\n"
     exit 1;
 fi
 

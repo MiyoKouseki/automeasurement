@@ -18,7 +18,7 @@ done
 
 #TYPEB
 SUSPENSIONS=(SR2 SR3 SRM BS)
-STAGES=(IP GAS IM)
+STAGES=(IP GAS IM TM)
 for SUS in ${SUSPENSIONS[@]}; do
     for STG in ${STAGES[@]}; do    
 	from=${prefix_from}/PLANT_TYPEB_${STG}.xml
@@ -31,7 +31,7 @@ done
 
 # TYPEBP
 SUSPENSIONS=(PR2 PR3 PRM)
-STAGES=(BF GAS IM)
+STAGES=(BF GAS IM TM)
 for SUS in ${SUSPENSIONS[@]}; do
     for STG in ${STAGES[@]}; do    
 	from=${prefix_from}/PLANT_TYPEBP_${STG}.xml

@@ -20,16 +20,24 @@ if [ "$STAGE" = "ALL" ]; then
 elif [ "$STAGE" = "TWR" ]; then
     STAGES=(IP BF GAS)
 elif [ "$STAGE" = "PAY" ]; then
-    STAGES=(MN IM)
+    if [[ "ETMX ITMX ETMY ITMY" == *${SUS}* ]]; then	
+	STAGES=(MN IM)
+    elif [[ "BS SRM SR2 SR3 PR2 PR3 PRM" == *${SUS}* ]]; then
+	STAGES=(IM TM)
+    else
+	echo "Invalid suspension name $SUS"
+	exit 1;
+    fi
+	
 else
     STAGES=${STAGE}
 fi    
 
 # Set DOFs
 if [ "$DOF" = "ALL" ]; then
-    DOFS=(L T Y P R V F0 F1 F2 F3 BF H1 H2 H3 V1 V2 V3)
+    DOFS=(L T Y P R V F0 F1 F2 F3 BF H1 H2 H3 H4 V1 V2 V3)
 elif [ "$DOF" = "HOR" ]; then
-    DOFS=(L T Y H1 H2 H3)
+    DOFS=(L T Y H1 H2 H3 H4)
 elif [ "$DOF" = "VER" ]; then
     DOFS=(P R V V1 V2 V3)
 else
@@ -120,13 +128,12 @@ get_output(){
 # Run
 
 STATE=`get_grdstate $SUS`
-echo $STATE
 for STAGE in ${STAGES[@]}; do
     template=`get_template $SUS $STAGE`
     for DOF in ${DOFS[@]}; do       	
 	output=`get_output $SUS $STATE $STAGE $EXC $DOF $refnum`
 	exc_channel=`get_exc_channel ${SUS} ${STAGE} ${EXC} ${DOF}`
-	run_plant.sh ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}	
+	run_plant.sh ${template} ${output} ${exc_channel} ${DEBUG} ${QUICK}		
     done
 done
 
