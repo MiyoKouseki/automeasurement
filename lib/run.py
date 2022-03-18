@@ -9,7 +9,8 @@ from db import pvdb
 from db import select_bit_fmt,select_val_fmt,ans_fmt
 from vis import suspensions,stages,states,sustypes
 from vis import key2dict,read_dict,get_sustype
-from vis import get_suslist_belong_sustype
+from vis import get_suslist_belong_sustype, get_stglist_belong_sus
+from vis import get_stslist, get_exclist
 
 from atmplot import plot
 
@@ -88,13 +89,16 @@ def update_ans(self,ans):
     set_all_val(self,'TYP',['---']*15)
     #set_all_val(self,'TYP',np.unique(typlist)[::-1])
     set_all_val(self,'TYP',sustypes)        
-    stslist = ans[:,1]
+    #stslist = ans[:,1]
+    stslist = get_stslist()
     set_all_val(self,'STS',['---']*15)
     set_all_val(self,'STS',np.unique(stslist)[::-1])            
-    stglist = ans[:,2]
+    #stglist = ans[:,2]
+    stglist = get_stglist_belong_sus(list(np.unique(suslist)))
     set_all_val(self,'STG',['---']*15)
     set_all_val(self,'STG',np.unique(stglist)[::-1])
-    exclist = ans[:,3]
+    #exclist = ans[:,3]
+    exclist = get_exclist()
     set_all_val(self,'EXC',['---']*15)
     set_all_val(self,'EXC',np.unique(exclist)[::-1])        
     reflist = ans[:,5]

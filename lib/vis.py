@@ -7,6 +7,7 @@ suspensions = typea + typeb + typebp + typeci + typeco
 sustypes = ['TYPE-A','TYPE-B','TYPE-BP','TYPE-CI','TYPE-CO']
 stages = ['IP','GAS','BF','MN','IM']
 states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
+excites = ['TEST','COILOUTF']
 refs = ['00','01','02','03','04','05','06','07','08','09']
 ansnums = ['00','01','02','03','04','05','06','07','08','09']
 
@@ -108,4 +109,12 @@ def get_suslist_belong_sustype(suslist,typlist): # fix me
     else:
         raise ValueError('A')
     
+def get_stglist_belong_sus(suslist): # fix me
+    stglist = stages
+    return stglist
 
+def get_stslist(): # fix me
+    return states
+
+def get_exclist(): # fix me
+    return excites
