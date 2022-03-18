@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#! coding:utf-8
 
 if __name__=="__main__":
     import re
@@ -37,15 +38,23 @@ if __name__=="__main__":
     exct = 'K1:VIS-%s_%s_%s_%s_IN2'%(sus,stg,exc,dof)
     red = re.findall('<.*"TracesBChannel\[0\]".*>K1:VIS-%s_%s_(.*)_.*_IN1_DQ<.*>'%(sus,stg),text)[0]
     read = 'K1:VIS-%s_%s_%s_%s_IN1_DQ'%(sus,stg,red,dof)
+    #
+    # 左の3つだけは特別にTrace2で表示をする。
+    # Trace1はFalseにしてTrace2だけに表示する。
+    # READ信号(IN1)はRenameする。
     text,n = re.subn(r'(<.*"TracesAChannel\[1\]".*>).*(<.*>)',r'\1%s\2'%(exct),text,3)
     text,n = re.subn(r'(<.*"TracesBChannel\[1\]".*>).*(<.*>)',r'\1%s\2'%(read),text,3)    
-    #
     text,n = re.subn(r'(<.*"TracesActive\[0\]".*>).*(<.*>)',r'\1false\2',text,3)
     text,n = re.subn(r'(<.*"TracesActive\[1\]".*>).*(<.*>)',r'\1true\2',text,3)
     text,n = re.subn(r'(<.*"TracesBChannel\[0\]".*)%s_%s_%s_IN1_DQ(<.*>)'%(_stg,red,_dof),
                      r'\1%s_%s_%s_IN1_DQ\2'%(stg,red,dof),text,3)
+
+    # 励起チャンネルはすべてRenameの対象    
     text,n = re.subn(r'(<.*"TracesAChannel\[0\]".*)%s_%s_%s_IN2(<.*>)'%(_stg,exc,_dof),
                      r'\1%s_%s_%s_IN2\2'%(stg,exc,dof),text,9)
-
+    # IPの場合右3つだけTrace2も表示してるので同様に変更
+    text,n = re.subn(r'(<.*"TracesAChannel\[1\]".*)%s_%s_%s_IN2(<.*>)'%(_stg,exc,_dof),
+                     r'\1%s_%s_%s_IN2\2'%(stg,exc,dof),text,9)        
     #
     open(src,'w').write(text)
+    print('Done',src)
