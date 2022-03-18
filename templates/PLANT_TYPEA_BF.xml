@@ -309,14 +309,14 @@
     <Param Name="StimulusChannel[6]" Type="string" Unit="channel">K1:VIS-ETMX_BF_COILOUTF_H1_EXC</Param>
     <Param Name="StimulusActive[6]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[6]" Type="string" Unit="channel"></Param>
-    <Param Name="StimulusAmplitude[6]" Type="double">0</Param>
+    <Param Name="StimulusAmplitude[6]" Type="double">100000</Param>
     <Param Name="StimulusFrequency[6]" Type="double" Unit="Hz">0</Param>
     <Param Name="StimulusOffset[6]" Type="double">0</Param>
     <Param Name="StimulusPhase[6]" Type="double">0</Param>
     <Param Name="StimulusType[6]" Type="int">7</Param>
     <Param Name="StimulusRatio[6]" Type="double">0.5</Param>
     <Param Name="StimulusFrequencyRange[6]" Type="double" Unit="Hz">20</Param>
-    <Param Name="StimulusAmplitudeRange[6]" Type="double">100000</Param>
+    <Param Name="StimulusAmplitudeRange[6]" Type="double">0</Param>
     <Param Name="StimulusFilter[6]" Type="string">zpk([],[1],1,&quot;n&quot;)</Param>
     <Param Name="StimulusChannel[7]" Type="string" Unit="channel">K1:VIS-ETMX_BF_COILOUTF_H2_EXC</Param>
     <Param Name="StimulusActive[7]" Type="boolean">false</Param>
@@ -367,7 +367,7 @@
     <Param Name="StimulusAmplitudeRange[10]" Type="double">0</Param>
     <Param Name="StimulusFilter[10]" Type="string"></Param>
     <Param Name="StimulusChannel[11]" Type="string" Unit="channel">K1:VIS-ETMX_BF_COILOUTF_V3_EXC</Param>
-    <Param Name="StimulusActive[11]" Type="boolean">false</Param>
+    <Param Name="StimulusActive[11]" Type="boolean">true</Param>
     <Param Name="StimulusReadback[11]" Type="string" Unit="channel"></Param>
     <Param Name="StimulusAmplitude[11]" Type="double">50000</Param>
     <Param Name="StimulusFrequency[11]" Type="double" Unit="Hz">0</Param>
@@ -429,8 +429,8 @@
     <Param Name="TracesBarAttrWidth" Type="double" Dim="8">0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1</Param>
     <Param Name="RangeAxisScale" Type="int" Dim="2">1	0</Param>
     <Param Name="RangeRange" Type="int" Dim="2">0	0</Param>
-    <Param Name="RangeRangeFrom" Type="double" Dim="2">0.01	-120</Param>
-    <Param Name="RangeRangeTo" Type="double" Dim="2">10	20</Param>
+    <Param Name="RangeRangeFrom" Type="double" Dim="2">0.1125	0</Param>
+    <Param Name="RangeRangeTo" Type="double" Dim="2">21.9875	1.1</Param>
     <Param Name="RangeBin" Type="int">1</Param>
     <Param Name="RangeBinLogSpacing" Type="boolean">true</Param>
     <Param Name="UnitsXValues" Type="int">0</Param>
@@ -699,8 +699,8 @@
     <Param Name="TracesBarAttrWidth" Type="double" Dim="8">0.1	0.1	0.1	0.1	0.1	0.1	0.1	0.1</Param>
     <Param Name="RangeAxisScale" Type="int" Dim="2">1	0</Param>
     <Param Name="RangeRange" Type="int" Dim="2">0	1</Param>
-    <Param Name="RangeRangeFrom" Type="double" Dim="2">0	0</Param>
-    <Param Name="RangeRangeTo" Type="double" Dim="2">22	1</Param>
+    <Param Name="RangeRangeFrom" Type="double" Dim="2">0.1125	0</Param>
+    <Param Name="RangeRangeTo" Type="double" Dim="2">21.9875	1</Param>
     <Param Name="RangeBin" Type="int">1</Param>
     <Param Name="RangeBinLogSpacing" Type="boolean">true</Param>
     <Param Name="UnitsXValues" Type="int">0</Param>
