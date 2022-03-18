@@ -95,19 +95,34 @@ display {
 		height=10
 	}
 	command[0] {
-		label="Automeasure ALL (3h)"
+		label="[EULER] Automeasure ALL (3h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
 		args="'run_plants.sh $(OPTIC) ALL TEST ALL| less -R' &"
 	}
 	command[1] {
-		label="Automeasure TOWER (2h)"
+		label="[EULER] Automeasure TOWER (2h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
 		args="'run_plants.sh $(OPTIC) TWR TEST ALL| less -R' &"
 	}
 	command[2] {
-		label="Automeasure PAYLOAD (1h)"
+		label="[EULER] Automeasure PAYLOAD (1h)"
 		name="xterm -fn 6x13 -geometry 60x50 -e"
 		args="'run_plants.sh $(OPTIC) PAY TEST ALL| less -R' &"
+	}
+	command[3] {
+		label="[COILOUTF] Automeasure ALL (3h)"
+		name="xterm -fn 6x13 -geometry 60x50 -e"
+		args="'run_plants.sh $(OPTIC) ALL COILOUTF ALL| less -R' &"
+	}
+	command[4] {
+		label="[COILOUTF] Automeasure TOWER (2h)"
+		name="xterm -fn 6x13 -geometry 60x50 -e"
+		args="'run_plants.sh $(OPTIC) TWR COILOUTF ALL| less -R' &"
+	}
+	command[5] {
+		label="[COILOUTF] Automeasure PAYLOAD (1h)"
+		name="xterm -fn 6x13 -geometry 60x50 -e"
+		args="'run_plants.sh $(OPTIC) PAY COILOUTF ALL| less -R' &"
 	}
 	clr=0
 	bclr=12
