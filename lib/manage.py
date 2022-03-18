@@ -51,7 +51,7 @@ def run_plants(sus,stg,exc,ref):
         outfile = get_outfile(sus=sus,stg=stg,exc=exc,ref=ref,dof=dof,sts=sts)
         template = get_template(sus=sus,stg=stg)
         excchannel = get_excchannel(sus,stg,exc,dof)
-        cmd = '/kagra/bin/run_plant.sh %s %s %s 1 1'%(template,outfile,excchannel)
+        cmd = '/kagra/bin/run_plant.sh %s %s %s 1 0'%(template,outfile,excchannel)
         ret = subprocess.run(cmd,shell=True,check=True)
         #print(outfile.split('/')[-1])
 
