@@ -27,11 +27,11 @@ fi
 
 # Set DOFs
 if [ "$DOF" = "ALL" ]; then
-    DOFS=(L T Y P R V F0 F1 F2 F3 BF)
+    DOFS=(L T Y P R V F0 F1 F2 F3 BF H1 H2 H3 V1 V2 V3)
 elif [ "$DOF" = "HOR" ]; then
-    DOFS=(L T Y)
+    DOFS=(L T Y H1 H2 H3)
 elif [ "$DOF" = "VER" ]; then
-    DOFS=(P R V)
+    DOFS=(P R V V1 V2 V3)
 else
     DOFS=${DOF}
 fi
@@ -39,9 +39,7 @@ fi
 # Confirmation
 echo -e " \033[1;31mSupension : ${SUS}\033[0;39m"
 echo -e " \033[1;31mStage     : ${STAGES[@]}\033[0;39m"
-echo -e " \033[1;31mDOF       : ${DOFS[@]}\033[0;39m"
-echo -e " \033[1;31m [Note] TypeB ignore F2 F3 and BF damper.\033[0;39m"
-echo -e " \033[1;31m [Note] TypeBp ignore F1 F2 F3.\033[0;39m"
+echo -e " \033[1;31mExcitation: ${EXC}\033[0;39m"
 read -p "(y/n):" YN
 if [ "${YN}" = "debug" ]; then
     DEBUG=0

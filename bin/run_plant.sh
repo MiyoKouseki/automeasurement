@@ -21,15 +21,17 @@ QUICK=$5
 # Custum Band Width
 if [[ "$exc_channel" == K1:VIS-*_BF_TEST_Y_EXC ]]; then    
     BW=0.001
-elif [[ "$exc_channel" == K1:VIS-*_BF_TEST_*_EXC ]]; then
+elif [[ "$exc_channel" == K1:VIS-*_BF_COILOUTF_H*_EXC ]]; then
+    BW=0.001
+elif [[ "$exc_channel" == K1:VIS-*_BF_*_*_EXC ]]; then
     BW=0.003
-elif [[ "$exc_channel" == K1:VIS-*_IP_TEST_*_EXC ]]; then
+elif [[ "$exc_channel" == K1:VIS-*_IP_*_*_EXC ]]; then
     BW=0.003
-elif [[ "$exc_channel" == K1:VIS-*_MN_TEST_*_EXC ]]; then
+elif [[ "$exc_channel" == K1:VIS-*_MN_*_*_EXC ]]; then
     BW=0.01
-elif [[ "$exc_channel" == K1:VIS-*_IM_TEST_*_EXC ]]; then
+elif [[ "$exc_channel" == K1:VIS-*_IM_*_*_EXC ]]; then
     BW=0.01
-elif [[ "$exc_channel" == K1:VIS-*_*_TEST_GAS_EXC ]]; then
+elif [[ "$exc_channel" == K1:VIS-*_*_*_GAS_EXC ]]; then
     BW=0.01
 else
     printf "\n\033[1;31m Invalid Excitation Channel\033[0;39m\n\n"
@@ -41,12 +43,11 @@ if [ ${QUICK} = "1" ]; then
     BW=`python -c "print($BW*30)"` # fix me
 fi
     
-
 # Find Excitation Channel in the DTT template file
 printf "\033[30;01m=== Use ${exc_channel} ===\033[00m\n"
 EXCNUM=`grep -e "StimulusChannel.*${exc_channel}" $template | sed -r 's/^.*\[([0-9]+)\].*$/\1/'`
 if [ -z "$EXCNUM" ]; then
-    #printf "\n\033[1;31m Invalid Excitation Channel\033[0;39m\n\n"
+    #printf "\n\033[1;31m $template does not have ${exc_channel}\033[0;39m\n\n"
     exit 1;
 fi
 
