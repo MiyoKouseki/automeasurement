@@ -126,14 +126,21 @@ def make_plot(self):
     doflist = get_pushed_ans_list(self,'DOF',pushed_ans)
     reflist = get_pushed_ans_list(self,'REF',pushed_ans)
 
+    print(stglist,stslist,exclist,doflist)
     if len(stglist)*len(stslist)*len(exclist)*len(doflist)==1:
         stg,sts = list(stglist)[0],list(stslist)[0]
         exc,ref = list(exclist)[0],list(reflist)
         suslist = list(suslist)
         if not stg=='---':
-            read = read_dict[stg][0] # fix me
+            if list(exclist)[0]=='COILOUTF':
+                read = read_dict[stg][1] # fix me
+            elif list(exclist)[0]=='TEST':
+                read = read_dict[stg][0] # fix me
+            else:
+                notify(self,'can not')
+                print('can not')
         else:
-            notify(self,'can not plot.')            
+            notify(self,'can not plot.')
             return None
         dofs = [ dof for dof in list(doflist)[0].split(" ")
                  if not ''==dof]

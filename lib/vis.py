@@ -7,8 +7,8 @@ suspensions = typea + typeb + typebp + typeci + typeco
 sustypes = ['TYPE-A','TYPE-B','TYPE-BP','TYPE-CI','TYPE-CO']
 stages = ['IP','GAS','BF','MN','IM']
 states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
-refs = ['00','01','02','03','04']
-ansnums = ['00','01','02','03','04','05','06','07','08','09','10','11','12','13','14']
+refs = ['00','01','02','03','04','05','06','07','08','09']
+ansnums = ['00','01','02','03','04','05','06','07','08','09']
 
 class VisError(Exception):
     pass
@@ -52,11 +52,11 @@ key2dict = {'SUS':refs,'STG':refs,
             'ANS':ansnums}
 
 read_dict = {
-    'IP':['IDAMP','BLEND_ACC','BLEND_LVDT'],
-    'BF':['DAMP'],
-    'GAS':['DAMP'],
-    'MN':['DAMP'],
-    'IM':['DAMP']
+    'IP':['IDAMP','LVDTINF','BLEND_ACC','BLEND_LVDT'],
+    'BF':['DAMP','LVDTINF'],
+    'GAS':['DAMP','LVDTINF'],
+    'MN':['DAMP','OSEMINF'],
+    'IM':['DAMP','OSEMINF']
 }
 
 def _sustype_is(sus):

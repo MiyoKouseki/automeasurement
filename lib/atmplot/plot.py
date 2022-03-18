@@ -48,7 +48,8 @@ import itertools
 #         #self.add_subplot(3,1,3,sharex=self.axes[2])
 
 exct_fmt = 'K1:VIS-{SUS}_{STAGE}_{EXCT}_{DOF}_IN2'
-read_fmt = 'K1:VIS-{SUS}_{STAGE}_{READ}_{DOF}_IN1_DQ'
+read1_fmt = 'K1:VIS-{SUS}_{STAGE}_{READ}_{DOF}_IN1_DQ'
+read2_fmt = 'K1:VIS-{SUS}_{STAGE}_{READ}_{DOF}_OUT_DQ'
 prefix = '/kagra/Dropbox/Measurements/VIS/PLANT/{SUS}/{YYYY}/{MM}/'
 prefix = '/diagdata/PLANT/{SUS}/{YYYY}/{MM}/'
 fname_fmt = 'PLANT_{SUS}_{STATE}_{STAGE}_{EXCT}_{DOF}_{YYYY}{MM}{DD}{HH}{mm}.xml'
@@ -85,7 +86,10 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     hoge = list(itertools.product(suspensions,datetime_kwargs)) # need list()?
     huge = list(itertools.product(suspensions,huga)) # need list()?
     _from = [exct_fmt.format(SUS=sus,**_exct_kwargs) for sus,_ in hoge]
-    _to = [read_fmt.format(SUS=sus,**_read_kwargs)for sus,_ in hoge]
+    if 'INF' in ch_to:
+        _to = [read2_fmt.format(SUS=sus,**_read_kwargs)for sus,_ in hoge]
+    else:
+        _to = [read1_fmt.format(SUS=sus,**_read_kwargs)for sus,_ in hoge]        
 
     print(exct_kwargs)
     sources = [(prefix+fname_fmt).\
