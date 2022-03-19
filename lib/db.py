@@ -23,7 +23,7 @@ select_val_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_VAL'
 select_find_fmt = 'ATM-VIS_SELECT_FIND_{key1}'
 default_val = {'SUS':'','STG':'','STS':'','REF':'2022',
                'ANS':'',
-               'TYP':'TYPE-','EXC':'TEST'}
+               'TYP':'TYPE-A','EXC':'TEST'}
 for key1 in ['SUS','STG','STS','REF','ANS','TYP','EXC']:
     pvdb.update(
         {

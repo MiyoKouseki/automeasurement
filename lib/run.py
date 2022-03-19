@@ -11,6 +11,7 @@ from vis import suspensions,stages,states,sustypes
 from vis import key2dict,read_dict,get_sustype
 from vis import get_suslist_belong_sustype, get_stglist_belong_sus
 from vis import get_stslist, get_exclist
+from vis import key1s
 
 from atmplot import plot
 
@@ -185,7 +186,17 @@ def get_search_with_selected_items(self):
                   sts=get_pushed_list(self,'STS'),
                   exc=get_pushed_list(self,'EXC'),
                   ref=get_pushed_list(self,'REF'))    
-        
+
+
+def find_refs(self,reason,findkey): # fixme
+    key1 = reason.split('_')[-1]
+    if not key1=='TYP':
+        key1num = key1s.index(key1)
+        refs = get_search_with_selected_items(self)[:,key1num]
+        refs = [ ref for ref in refs if findkey in ref]
+        set_all_val(self,key1,['---']*15)
+        set_all_val(self,key1,np.unique(refs)[::-1])
+
 class myDriver(Driver):
     def  __init__(self):
         super(myDriver, self).__init__()
@@ -197,7 +208,8 @@ class myDriver(Driver):
         if 'ATM-VIS_PLOT' in reason:
             make_plot(self)
         elif 'ATM-VIS_SELECT_FIND' in reason:
-            pass
+            find_refs(self,reason,value)
+            self.setParam(reason,value)
         elif 'ATM-VIS_SELECT_BUTTON' in reason:
             blink_select_button(self,reason)            
             ans = get_search_with_selected_items(self)
