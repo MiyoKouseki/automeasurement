@@ -60,6 +60,16 @@ read_dict = {
     'IM':['DAMP','OSEMINF'],
     'TM':['OLDAMP','OLDAMP']
 }
+read_dict = {
+    'IP':  {'TEST':'IDAMP','COILOUTF':'LVDTINF'},
+    #'IP':  {'TEST':'IDAMP','COILOUTF':['LVDTINF','BLEND_ACC','BLEND_LVDT']},
+    'BF':  {'TEST':'DAMP','COILOUTF':'LVDTINF'},
+    'GAS': {'TEST':'DAMP','COILOUTF':'LVDTINF'},
+    'MN':  {'TEST':'DAMP','COILOUTF':'OSEMINF'},
+    'IM':  {'TEST':'DAMP','COILOUTF':'OSEMINF'},
+    'TM':  {'TEST':'OLDAMP','COILOUTF':'OLDAMP'}
+}
+
 
 def _sustype_is(sus):
     if sus in typea:
@@ -119,3 +129,11 @@ def get_stslist(): # fix me
 
 def get_exclist(): # fix me
     return excites
+
+def get_read(stg,exc):
+    if not stg in stages:
+        raise VisError('Invalid stage name: %s'%(stg))
+    if not exc in excites:
+        raise VisError('Invalid excitation name: %s'%(exc))
+
+    return read_dict[stg][exc]

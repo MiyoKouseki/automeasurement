@@ -8,7 +8,7 @@ from search import search
 from db import pvdb
 from db import select_bit_fmt,select_val_fmt,ans_fmt
 from vis import suspensions,stages,states,sustypes
-from vis import key2dict,read_dict,get_sustype
+from vis import key2dict,get_read,get_sustype
 from vis import get_suslist_belong_sustype, get_stglist_belong_sus
 from vis import get_stslist, get_exclist
 from vis import key1s
@@ -121,6 +121,10 @@ def update_ans(self,ans):
     set_all_ans(self,'EXC',ans[:,3])
     set_all_ans(self,'DOF',ans[:,4])
     set_all_ans(self,'REF',ans[:,5])    
+
+def get_plot_params(suslist,stglist,stslist,exclist,doflist,reflist):
+        
+    
     
 def make_plot(self):
     pushed_ans = get_pushed_list(self,'ANS')
@@ -131,35 +135,40 @@ def make_plot(self):
     doflist = get_pushed_ans_list(self,'DOF',pushed_ans)
     reflist = get_pushed_ans_list(self,'REF',pushed_ans)
 
-    print(stglist,stslist,exclist,doflist)
+    # 同じ stage, grdstate, excitation, doflist でPlotする
+    # suslist, reflist は複数選択して比較Plot可能
     if len(stglist)*len(stslist)*len(exclist)*len(doflist)==1:
         stg,sts = list(stglist)[0],list(stslist)[0]
         exc,ref = list(exclist)[0],list(reflist)
         suslist = list(suslist)
-        if not stg=='---':
-            if list(exclist)[0]=='COILOUTF':
-                read = read_dict[stg][1] # fix me
-            elif list(exclist)[0]=='TEST':
-                read = read_dict[stg][0] # fix me
-            else:
-                notify(self,'can not')
-                print('can not')
-        else:
-            notify(self,'can not plot.')
-            return None
-        dofs = [ dof for dof in list(doflist)[0].split(" ")
-                 if not ''==dof]
-        print(dofs)
-        for dof in dofs:
+        excdofs = [ dof for dof in list(doflist)[0].split(" ") if not ''==dof] #fixme
+        print('plot',suslist,stg,sts,exc,ref,excdof)
+        
+        # fixme: choose read point name by excitation point name
+        read = get_read(stg,exc)
+        
+        # Plot each dofs
+        for dof in excdofs:
             ch_from = '%s_%s_%s'%(stg,exc,dof)
-            ch_to = '%s_%s_%s'%(stg,read,dof)
-            print(suslist,ch_from,ch_to,ref,sts)            
-            figname = plot(suslist,ch_from,ch_to,ref,sts)
-            notify(self,figname)
+            # fix me ----------------------
+            if stg=='TM':
+                readdofs = ['L','P','Y']
+            else:
+                readdofs = excdofs
+            # fix me ----------------------
+            for readdof in readdofs:
+                ch_to = '%s_%s_%s'%(stg,read,readdof)
+                print('Plot',suslist,ch_from,ch_to,ref,sts)
+                figname = plot(suslist,ch_from,ch_to,ref,sts)
+                notify(self,figname)
     else:
+        # stage, grdstate, excitation, dof list, が複数選択された
+        # 場合、Plotしない。
         notify(self,'can not plot.')
         print('Can not plot.')
-    
+
+# ------------------------------------------------------------------------------
+        
 def blink_select_button(self,reason):
     key1,key2 = reason.split('_')[-2:]
     self.setParam(
