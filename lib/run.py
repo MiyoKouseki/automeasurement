@@ -69,7 +69,7 @@ def set_all_val(self,key1,vals):
 
 def set_all_ans(self,key1,vals):
     for key2,val in zip(key2dict['ANS'],vals):
-        self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val))        
+        self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val)) 
         
 def update_ans(self,ans):
     if not isinstance(ans,np.ndarray):
@@ -122,19 +122,25 @@ def update_ans(self,ans):
     set_all_ans(self,'DOF',ans[:,4])
     set_all_ans(self,'REF',ans[:,5])    
 
-def get_plot_params(suslist,stglist,stslist,exclist,doflist,reflist):
-        
-    
-    
-def make_plot(self):
-    pushed_ans = get_pushed_list(self,'ANS')
-    suslist = get_pushed_ans_list(self,'SUS',pushed_ans)
-    stglist = get_pushed_ans_list(self,'STG',pushed_ans)
-    stslist = get_pushed_ans_list(self,'STS',pushed_ans)
-    exclist = get_pushed_ans_list(self,'EXC',pushed_ans)
-    doflist = get_pushed_ans_list(self,'DOF',pushed_ans)
-    reflist = get_pushed_ans_list(self,'REF',pushed_ans)
+def diag_plot():
+    pass
 
+def cross_plot():
+    pass
+
+def get_pushed_ans_parameters(self):
+    pushed_ans = get_pushed_list(self,'ANS')
+    sus = get_pushed_ans_list(self,'SUS',pushed_ans)
+    stg = get_pushed_ans_list(self,'STG',pushed_ans)
+    sts = get_pushed_ans_list(self,'STS',pushed_ans)
+    exc = get_pushed_ans_list(self,'EXC',pushed_ans)
+    dof = get_pushed_ans_list(self,'DOF',pushed_ans)
+    ref = get_pushed_ans_list(self,'REF',pushed_ans)
+    return sus,stg,sts,exc,dof,ref
+          
+def make_plot(self,*args):
+    suslist,stglist,stslist,exclist,doflist,reflist = args[0]
+    
     # 同じ stage, grdstate, excitation, doflist でPlotする
     # suslist, reflist は複数選択して比較Plot可能
     if len(stglist)*len(stslist)*len(exclist)*len(doflist)==1:
@@ -142,7 +148,7 @@ def make_plot(self):
         exc,ref = list(exclist)[0],list(reflist)
         suslist = list(suslist)
         excdofs = [ dof for dof in list(doflist)[0].split(" ") if not ''==dof] #fixme
-        print('plot',suslist,stg,sts,exc,ref,excdof)
+        print('plot',suslist,stg,sts,exc,ref,excdofs)
         
         # fixme: choose read point name by excitation point name
         read = get_read(stg,exc)
@@ -196,7 +202,6 @@ def get_search_with_selected_items(self):
                   exc=get_pushed_list(self,'EXC'),
                   ref=get_pushed_list(self,'REF'))    
 
-
 def find_refs(self,reason,findkey): # fixme
     key1 = reason.split('_')[-1]
     if not key1=='TYP':
@@ -213,13 +218,27 @@ class myDriver(Driver):
         update_ans(self,ans)                    
 
     def write(self, reason, value):
-        #notify(self,'')                    
         if 'ATM-VIS_PLOT' in reason:
-            make_plot(self)
+            """
+            K1:ATM-VIS_PLOT が押されると、選択したANSから
+            各種パラメータを取得し、プロットをつくる。
+            """
+            params = get_pushed_ans_parameters(self)
+            make_plot(self,params)
         elif 'ATM-VIS_SELECT_FIND' in reason:
+            """
+            K1:ATM-VIS_SELECT_FIND_** に値を代入すると、
+            その値で絞り込み検索をかける。           
+            """
             find_refs(self,reason,value)
             self.setParam(reason,value)
         elif 'ATM-VIS_SELECT_BUTTON' in reason:
+            """
+            K1:ATM-VIS_SELECT_BUTTON_** を押すと、黄色く
+            点灯し、また、そのとき選択されている SELECT 
+            ボタンのパラメータを使ってANSにある検索結果
+            を更新する。
+            """
             blink_select_button(self,reason)            
             ans = get_search_with_selected_items(self)
             update_ans(self,ans)            

@@ -130,4 +130,4 @@ if __name__=='__main__':
               'ref':args.ref, 'dof':args.dof, 'prefix':args.prefix,
               'cache':args.nocache}
     suslist,stslist,stglist,exclist,doflist,reflist = search(**kwargs)
-    print(suslist,stslist,stglist,exclist,doflist,reflist)    
+    #print(suslist,stslist,stglist,exclist,doflist,reflist)    
