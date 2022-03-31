@@ -48,7 +48,7 @@ fi
 printf "\033[30;01m=== Use ${exc_channel} ===\033[00m\n"
 EXCNUM=`grep -e "StimulusChannel.*${exc_channel}" $template | sed -r 's/^.*\[([0-9]+)\].*$/\1/'`
 if [ -z "$EXCNUM" ]; then
-    #printf "\n\033[1;31m $template does not have ${exc_channel}\033[0;39m\n\n"
+    printf "\n\033[1;31m $template does not have ${exc_channel}\033[0;39m\n\n"
     exit 1;
 fi
 

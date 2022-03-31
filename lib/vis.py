@@ -5,7 +5,7 @@ typeci = ['MCI','MCO','MCE','IMMT1','IMMT2']
 typeco = ['OSTM','OMMT1','OMMT2']
 suspensions = typea + typeb + typebp + typeci + typeco
 sustypes = ['TYPE-A','TYPE-B','TYPE-BP','TYPE-CI','TYPE-CO']
-stages = ['IP','GAS','BF','MN','IM']
+stages = ['IP','GAS','BF','MN','IM','TM']
 states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
 excites = ['TEST','COILOUTF']
 refs = ['00','01','02','03','04','05','06','07','08','09']
@@ -57,7 +57,8 @@ read_dict = {
     'BF':['DAMP','LVDTINF'],
     'GAS':['DAMP','LVDTINF'],
     'MN':['DAMP','OSEMINF'],
-    'IM':['DAMP','OSEMINF']
+    'IM':['DAMP','OSEMINF'],
+    'TM':['OLDAMP','OLDAMP']
 }
 
 def _sustype_is(sus):

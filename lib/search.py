@@ -6,7 +6,7 @@ import settings
 import re
 import glob
 
-plant_pattern = '.*/PLANT_([A-Z]+[1-2]?)_([A-Z]+)_([A-Z]+)_([A-Z]+)_([A-Z]+[0-3]?)_([0-9]{12})\.xml'
+plant_pattern = '.*/PLANT_([A-Z]+[1-2]?)_([A-Z]+)_([A-Z]+)_([A-Z]+)_([A-Z]+[0-4]?)_([0-9]{12})\.xml'
 
 
 def _get_params(fname):

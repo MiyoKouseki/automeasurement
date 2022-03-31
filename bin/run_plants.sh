@@ -24,6 +24,8 @@ elif [ "$STAGE" = "PAY" ]; then
 	STAGES=(MN IM)
     elif [[ "BS SRM SR2 SR3 PR2 PR3 PRM" == *${SUS}* ]]; then
 	STAGES=(IM TM)
+    elif [[ "MCI MCO MCE IMMT1 IMMT2" == *${SUS}* ]]; then
+	STAGES=(TM)	
     else
 	echo "Invalid suspension name $SUS"
 	exit 1;

@@ -40,3 +40,16 @@ for SUS in ${SUSPENSIONS[@]}; do
 	sed -i -e "s/-PR2_/-${SUS}_/" ${to}
     done
 done    
+
+
+# TYPECI
+SUSPENSIONS=(MCI MCO MCE IMMT1 IMMT2)
+STAGES=(TM)
+for SUS in ${SUSPENSIONS[@]}; do
+    for STG in ${STAGES[@]}; do    
+	from=${prefix_from}/PLANT_TYPECI_${STG}.xml
+	to=${prefix_to}/PLANT_${SUS}_${STG}.xml
+	cp ${from} ${to}
+	sed -i -e "s/-IMMT1_/-${SUS}_/" ${to}
+    done
+done    
