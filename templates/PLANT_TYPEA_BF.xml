@@ -367,7 +367,7 @@
     <Param Name="StimulusAmplitudeRange[10]" Type="double">0</Param>
     <Param Name="StimulusFilter[10]" Type="string"></Param>
     <Param Name="StimulusChannel[11]" Type="string" Unit="channel">K1:VIS-ETMX_BF_COILOUTF_V3_EXC</Param>
-    <Param Name="StimulusActive[11]" Type="boolean">true</Param>
+    <Param Name="StimulusActive[11]" Type="boolean">false</Param>
     <Param Name="StimulusReadback[11]" Type="string" Unit="channel"></Param>
     <Param Name="StimulusAmplitude[11]" Type="double">50000</Param>
     <Param Name="StimulusFrequency[11]" Type="double" Unit="Hz">0</Param>
