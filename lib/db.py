@@ -1,6 +1,8 @@
+import re
 import settings
 import itertools
 from vis import suspensions,stages,states,key2dict
+
 
 # STATUS
 refnum_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_REFNUM'
@@ -18,6 +20,7 @@ pvdb.update(
 
 # SELECT
 select_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}'
+select_ptrn = 'ATM-VIS_SELECT_BUTTON_([A-Z0-9]+)_([A-Z0-9]+)'
 select_bit_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_BIT'
 select_val_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_VAL'
 select_find_fmt = 'ATM-VIS_SELECT_FIND_{key1}'
@@ -53,6 +56,11 @@ for key1 in ['SUS','STG','STS','REF','ANS','TYP','EXC']:
         }
     )
 
+def get_key1_key2(channel):
+    key1,key2 = re.findall(select_ptrn,channel)[0]
+    return key1,key2
+    
+# ---------------------------------------------------
 # ANS
 ans_fmt = 'ATM-VIS_ANS_{key2}_{key1}'
 for key1 in ['SUS','STG','STS','EXC','DOF','REF']:

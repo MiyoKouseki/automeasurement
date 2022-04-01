@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 import numpy as np
 from pcaspy import Driver, SimpleServer
 import random
@@ -7,6 +8,7 @@ from search import search
 
 from db import pvdb
 from db import select_bit_fmt,select_val_fmt,ans_fmt
+from db import get_key1_key2
 from vis import suspensions,stages,states,sustypes
 from vis import key2dict,get_read,get_sustype
 from vis import get_suslist_belong_sustype, get_stglist_belong_sus
@@ -48,7 +50,9 @@ def get_pushed_list(self,key1):
     ]
     return _list
 
-def get_pushed_ans_list(self,key1,ansnum):
+def _get_pushed_ans_list(self,key1,ansnum):
+    """
+    """
     _list = [
         self.getParam(ans_fmt.format(key2=key2,key1=key1))
         for key2 in ansnum
@@ -128,17 +132,36 @@ def diag_plot():
 def cross_plot():
     pass
 
-def get_pushed_ans_parameters(self):
+def _get_pushed_ans_parameters(self):
+    """ 選択されているANSチャンネルの全パラメータを取得
+    
+    Returns:
+    --------
+    sus: list of `str` 
+        list of suspension names
+    stg: list of `str` 
+        list of stage names
+    sts: list of `str`
+        list of guard state names
+    exc: list of `str`
+        list of excitation point names
+    dof: list of `str`
+        list of excitation dof names
+    ref: list of `str`
+        list of reference number names
+    """
     pushed_ans = get_pushed_list(self,'ANS')
-    sus = get_pushed_ans_list(self,'SUS',pushed_ans)
-    stg = get_pushed_ans_list(self,'STG',pushed_ans)
-    sts = get_pushed_ans_list(self,'STS',pushed_ans)
-    exc = get_pushed_ans_list(self,'EXC',pushed_ans)
-    dof = get_pushed_ans_list(self,'DOF',pushed_ans)
-    ref = get_pushed_ans_list(self,'REF',pushed_ans)
+    sus = _get_pushed_ans_list(self,'SUS',pushed_ans)
+    stg = _get_pushed_ans_list(self,'STG',pushed_ans)
+    sts = _get_pushed_ans_list(self,'STS',pushed_ans)
+    exc = _get_pushed_ans_list(self,'EXC',pushed_ans)
+    dof = _get_pushed_ans_list(self,'DOF',pushed_ans)
+    ref = _get_pushed_ans_list(self,'REF',pushed_ans)
     return sus,stg,sts,exc,dof,ref
 
 def get_plot_parameters(*args):
+    """
+    """
     suslist,stglist,stslist,exclist,doflist,reflist = args[0]
     if len(stglist)*len(stslist)*len(exclist)*len(doflist)==1:
         stg,sts = list(stglist)[0],list(stslist)[0]
@@ -152,7 +175,7 @@ def get_plot_parameters(*args):
         
         # Plot each dofs
         # fix me ----------------------
-        if stg=='TM':
+        if stg=='TM' and exc=='COILOUTF':
             readdofs = ['L','P','Y']
         else:
             readdofs = excdofs
@@ -176,15 +199,31 @@ def make_plot(self,*args):
         notify(self,figname)
 
 # ------------------------------------------------------------------------------
+
+
+def _get_params(fname):
+    sus,sts,stg,exc,dof,ref = re.findall(plant_pattern,fname)[0]
+    return sus,sts,stg,exc,dof,ref
+
+def blink_select_button(self,selected_channel):
+    """ SELECTボタンを点灯させる
+
+    Params:
+    -------
+    selected_channel: `str`
         
-def blink_select_button(self,reason):
-    key1,key2 = reason.split('_')[-2:]
+    """
+    'ATM-VIS_SELECT_BUTTON_{key1}_{key2}_BIT'    
+    key1,key2 = get_key1_key2(selected_channel)
+    new_val = self.getParam(select_bit_fmt.format(key1=key1,key2=key2)) + 2
     self.setParam(
         select_bit_fmt.format(key1=key1,key2=key2),
-        self.getParam(select_bit_fmt.format(key1=key1,key2=key2)) + 2
+        new_val
     )
 
 def get_search_with_selected_items(self):
+    """
+    """
     typlist = get_pushed_list(self,'TYP')
     suslist = get_pushed_list(self,'SUS')
     if not typlist and suslist:
@@ -222,24 +261,20 @@ class myDriver(Driver):
     def write(self, reason, value):
         if 'ATM-VIS_PLOT' in reason:
             """
-            K1:ATM-VIS_PLOT が押されると、選択したANSから
-            各種パラメータを取得し、プロットをつくる。
+            選択されたANSチャンネルのパラメータを読み込んで、プロットする。
             """
-            params = get_pushed_ans_parameters(self)
-            make_plot(self,params)
+            params = _get_pushed_ans_parameters(self)
+            make_plot(self,params)            
         elif 'ATM-VIS_SELECT_FIND' in reason:
-            """
-            K1:ATM-VIS_SELECT_FIND_** に値を代入すると、
-            その値で絞り込み検索をかける。           
+            """            
+            K1:ATM-VIS_SELECT_FIND_** の値で絞り込み検索をかける。           
             """
             find_refs(self,reason,value)
             self.setParam(reason,value)
         elif 'ATM-VIS_SELECT_BUTTON' in reason:
             """
-            K1:ATM-VIS_SELECT_BUTTON_** を押すと、黄色く
-            点灯し、また、そのとき選択されている SELECT 
-            ボタンのパラメータを使ってANSにある検索結果
-            を更新する。
+            選択されたSELECTチャンネルを点灯し、また、その選択されている
+            SELECT ボタンのパラメータを使ってANSにある検索結果を更新する。
             """
             blink_select_button(self,reason)            
             ans = get_search_with_selected_items(self)
