@@ -105,38 +105,20 @@ def update_ans(self,ans):
                 
     # update reflist
     suslist = ans[:,0]
-    #set_all_val(self,'SUS',['---']*15)
     typlist = get_pushed_list(self,'TYP')
     suslist = get_suslist_belong_sustype(list(np.unique(suslist)),typlist)
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
     typlist = get_sustype(suslist)
-    #set_all_val(self,'TYP',['---']*15)
-    #set_all_val(self,'TYP',np.unique(typlist)[::-1])
     set_all_val(self,'TYP',sustypes)        
-    #stslist = ans[:,1]
     stslist = get_stslist()
-    #set_all_val(self,'STS',['---']*15)
     set_all_val(self,'STS',np.unique(stslist)[::-1])            
-    #stglist = ans[:,2]
     stglist = get_stglist_belong_sus(list(np.unique(suslist)))
-    #set_all_val(self,'STG',['---']*15)
     set_all_val(self,'STG',np.unique(stglist)[::-1])
-    #exclist = ans[:,3]
     exclist = get_exclist()
-    #set_all_val(self,'EXC',['---']*15)
     set_all_val(self,'EXC',np.unique(exclist)[::-1])        
     reflist = ans[:,5]
-    #set_all_val(self,'REF',['---']*15)
     set_all_val(self,'REF',np.unique(reflist)[::-1])    
 
-    # init answers
-    # set_all_ans(self,'SUS',['---']*15)
-    # set_all_ans(self,'STG',['---']*15)
-    # set_all_ans(self,'STS',['---']*15)
-    # set_all_ans(self,'EXC',['---']*15)
-    # set_all_ans(self,'DOF',['---']*15)
-    # set_all_ans(self,'REF',['---']*15)    
-    
     # write answers
     set_all_ans(self,'SUS',ans[:,0])
     set_all_ans(self,'STS',ans[:,1])
