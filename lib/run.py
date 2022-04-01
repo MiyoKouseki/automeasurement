@@ -224,12 +224,19 @@ def blink_select_button(self,selected_channel):
 
 def get_search_with_selected_items(self):
     """
-    """        
-    return search(sus=get_pushed_list(self,'SUS'),
+    """      
+    anstable = search(sus=get_pushed_list(self,'SUS'),
                   stg=get_pushed_list(self,'STG'),
                   sts=get_pushed_list(self,'STS'),
                   exc=get_pushed_list(self,'EXC'),
-                  ref=get_pushed_list(self,'REF'))    
+                  ref=get_pushed_list(self,'REF'))
+    
+    if not isinstance(anstable,np.ndarray):
+        raise PcasRunError('invalid type. %s'%(type(anstable)))
+    if not anstable.shape[1]==6:
+        raise PcasRunError('ans should have 6 cols: sus,sts,stg,exc,dof,ref.')
+    
+    return anstable
 
 def find_refs(self,reason,findkey): # fixme
     print(reason)
@@ -267,8 +274,8 @@ class myDriver(Driver):
             SELECT ボタンのパラメータを使ってANSにある検索結果を更新する。
             """
             blink_select_button(self,reason)            
-            ans = get_search_with_selected_items(self)
-            update_ans(self,ans)            
+            anstable = get_search_with_selected_items(self)
+            update_ans(self,anstable)
         else:
             pass
         
