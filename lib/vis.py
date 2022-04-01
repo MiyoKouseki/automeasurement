@@ -82,7 +82,7 @@ def _sustype_is(sus):
     elif sus in typeco:
         return 'TYPE-CO'
     else:
-        raise ValueError('Invalid %s'%(sus))
+        return None
     
 def get_sustype(suslist):
     return [ _sustype_is(sus) for sus in suslist]

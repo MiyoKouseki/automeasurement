@@ -1,8 +1,6 @@
 #!/usr/bin/env python
-
 import numpy as np
 from pcaspy import Driver, SimpleServer
-import random
 
 from search import search
 
@@ -10,6 +8,7 @@ from db import pvdb
 from db import select_bit_fmt,select_val_fmt,ans_fmt
 from db import get_key1_key2
 from db import key1s
+
 from vis import suspensions,stages,states,sustypes
 from vis import key2dict,get_read,get_sustype
 from vis import get_suslist_belong_sustype, get_stglist_belong_sus
@@ -20,7 +19,7 @@ from atmplot import plot
 
 prefix = 'K1:'
 
-class RunError(Exception):
+class PcasRunError(Exception):
     pass
 
 def is_pushed(self,key1,key2):
@@ -41,7 +40,7 @@ def _get_pushed(self,key1,key2): # Fix me
     elif key1 in ['ANS']:
         return key2
     else:
-        raise RunError(key1,key2)
+        raise PcasRunError(key1,key2)
 
 def get_pushed_list(self,key1):
     """
@@ -92,19 +91,16 @@ def set_all_ans(self,key1,vals):
     for key2,val in zip(key2dict['ANS'],vals):
         self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val)) 
         
-def update_ans(self,ans):
+def update_ans(self,anstable):
     """
     """
-    if not isinstance(ans,np.ndarray):
-        raise RunError('invalid type. %s'%(type(ans)))
-    if not ans.shape[1]==6:
-        raise RunError('ans should have 6 cols: sus,sts,stg,exc,dof,ref.')
-
-    
-    num = min(15,ans.shape[0])                    
-                
+    if not isinstance(anstable,np.ndarray):
+        raise PcasRunError('invalid type. %s'%(type(anstable)))
+    if not anstable.shape[1]==6:
+        raise PcasRunError('ans should have 6 cols: sus,sts,stg,exc,dof,ref.')
+                    
     # update reflist
-    suslist = ans[:,0]
+    suslist = anstable[:,0]
     typlist = get_pushed_list(self,'TYP')
     suslist = get_suslist_belong_sustype(list(np.unique(suslist)),typlist)
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
@@ -116,16 +112,16 @@ def update_ans(self,ans):
     set_all_val(self,'STG',np.unique(stglist)[::-1])
     exclist = get_exclist()
     set_all_val(self,'EXC',np.unique(exclist)[::-1])        
-    reflist = ans[:,5]
+    reflist = anstable[:,5]
     set_all_val(self,'REF',np.unique(reflist)[::-1])    
 
     # write answers
-    set_all_ans(self,'SUS',ans[:,0])
-    set_all_ans(self,'STS',ans[:,1])
-    set_all_ans(self,'STG',ans[:,2])    
-    set_all_ans(self,'EXC',ans[:,3])
-    set_all_ans(self,'DOF',ans[:,4])
-    set_all_ans(self,'REF',ans[:,5])    
+    set_all_ans(self,'SUS',anstable[:,0])
+    set_all_ans(self,'STS',anstable[:,1])
+    set_all_ans(self,'STG',anstable[:,2])    
+    set_all_ans(self,'EXC',anstable[:,3])
+    set_all_ans(self,'DOF',anstable[:,4])
+    set_all_ans(self,'REF',anstable[:,5])    
 
 def diag_plot():
     pass
@@ -205,6 +201,8 @@ def make_plot(self,*args):
 
 
 def _get_params(fname):
+    """
+    """
     sus,sts,stg,exc,dof,ref = re.findall(plant_pattern,fname)[0]
     return sus,sts,stg,exc,dof,ref
 
@@ -226,21 +224,8 @@ def blink_select_button(self,selected_channel):
 
 def get_search_with_selected_items(self):
     """
-    """
-    typlist = get_pushed_list(self,'TYP')
-    suslist = get_pushed_list(self,'SUS')
-    if not typlist and suslist:
-        pass
-    elif not typlist and not suslist:
-        pass
-    elif typlist and not suslist:
-        suslist = get_suslist_belong_sustype(suslist,typlist)
-    elif typlist and suslist:
-        pass
-    else:
-        raise ValueError('A')
-        
-    return search(sus=suslist,
+    """        
+    return search(sus=get_pushed_list(self,'SUS'),
                   stg=get_pushed_list(self,'STG'),
                   sts=get_pushed_list(self,'STS'),
                   exc=get_pushed_list(self,'EXC'),
@@ -260,8 +245,8 @@ class myDriver(Driver):
     """
     def  __init__(self):
         super(myDriver, self).__init__()
-        ans = get_search_with_selected_items(self)
-        update_ans(self,ans)                    
+        anstable = get_search_with_selected_items(self)
+        update_ans(self,anstable)
 
     def write(self, reason, value):
         if 'ATM-VIS_PLOT' in reason:
