@@ -127,6 +127,9 @@ $QUICK \
  * 管理用テンプレを更新したあと init_template.sh を実行したか？
  * init_template.sh は測定用テンプレを更新しているか？
 
+MEDMが白抜きになった
+ * pcas の再起動をする。（pcas/99_restart.sh を実行してDockerにログイン後、python3 run.py を実行）
+ 
 
 
 ### メモ, ToDo

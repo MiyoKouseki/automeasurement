@@ -1,51 +1,13 @@
 #from gwpy.plot import BodePlot as GwBodePlot
 import matplotlib.gridspec as gridspec
 import numpy as np
+import matplotlib.pyplot as plt
 
 from .mybode import BodePlot
 from .base import TransferFunctionSpectrum, CrossSpectrum, CoherenceSpectrum
 
 import re
 import itertools
-
-
-# class BodePlot(GwBodePlot):
-#     def __init__(self,*filters,**kwargs):
-#         label = kwargs.pop('label', True)
-#         super().__init__(*filters,**kwargs)
-#         ylims = [[-120,20],[-180,180]]
-#         [ax.set_ylim(*ylim) for ax,ylim in zip(self.axes,ylims)]
-#         self.axes[1].set_yticks(range(-180,181,90))
-#         [ax.legend(label,alpha=0.7,loc='upper left') for ax in self.axes]
-        
-#     def add_coherence(self,codata,**kwargs):
-#         gs = gridspec.GridSpec(3,1)
-#         self.axes[0].set_position(gs[0:1].get_position(self.figure))
-#         self.axes[1].set_position(gs[1:2].get_position(self.figure))
-#         self.add_subplot(gs[2:3])
-#         self.axes[0].set_subplotspec(gs[0:1])
-#         self.axes[1].set_subplotspec(gs[1:2])                   
-#         for data in codata:
-#             self.axes[2].plot(data.frequencies.value,np.angle(data.value,deg=True))
-#         self.axes[2].set_xscale('log')
-#         self.axes[2].set_xlabel('Frequency [Hz]')
-
-#         print(self.axes)
-#         print([a for a in dir(self.axes[0]) if 'share' in a])
-#         print(self.axes[0].get_shared_x_axes())
-#         #self.axes[0].get_shared_x_axes().join(self.axes[0],self.axes[2])
-#         #self.axes[1].get_shared_x_axes().join(self.axes[1],self.axes[2])
-#         print(dir(self.axes[0]._shared_x_axes))
-#         self.axes[0]._shared_x_axes.remove(self.axes[1])
-#         #self.axes[1]._shared_x_axes.remove(self.axes[0])
-#         print(dir(self.axes[1].get_shared_x_axes().clean()))
-#         self.axes[0].sharex(self.axes[2])
-#         self.axes[1].sharex(self.axes[2])
-#         pass
-#         #self.clf()
-#         #self.add_subplot(3,1,1)
-#         #self.add_subplot(3,1,2,sharex=self.axes[2])
-#         #self.add_subplot(3,1,3,sharex=self.axes[2])
 
 exct_fmt = 'K1:VIS-{SUS}_{STAGE}_{EXCT}_{DOF}_IN2'
 read1_fmt = 'K1:VIS-{SUS}_{STAGE}_{READ}_{DOF}_IN1_DQ'
@@ -55,7 +17,17 @@ prefix = '/diagdata/PLANT/{SUS}/{YYYY}/{MM}/'
 fname_fmt = 'PLANT_{SUS}_{STATE}_{STAGE}_{EXCT}_{DOF}_{YYYY}{MM}{DD}{HH}{mm}.xml'
 
 
-def plot(suspensions,ch_from,ch_to,refnumbers,state):    
+def plot(suspensions,ch_from,ch_tos,refnumbers,state):
+    if isinstance(ch_tos,str):
+        ch_tos = [ch_tos]
+    
+    for ch_to in ch_tos:
+        print(ch_from,ch_to)
+        _plot(suspensions,ch_from,ch_to,refnumbers,state)
+    
+        
+    
+def _plot(suspensions,ch_from,ch_to,refnumbers,state):    
     # Parse Parameters from Arguments
     exct_kwargs = dict(zip(['STAGE','EXCT','DOF'],ch_from.split('_')))
     read_kwargs = dict(zip(['STAGE','READ','DOF'],ch_to.split('_')))
@@ -66,7 +38,6 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     # Fix me -------------------------------------
     _exct_kwargs = exct_kwargs.copy()
     _read_kwargs = read_kwargs.copy()
-    print(exct_kwargs)    
     if read_kwargs['STAGE']=='GAS':
         _read_kwargs['STAGE'] = _read_kwargs['DOF']
         _read_kwargs['DOF'] = 'GAS'
@@ -80,7 +51,6 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     huga = [datetime.strptime(refnum, '%Y%m%d%H%M').strftime('%Y %b %d %H:%m')
             for refnum in refnumbers]
     # Fix me ---------------------------------------------
-    print(exct_kwargs)
     
     # Set File Name and Channel Name from Parameters
     hoge = list(itertools.product(suspensions,datetime_kwargs)) # need list()?
@@ -91,7 +61,6 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     else:
         _to = [read1_fmt.format(SUS=sus,**_read_kwargs)for sus,_ in hoge]        
 
-    print(exct_kwargs)
     sources = [(prefix+fname_fmt).\
                format(STATE=state,SUS=sus,
                       **exct_kwargs,**datetime_kwargs)
@@ -105,9 +74,9 @@ def plot(suspensions,ch_from,ch_to,refnumbers,state):
     
     # Plot
     plot = BodePlot(*tfdata,coherence=codata,figsize=(8,8),title=title,label=label)
-    #plot.add_coherence(codata)
+
     figname = '/figures/{refnums}_{ch_from}_{ch_to}.png'.format(refnums="_".join(refnumbers),ch_from=ch_from,ch_to=ch_to)    
     plot.savefig(figname)
     plot.savefig('/figures/now.png')    
-    plot.close()
-    return figname.split('/')[2]
+    plot.close()    
+    return plot

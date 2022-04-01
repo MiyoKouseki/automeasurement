@@ -137,12 +137,9 @@ def get_pushed_ans_parameters(self):
     dof = get_pushed_ans_list(self,'DOF',pushed_ans)
     ref = get_pushed_ans_list(self,'REF',pushed_ans)
     return sus,stg,sts,exc,dof,ref
-          
-def make_plot(self,*args):
+
+def get_plot_parameters(*args):
     suslist,stglist,stslist,exclist,doflist,reflist = args[0]
-    
-    # 同じ stage, grdstate, excitation, doflist でPlotする
-    # suslist, reflist は複数選択して比較Plot可能
     if len(stglist)*len(stslist)*len(exclist)*len(doflist)==1:
         stg,sts = list(stglist)[0],list(stslist)[0]
         exc,ref = list(exclist)[0],list(reflist)
@@ -154,24 +151,29 @@ def make_plot(self,*args):
         read = get_read(stg,exc)
         
         # Plot each dofs
-        for dof in excdofs:
-            ch_from = '%s_%s_%s'%(stg,exc,dof)
-            # fix me ----------------------
-            if stg=='TM':
-                readdofs = ['L','P','Y']
-            else:
-                readdofs = excdofs
-            # fix me ----------------------
-            for readdof in readdofs:
-                ch_to = '%s_%s_%s'%(stg,read,readdof)
-                print('Plot',suslist,ch_from,ch_to,ref,sts)
-                figname = plot(suslist,ch_from,ch_to,ref,sts)
-                notify(self,figname)
+        # fix me ----------------------
+        if stg=='TM':
+            readdofs = ['L','P','Y']
+        else:
+            readdofs = excdofs
+        # fix me ----------------------        
+        return suslist,stg,sts,exc,excdofs,read,readdofs,ref        
     else:
         # stage, grdstate, excitation, dof list, が複数選択された
         # 場合、Plotしない。
         notify(self,'can not plot.')
         print('Can not plot.')
+        return None
+
+def make_plot(self,*args):
+    suslist,stg,sts,exc,excdofs,read,readdofs,ref = \
+        get_plot_parameters(args[0])
+
+    for dof in excdofs:
+        ch_from = '%s_%s_%s'%(stg,exc,dof)
+        ch_to = ['%s_%s_%s'%(stg,read,readdof) for readdof in readdofs]
+        figname = plot(suslist,ch_from,ch_to,ref,sts)
+        notify(self,figname)
 
 # ------------------------------------------------------------------------------
         
