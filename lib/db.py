@@ -5,19 +5,7 @@ from vis import suspensions,stages,states,key2dict
 
 key1s = ['SUS','STS','STG','EXC','DOFS','REF'] # 順番が大事
 
-# STATUS
-refnum_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_REFNUM'
-refnum_fmt_sdf_dummy = 'VIS-{sus}_{stg}_{sts}_REFNUM'
-params = list(itertools.product(suspensions,stages,states))
-pvdb = {refnum_fmt.format(sus=sus,stg=stg,sts=sts):
-        {'type':'float','value':0} for sus,stg,sts in params}
-pvdb.update(
-    {
-        refnum_fmt_sdf_dummy.format(sus=sus,stg=stg,sts=sts):
-        {'type':'float','value':0}
-        for sus,stg,sts in params
-    }
-)
+pvdb = {'HOGE':{'type':'float'}}
 
 # SELECT
 select_fmt = 'ATM-VIS_SELECT_BUTTON_{key1}_{key2}'
@@ -73,7 +61,7 @@ for key1 in ['SUS','STG','STS','EXC','DOF','REF']:
         }
     )
         
-pvdb.update({'HOGE':{'type':'float'}})
+
 pvdb.update({'ATM-VIS_SEARCH':{'type':'str'}})
 pvdb.update({'ATM-VIS_PLOT':{'type':'str'}})
 pvdb.update({'ATM-VIS_MEASURE':{'type':'str'}})
