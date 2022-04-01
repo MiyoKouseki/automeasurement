@@ -10,7 +10,6 @@ states = ['SAFE','STANDBY','ISOLATED','DAMPED','ALIGNED','TWRFLOAT','PAYFLOAT']
 excites = ['TEST','COILOUTF']
 refs = ['00','01','02','03','04','05','06','07','08','09']
 ansnums = ['00','01','02','03','04','05','06','07','08','09']
-key1s = ['SUS','STS','STG','EXC','DOFS','REF']
 class VisError(Exception):
     pass
 

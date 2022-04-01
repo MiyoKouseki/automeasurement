@@ -9,11 +9,12 @@ from search import search
 from db import pvdb
 from db import select_bit_fmt,select_val_fmt,ans_fmt
 from db import get_key1_key2
+from db import key1s
 from vis import suspensions,stages,states,sustypes
 from vis import key2dict,get_read,get_sustype
 from vis import get_suslist_belong_sustype, get_stglist_belong_sus
 from vis import get_stslist, get_exclist
-from vis import key1s
+
 
 from atmplot import plot
 
@@ -23,7 +24,7 @@ class RunError(Exception):
     pass
 
 def is_pushed(self,key1,key2):
-    # 4 で割った余りは直したい。
+    # 4 で割った余りは直したい。    
     return self.getParam(select_bit_fmt.format(key1=key1,key2=key2))%4 # fixme
 
 def _get_pushed(self,key1,key2): # Fix me
@@ -43,6 +44,8 @@ def _get_pushed(self,key1,key2): # Fix me
         raise RunError(key1,key2)
 
 def get_pushed_list(self,key1):
+    """
+    """
     _list = [
         _get_pushed(self,key1,key2)
         for key2 in key2dict[key1]
@@ -60,6 +63,8 @@ def _get_pushed_ans_list(self,key1,ansnum):
     return set(_list)
 
 def notify(self,message):
+    """
+    """
     for i in range(6)[::-1]:
         if i==0:
             self.setParam('ATM-VIS_NOTIFY_00',message)
@@ -68,14 +73,28 @@ def notify(self,message):
             self.setParam('ATM-VIS_NOTIFY_%02d'%(i),_oldmessage)
 
 def set_all_val(self,key1,vals):
+    """
+    """
+    # 初期化
+    for key2,val in zip(key2dict[key1],['----']*len(key2dict[key1])):
+        self.setParam(select_val_fmt.format(key1=key1,key2=key2),str(val))
+    # Set
     for key2,val in zip(key2dict[key1],vals):
         self.setParam(select_val_fmt.format(key1=key1,key2=key2),str(val))
 
 def set_all_ans(self,key1,vals):
+    """
+    """
+    # 初期化
+    for key2,val in zip(key2dict['ANS'],['----']*len(key2dict['ANS'])):
+        self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val)) 
+    # set
     for key2,val in zip(key2dict['ANS'],vals):
         self.setParam(ans_fmt.format(key1=key1,key2=key2),str(val)) 
         
 def update_ans(self,ans):
+    """
+    """
     if not isinstance(ans,np.ndarray):
         raise RunError('invalid type. %s'%(type(ans)))
     if not ans.shape[1]==6:
@@ -86,37 +105,37 @@ def update_ans(self,ans):
                 
     # update reflist
     suslist = ans[:,0]
-    set_all_val(self,'SUS',['---']*15)
+    #set_all_val(self,'SUS',['---']*15)
     typlist = get_pushed_list(self,'TYP')
     suslist = get_suslist_belong_sustype(list(np.unique(suslist)),typlist)
     set_all_val(self,'SUS',np.unique(suslist)[::-1])
     typlist = get_sustype(suslist)
-    set_all_val(self,'TYP',['---']*15)
+    #set_all_val(self,'TYP',['---']*15)
     #set_all_val(self,'TYP',np.unique(typlist)[::-1])
     set_all_val(self,'TYP',sustypes)        
     #stslist = ans[:,1]
     stslist = get_stslist()
-    set_all_val(self,'STS',['---']*15)
+    #set_all_val(self,'STS',['---']*15)
     set_all_val(self,'STS',np.unique(stslist)[::-1])            
     #stglist = ans[:,2]
     stglist = get_stglist_belong_sus(list(np.unique(suslist)))
-    set_all_val(self,'STG',['---']*15)
+    #set_all_val(self,'STG',['---']*15)
     set_all_val(self,'STG',np.unique(stglist)[::-1])
     #exclist = ans[:,3]
     exclist = get_exclist()
-    set_all_val(self,'EXC',['---']*15)
+    #set_all_val(self,'EXC',['---']*15)
     set_all_val(self,'EXC',np.unique(exclist)[::-1])        
     reflist = ans[:,5]
-    set_all_val(self,'REF',['---']*15)
+    #set_all_val(self,'REF',['---']*15)
     set_all_val(self,'REF',np.unique(reflist)[::-1])    
 
     # init answers
-    set_all_ans(self,'SUS',['---']*15)
-    set_all_ans(self,'STG',['---']*15)
-    set_all_ans(self,'STS',['---']*15)
-    set_all_ans(self,'EXC',['---']*15)
-    set_all_ans(self,'DOF',['---']*15)
-    set_all_ans(self,'REF',['---']*15)    
+    # set_all_ans(self,'SUS',['---']*15)
+    # set_all_ans(self,'STG',['---']*15)
+    # set_all_ans(self,'STS',['---']*15)
+    # set_all_ans(self,'EXC',['---']*15)
+    # set_all_ans(self,'DOF',['---']*15)
+    # set_all_ans(self,'REF',['---']*15)    
     
     # write answers
     set_all_ans(self,'SUS',ans[:,0])
@@ -189,6 +208,8 @@ def get_plot_parameters(*args):
         return None
 
 def make_plot(self,*args):
+    """
+    """
     suslist,stg,sts,exc,excdofs,read,readdofs,ref = \
         get_plot_parameters(args[0])
 
@@ -244,15 +265,17 @@ def get_search_with_selected_items(self):
                   ref=get_pushed_list(self,'REF'))    
 
 def find_refs(self,reason,findkey): # fixme
-    key1 = reason.split('_')[-1]
+    print(reason)
+    key1 = reason.split('_')[-1] # fixme
     if not key1=='TYP':
-        key1num = key1s.index(key1)
-        refs = get_search_with_selected_items(self)[:,key1num]
+        idx = key1s.index(key1)
+        refs = get_search_with_selected_items(self)[:,idx]
         refs = [ ref for ref in refs if findkey in ref]
-        set_all_val(self,key1,['---']*15)
         set_all_val(self,key1,np.unique(refs)[::-1])
 
 class myDriver(Driver):
+    """
+    """
     def  __init__(self):
         super(myDriver, self).__init__()
         ans = get_search_with_selected_items(self)

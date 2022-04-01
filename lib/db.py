@@ -3,6 +3,7 @@ import settings
 import itertools
 from vis import suspensions,stages,states,key2dict
 
+key1s = ['SUS','STS','STG','EXC','DOFS','REF'] # 順番が大事
 
 # STATUS
 refnum_fmt = 'ATM-VIS_{sus}_{stg}_{sts}_REFNUM'
