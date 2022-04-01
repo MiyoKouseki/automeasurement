@@ -156,9 +156,10 @@ def _get_pushed_ans_parameters(self):
     ref = _get_pushed_ans_list(self,'REF',pushed_ans)
     return sus,stg,sts,exc,dof,ref
 
-def get_plot_parameters(*args):
+def get_plot_parameters(self,*args):
     """
     """
+    print(args)
     suslist,stglist,stslist,exclist,doflist,reflist = args[0]
     if len(stglist)*len(stslist)*len(exclist)*len(doflist)==1:
         stg,sts = list(stglist)[0],list(stslist)[0]
@@ -189,7 +190,7 @@ def make_plot(self,*args):
     """
     """
     suslist,stg,sts,exc,excdofs,read,readdofs,ref = \
-        get_plot_parameters(args[0])
+        get_plot_parameters(self,args[0])
 
     for dof in excdofs:
         ch_from = '%s_%s_%s'%(stg,exc,dof)
