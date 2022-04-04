@@ -127,8 +127,8 @@ class BodePlot(Plot):
             self.maxes.set_ylabel('Amplitude')
 
         # 
-        ylims = [[-120,20],[-180,180],[0,1.01]]
-        [ax.set_ylim(*ylim) for ax,ylim in zip(self.axes,ylims)]
+        # ylims = [[-120,20],[-180,180],[0,1.01]]
+        # [ax.set_ylim(*ylim) for ax,ylim in zip(self.axes,ylims)]
         [ax.set_xlim(1e-3,20) for ax in self.axes]
         self.axes[1].set_yticks(range(-180,181,90))
         label = kwargs.pop('label', True)        
