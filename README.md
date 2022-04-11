@@ -124,14 +124,26 @@ $QUICK \
 ### トラブルシュート
 
 テンプレを更新したのに反映されない
- * 管理用テンプレを更新したあと init_template.sh を実行したか？
- * init_template.sh は測定用テンプレを更新しているか？
+ * 管理用テンプレを更新したあと init_template.sh を実行したか確認
+ * init_template.sh は測定用テンプレを更新しているか確認
 
 MEDMが白抜きになった
  * pcas の再起動をする。（pcas/99_restart.sh を実行してDockerにログイン後、python3 run.py を実行）
- 
+ * もしpcas自体のエラーで再び白抜きになる場合、適宜 run.py を修正したのち再起動すること。もし解決しない場合は maintainer に連絡。
+
+Docker を常に起動させておきたい
+ * デバッグを頻繁におこなうために、常時起動しないように設定ファイルの該当部分をコメントアウトしているので、それを外せば良い。
+ * pcas/build/pcas/Dockerfile の ENTRYPOINT をコメントアウトをはずしてpcasの再起動をする。これで起動時に run.py を走らせるようになる。
+
+Docker をやめたい
+ * 管理の問題などから、Dockerをやめたい場合は基本的には、環境設定済みの計算機のうえで `lib/run.py` を実行するだけ。
+ * ただし Docker で EPICS チャンネルを KAGRA のものと隔離していたので、EPICS_CA_ADDRLIST という環境変数の書き換えをしていた都合上、この環境変数を適宜移行した計算機の環境に合わせる必要がある。また AUTOMEASUREMENT.adl 自体は 172.20.0.2 という Docker の EPICS Gateway を見るようにしているので、それを移行環境に対応する必要があることに注意。
+
+k1ctr27 から k1script へ移行したい
+ * 基本的にDockerがインストールされれば、k1ctr27でしていることと同じことをすればよい。つまり、pcas/99_restart.sh を実行してpcasを起動すればOK。
 
 
 ### メモ, ToDo
 
  * 管理用テンプレファイルファイルを減らせないか
+ 
