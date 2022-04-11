@@ -12,3 +12,4 @@ daqchannels.txt
 TEMPLATES
 PLANT
 env
+*pyc
