@@ -11,7 +11,7 @@ if [[ "$1" == '-x' ]] ; then
     shift
 fi
 
-DOCKER_HOST=k1ctr27
+DOCKER_HOST=k1script2
 EPICS_GATEWAY=172.20.0.2
 ADL=/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas/AUTOMEASUREMENT_OVERVIEW.adl
 PREFIX=/kagra/Dropbox/Subsystems/VIS/Scripts/automeasurement/pcas
